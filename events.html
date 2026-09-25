@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Events | The 616 Marvelbase</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+    <!-- EVENT PROFILE MODAL OVERRIDE -->
+
+    <style>
+
+        #profile-modal {
+            position: fixed !important;
+            inset: 0 !important;
+
+            z-index: 99999 !important;
+
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+
+            width: 100vw !important;
+            height: 100vh !important;
+
+            padding: 30px !important;
+
+            background:
+                rgba(0, 0, 0, 0.80) !important;
+
+            backdrop-filter: blur(10px);
+
+            opacity: 0 !important;
+            visibility: hidden !important;
+            pointer-events: none !important;
+
+            transition:
+                opacity 0.3s ease,
+                visibility 0.3s ease;
+        }
+
+
+        #profile-modal.active {
+            opacity: 1 !important;
+            visibility: visible !important;
+            pointer-events: auto !important;
+        }
+
+
+        #profile-modal .profile-box {
+            position: relative !important;
+
+            width: min(850px, 100%) !important;
+
+            max-height: 88vh !important;
+
+            overflow-y: auto !important;
+
+            padding: 48px !important;
+
+            border:
+                1px solid
+                rgba(60, 150, 255, 0.35) !important;
+
+            border-radius: 18px !important;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(15, 25, 40, 0.98),
+                    rgba(5, 10, 18, 0.98)
+                ) !important;
+
+            color: #ffffff !important;
+
+            box-shadow:
+                0 0 35px
+                rgba(40, 130, 255, 0.18),
+
+                0 25px 80px
+                rgba(0, 0, 0, 0.65) !important;
+
+            transform:
+                translateY(25px)
+                scale(0.97);
+
+            transition:
+                transform 0.35s ease;
+        }
+
+
+        #profile-modal.active .profile-box {
+            transform:
+                translateY(0)
+                scale(1);
+        }
+
+
+        #profile-modal .close-button {
+            position: absolute !important;
+
+            top: 18px !important;
+            right: 20px !important;
+
+            width: 42px !important;
+            height: 42px !important;
+
+            display: flex !important;
+
+            align-items: center !important;
+            justify-content: center !important;
+
+            padding: 0 !important;
+
+            border:
+                1px solid
+                rgba(80, 160, 255, 0.3) !important;
+
+            border-radius: 50% !important;
+
+            background:
+                rgba(10, 20, 35, 0.8) !important;
+
+            color: #ffffff !important;
+
+            font-size: 28px !important;
+            line-height: 1 !important;
+
+            cursor: pointer;
+
+            transition:
+                color 0.25s ease,
+                border-color 0.25s ease,
+                box-shadow 0.25s ease,
+                transform 0.25s ease;
+        }
+
+
+        #profile-modal .close-button:hover {
+            border-color:
+                var(--blue) !important;
+
+            color:
+                var(--blue) !important;
+
+            box-shadow:
+                0 0 18px
+                rgba(70, 160, 255, 0.45);
+
+            transform:
+                rotate(90deg);
+        }
+
+
+        #profile-modal .profile-button {
+            display: inline-block;
+
+            margin: 5px 5px 5px 0;
+
+            padding: 9px 14px;
+
+            border:
+                1px solid
+                var(--border-light);
+
+            border-radius: 6px;
+
+            background:
+                rgba(255, 255, 255, 0.03);
+
+            color:
+                var(--text-soft);
+
+            font-family: inherit;
+
+            font-size: 12px;
+
+            font-weight: 600;
+
+            cursor: pointer;
+
+            transition:
+                color 0.2s ease,
+                background 0.2s ease,
+                border-color 0.2s ease,
+                transform 0.2s ease;
+        }
+
+
+        #profile-modal .profile-button:hover {
+            transform:
+                translateY(-2px);
+
+            border-color:
+                var(--cyan);
+
+            background:
+                rgba(36, 215, 232, 0.08);
+
+            color:
+                #ffffff;
+        }
+
+
+        /* GLOBAL SEARCH */
+
+        .global-search-section {
+            width: 100%;
+
+            display: flex;
+            justify-content: center;
+
+            padding: 22px 20px 4px;
+
+            box-sizing: border-box;
+        }
+
+
+        .global-search {
+            position: relative;
+
+            width: min(620px, 90vw);
+        }
+
+
+        #global-search-input {
+            width: 100%;
+
+            box-sizing: border-box;
+
+            padding: 14px 18px;
+
+            border:
+                1px solid
+                #1B2C45;
+
+            border-radius: 10px;
+
+            background:
+                #0B1A2E;
+
+            color:
+                white;
+
+            outline: none;
+
+            font-size: 15px;
+
+            transition:
+                border-color 0.2s ease,
+                box-shadow 0.2s ease,
+                background 0.2s ease;
+        }
+
+
+        #global-search-input::placeholder {
+            color:
+                #8A98AA;
+        }
+
+
+        #global-search-input:focus {
+            border-color:
+                #24D7E8;
+
+            background:
+                #0D1F35;
+
+            box-shadow:
+                0 0 0 3px
+                rgba(36, 215, 232, 0.08);
+        }
+
+
+        .global-search-results {
+            position: absolute;
+
+            top: calc(100% + 8px);
+            left: 0;
+
+            width: 100%;
+
+            max-height: 430px;
+
+            overflow-y: auto;
+
+            padding: 6px;
+
+            box-sizing: border-box;
+
+            border:
+                1px solid
+                #1B2C45;
+
+            border-radius: 10px;
+
+            background:
+                #0B1A2E;
+
+            box-shadow:
+                0 15px 40px
+                rgba(0, 0, 0, 0.45);
+
+            opacity: 0;
+
+            visibility: hidden;
+
+            pointer-events: none;
+
+            transform:
+                translateY(-5px);
+
+            transition:
+                opacity 0.2s ease,
+                visibility 0.2s ease,
+                transform 0.2s ease;
+
+            z-index: 100000;
+        }
+
+
+        .global-search-results.active {
+            opacity: 1;
+
+            visibility: visible;
+
+            pointer-events: auto;
+
+            transform:
+                translateY(0);
+        }
+
+
+        .global-search-result {
+            display: block;
+
+            width: 100%;
+
+            padding: 11px 12px;
+
+            border: none;
+
+            border-radius: 7px;
+
+            background:
+                transparent;
+
+            color:
+                white;
+
+            text-align: left;
+
+            cursor: pointer;
+
+            transition:
+                background 0.15s ease;
+        }
+
+
+        .global-search-result:hover {
+            background:
+                #142640;
+        }
+
+
+        .global-result-category {
+            display: block;
+
+            margin-bottom: 3px;
+
+            color:
+                #24D7E8;
+
+            font-size: 11px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.8px;
+        }
+
+
+        .global-search-result strong {
+            display: block;
+
+            font-size: 14px;
+        }
+
+
+        .global-search-result small {
+            display: block;
+
+            margin-top: 3px;
+
+            color:
+                #8A98AA;
+
+            font-size: 12px;
+        }
+
+
+        .global-search-empty {
+            padding: 15px;
+
+            color:
+                #8A98AA;
+
+            text-align: center;
+
+            font-size: 13px;
+        }
+
+
+        /* MOUSE GLOW */
+
+        .mouse-glow {
+            position: fixed;
+
+            width: 260px;
+            height: 260px;
+
+            border-radius: 50%;
+
+            pointer-events: none;
+
+            transform:
+                translate(-50%, -50%);
+
+            background:
+                radial-gradient(
+                    circle,
+
+                    rgba(36, 215, 232, 0.10) 0%,
+
+                    rgba(36, 215, 232, 0.04) 35%,
+
+                    transparent 70%
+                );
+
+            opacity: 0;
+
+            z-index: 0;
+
+            transition:
+                opacity 0.2s ease;
+        }
+
+
+        @media (max-width: 650px) {
+
+            #profile-modal {
+                padding:
+                    15px !important;
+            }
+
+
+            #profile-modal .profile-box {
+                width:
+                    95vw !important;
+
+                max-height:
+                    92vh !important;
+
+                padding:
+                    35px 24px !important;
+            }
+        }
+
+
+        @media (max-width: 600px) {
+
+            .global-search-section {
+                padding-top:
+                    16px;
+            }
+
+
+            .global-search {
+                width:
+                    94vw;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <!-- MOUSE GLOW -->
+
+    <div class="mouse-glow"></div>
+
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="logo">
+
+            THE 616
+
+            <span>
+                MARVELBASE
+            </span>
+
+        </div>
+
+
+        <nav>
+
+            <a href="index.html">
+                HOME
+            </a>
+
+            <a href="characters.html">
+                CHARACTERS
+            </a>
+
+            <a href="movies.html">
+                MOVIES
+            </a>
+
+            <a href="teams.html">
+                TEAMS
+            </a>
+
+            <a href="locations.html">
+                LOCATIONS
+            </a>
+
+            <a
+                href="events.html"
+                class="active"
+            >
+                EVENTS
+            </a>
+
+            <a href="timeline.html">
+                TIMELINE
+            </a>
+
+            <a href="universes.html">
+                UNIVERSES
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- GLOBAL SEARCH -->
+
+    <section class="global-search-section">
+
+        <div class="global-search">
+
+            <input
+                type="text"
+                id="global-search-input"
+                placeholder="Search the entire Marvelbase..."
+                autocomplete="off"
+            >
+
+            <div
+                id="global-search-results"
+                class="global-search-results"
+            ></div>
+
+        </div>
+
+    </section>
+
+
+    <main>
+
+        <!-- PAGE HEADER -->
+
+        <section class="database-header">
+
+            <p>
+                THE 616 DATABASE
+            </p>
+
+            <h1>
+                EVENTS
+            </h1>
+
+            <p>
+                Explore the major events that have shaped the Marvel universe.
+            </p>
+
+        </section>
+
+
+        <!-- SEARCH -->
+
+        <section class="character-tools">
+
+            <input
+                type="text"
+                id="event-search"
+                placeholder="Search events..."
+            >
+
+        </section>
+
+
+        <!-- EVENTS -->
+
+        <section class="media-section">
+
+            <div class="section-heading">
+
+                <h2>
+                    EVENTS
+                </h2>
+
+                <span id="event-count">
+                    0
+                </span>
+
+            </div>
+
+
+            <div
+                id="event-grid"
+                class="movie-grid"
+            ></div>
+
+        </section>
+
+    </main>
+
+
+    <!-- EVENT PROFILE MODAL -->
+
+    <div
+        id="profile-modal"
+        class="profile-modal"
+    >
+
+        <div
+            class="profile-box"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="profile-name"
+        >
+
+            <!-- CLOSE -->
+
+            <button
+                type="button"
+                class="close-button"
+                onclick="closeProfile()"
+                aria-label="Close profile"
+            >
+                ×
+            </button>
+
+
+            <!-- HEADER -->
+
+            <div class="profile-header">
+
+                <div class="profile-type-wrapper">
+
+                    <span id="profile-type"></span>
+
+                </div>
+
+
+                <h1 id="profile-name"></h1>
+
+
+                <h3 id="profile-date"></h3>
+
+            </div>
+
+
+            <!-- STATS -->
+
+            <div class="profile-stats">
+
+                <div class="profile-stat">
+
+                    <strong>
+                        YEAR
+                    </strong>
+
+                    <p id="profile-year"></p>
+
+                </div>
+
+
+                <div class="profile-stat">
+
+                    <strong>
+                        UNIVERSE
+                    </strong>
+
+                    <p id="profile-universe"></p>
+
+                </div>
+
+
+                <div class="profile-stat">
+
+                    <strong>
+                        LOCATION
+                    </strong>
+
+                    <p id="profile-location"></p>
+
+                </div>
+
+            </div>
+
+
+            <!-- ABOUT -->
+
+            <div class="profile-section">
+
+                <h3>
+                    ABOUT
+                </h3>
+
+                <p id="profile-description"></p>
+
+            </div>
+
+
+            <!-- PARTICIPANTS -->
+
+            <div class="profile-section">
+
+                <h3>
+                    PARTICIPANTS
+                </h3>
+
+                <div id="profile-participants"></div>
+
+            </div>
+
+
+            <!-- COMICS -->
+
+            <div class="profile-section">
+
+                <h3>
+                    COMICS
+                </h3>
+
+                <div id="profile-comics"></div>
+
+            </div>
+
+
+            <!-- RELATED EVENTS -->
+
+            <div class="profile-section">
+
+                <h3>
+                    RELATED
+                </h3>
+
+                <div id="profile-related"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="events.js"></script>
+
+    <script src="global-search.js"></script>
+
+
+    <!-- MOUSE GLOW SCRIPT -->
+
+    <script>
+
+        const mouseGlow =
+            document.querySelector(".mouse-glow");
+
+
+        document.addEventListener(
+            "mousemove",
+            function(event) {
+
+                if (!mouseGlow) return;
+
+
+                mouseGlow.style.left =
+                    event.clientX + "px";
+
+
+                mouseGlow.style.top =
+                    event.clientY + "px";
+
+
+                mouseGlow.style.opacity =
+                    "1";
+
+            }
+        );
+
+    </script>
+
+</body>
+
+</html>

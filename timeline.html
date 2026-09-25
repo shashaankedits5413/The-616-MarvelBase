@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Timeline | The 616 Marvelbase</title>
+
+    <link rel="stylesheet" href="style.css">
+
+
+    <style>
+
+        /* ========================================
+           GLOBAL SEARCH
+        ======================================== */
+
+        .global-search-section {
+            width: 100%;
+
+            display: flex;
+            justify-content: center;
+
+            padding: 22px 20px 4px;
+
+            box-sizing: border-box;
+        }
+
+
+        .global-search {
+            position: relative;
+
+            width: min(620px, 90vw);
+        }
+
+
+        #global-search-input {
+            width: 100%;
+
+            box-sizing: border-box;
+
+            padding: 14px 18px;
+
+            border:
+                1px solid
+                #1B2C45;
+
+            border-radius: 10px;
+
+            background:
+                #0B1A2E;
+
+            color:
+                white;
+
+            outline: none;
+
+            font-size: 15px;
+
+            transition:
+                border-color 0.2s ease,
+                box-shadow 0.2s ease,
+                background 0.2s ease;
+        }
+
+
+        #global-search-input::placeholder {
+            color:
+                #8A98AA;
+        }
+
+
+        #global-search-input:focus {
+            border-color:
+                #24D7E8;
+
+            background:
+                #0D1F35;
+
+            box-shadow:
+                0 0 0 3px
+                rgba(36, 215, 232, 0.08);
+        }
+
+
+        .global-search-results {
+            position: absolute;
+
+            top: calc(100% + 8px);
+            left: 0;
+
+            width: 100%;
+
+            max-height: 430px;
+
+            overflow-y: auto;
+
+            padding: 6px;
+
+            box-sizing: border-box;
+
+            border:
+                1px solid
+                #1B2C45;
+
+            border-radius: 10px;
+
+            background:
+                #0B1A2E;
+
+            box-shadow:
+                0 15px 40px
+                rgba(0, 0, 0, 0.45);
+
+            opacity: 0;
+
+            visibility: hidden;
+
+            pointer-events: none;
+
+            transform:
+                translateY(-5px);
+
+            transition:
+                opacity 0.2s ease,
+                visibility 0.2s ease,
+                transform 0.2s ease;
+
+            z-index: 100000;
+        }
+
+
+        .global-search-results.active {
+            opacity: 1;
+
+            visibility: visible;
+
+            pointer-events: auto;
+
+            transform:
+                translateY(0);
+        }
+
+
+        .global-search-result {
+            display: block;
+
+            width: 100%;
+
+            padding: 11px 12px;
+
+            border: none;
+
+            border-radius: 7px;
+
+            background:
+                transparent;
+
+            color:
+                white;
+
+            text-align: left;
+
+            cursor: pointer;
+
+            transition:
+                background 0.15s ease;
+        }
+
+
+        .global-search-result:hover {
+            background:
+                #142640;
+        }
+
+
+        .global-result-category {
+            display: block;
+
+            margin-bottom: 3px;
+
+            color:
+                #24D7E8;
+
+            font-size: 11px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.8px;
+        }
+
+
+        .global-search-result strong {
+            display: block;
+
+            font-size: 14px;
+        }
+
+
+        .global-search-result small {
+            display: block;
+
+            margin-top: 3px;
+
+            color:
+                #8A98AA;
+
+            font-size: 12px;
+        }
+
+
+        .global-search-empty {
+            padding: 15px;
+
+            color:
+                #8A98AA;
+
+            text-align: center;
+
+            font-size: 13px;
+        }
+
+
+        /* ========================================
+           MOUSE GLOW
+        ======================================== */
+
+        .mouse-glow {
+            position: fixed;
+
+            width: 260px;
+            height: 260px;
+
+            border-radius: 50%;
+
+            pointer-events: none;
+
+            transform:
+                translate(-50%, -50%);
+
+            background:
+                radial-gradient(
+                    circle,
+
+                    rgba(36, 215, 232, 0.10) 0%,
+
+                    rgba(36, 215, 232, 0.04) 35%,
+
+                    transparent 70%
+                );
+
+            opacity: 0;
+
+            z-index: 0;
+
+            transition:
+                opacity 0.2s ease;
+        }
+
+
+        @media (max-width: 600px) {
+
+            .global-search-section {
+                padding-top:
+                    16px;
+            }
+
+
+            .global-search {
+                width:
+                    94vw;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ========================================
+         MOUSE GLOW
+    ========================================= -->
+
+    <div class="mouse-glow"></div>
+
+
+
+    <!-- ========================================
+         NAVIGATION
+    ========================================= -->
+
+    <header>
+
+        <div class="logo">
+            THE 616 <span>MARVELBASE</span>
+        </div>
+
+
+        <nav>
+
+            <a href="index.html">
+                HOME
+            </a>
+
+            <a href="characters.html">
+                CHARACTERS
+            </a>
+
+            <a href="movies.html">
+                MOVIES
+            </a>
+
+            <a href="teams.html">
+                TEAMS
+            </a>
+
+            <a href="locations.html">
+                LOCATIONS
+            </a>
+
+            <a href="events.html">
+                EVENTS
+            </a>
+
+            <a
+                href="timeline.html"
+                class="active"
+            >
+                TIMELINE
+            </a>
+
+            <a href="universes.html">
+                UNIVERSES
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- ========================================
+         GLOBAL SEARCH
+    ========================================= -->
+
+    <section class="global-search-section">
+
+        <div class="global-search">
+
+            <input
+                type="text"
+                id="global-search-input"
+                placeholder="Search the entire Marvelbase..."
+                autocomplete="off"
+            >
+
+
+            <div
+                id="global-search-results"
+                class="global-search-results"
+            ></div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ========================================
+         MAIN CONTENT
+    ========================================= -->
+
+    <main>
+
+
+        <!-- ========================================
+             TIMELINE CONTROLS
+        ========================================= -->
+
+        <section class="timeline-tools">
+
+            <input
+                type="text"
+                id="timeline-search"
+                placeholder="Search timeline..."
+            >
+
+
+            <div class="filter-buttons">
+
+                <button
+                    type="button"
+                    class="timeline-filter active"
+                    onclick="filterTimeline('all')"
+                >
+                    ALL TIMELINES
+                </button>
+
+
+                <button
+                    type="button"
+                    class="timeline-filter"
+                    onclick="filterTimeline('MCU')"
+                >
+                    MCU
+                </button>
+
+
+                <button
+                    type="button"
+                    class="timeline-filter"
+                    onclick="filterTimeline('Sony')"
+                >
+                    SONY
+                </button>
+
+
+                <button
+                    type="button"
+                    class="timeline-filter"
+                    onclick="filterTimeline('Fox')"
+                >
+                    FOX X-MEN
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ========================================
+             CURRENT TIMELINE
+        ========================================= -->
+
+        <div
+            id="current-timeline"
+            class="current-timeline"
+        >
+            ALL MARVEL TIMELINES
+        </div>
+
+
+
+        <!-- ========================================
+             TIMELINE HEADER
+        ========================================= -->
+
+        <section class="database-header">
+
+            <p id="timeline-label">
+                MARVEL MOVIE TIMELINES
+            </p>
+
+        </section>
+
+
+
+        <!-- ========================================
+             TIMELINE
+        ========================================= -->
+
+        <section
+            id="timeline"
+            class="timeline"
+        >
+
+            <!-- Timeline events loaded by JavaScript -->
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ========================================
+         JAVASCRIPT
+    ========================================= -->
+
+    <script src="timeline.js"></script>
+
+    <script src="global-search.js"></script>
+
+
+    <!-- ========================================
+         MOUSE GLOW SCRIPT
+    ========================================= -->
+
+    <script>
+
+        const mouseGlow =
+            document.querySelector(".mouse-glow");
+
+
+        document.addEventListener(
+            "mousemove",
+            function(event) {
+
+                if (!mouseGlow) return;
+
+
+                mouseGlow.style.left =
+                    event.clientX + "px";
+
+
+                mouseGlow.style.top =
+                    event.clientY + "px";
+
+
+                mouseGlow.style.opacity =
+                    "1";
+
+            }
+        );
+
+    </script>
+
+
+</body>
+
+</html>
