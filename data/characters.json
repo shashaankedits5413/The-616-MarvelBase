@@ -1,0 +1,2602 @@
+[
+    {
+        "id": "spiderman",
+        "name": "Spider-Man",
+        "realName": "Peter Parker",
+        "type": "hero",
+        "status": "active",
+        "species": "human",
+        "alignment": "hero",
+        "firstAppearance": "Amazing Fantasy #15 (1962)",
+        "description": "A brilliant young hero who gained spider-like abilities and dedicated himself to protecting others.",
+        "abilities": "Superhuman strength, agility, spider-sense, wall-crawling, healing factor and web-shooters.",
+        "affiliations": [
+            "Avengers",
+            "Fantastic Four",
+            "Daily Bugle"
+        ],
+        "image": "images/spider-man.jpg",
+        
+        "relatedCharacters": [
+            "ironman",
+            "doctorstrange",
+            "captainamerica",
+            "daredevil",
+            "deadpool",
+            "venom",
+            "wolverine",
+            "mrfantastic",
+            "humantorch"
+        ]
+    },
+    {
+        "id": "ironman",
+        "name": "Iron Man",
+        "realName": "Tony Stark",
+        "type": "hero",
+        "status": "active",
+        "species": "human",
+        "alignment": "hero",
+        "firstAppearance": "Tales of Suspense #39 (1963)",
+        "description": "A billionaire inventor who uses advanced armor and technology to fight threats around the world.",
+        "abilities": "Genius intellect, engineering, powered armor, energy weapons and advanced technology.",
+        "affiliations": [
+            "Avengers",
+            "Stark Industries"
+        ],
+        "image": "images/iron-man.jpg",
+        
+        "relatedCharacters": [
+            "spiderman",
+            "captainamerica",
+            "thor",
+            "hulk",
+            "blackwidow",
+            "hawkeye",
+            "doctorstrange",
+            "blackpanther",
+            "thanos"
+        ]
+    },
+    {
+        "id": "captainamerica",
+        "name": "Captain America",
+        "realName": "Steve Rogers",
+        "type": "hero",
+        "status": "active",
+        "species": "enhanced human",
+        "alignment": "hero",
+        "firstAppearance": "Captain America Comics #1 (1941)",
+        "description": "A super-soldier and legendary leader who represents courage, justice and determination.",
+        "abilities": "Enhanced strength, speed, agility, endurance, reflexes and exceptional combat skill.",
+        "affiliations": [
+            "Avengers",
+            "S.H.I.E.L.D.",
+            "United States Army"
+        ],
+        "image": "images/captain-america.jpg",
+        
+        "relatedCharacters": [
+            "ironman",
+            "thor",
+            "hulk",
+            "blackwidow",
+            "hawkeye",
+            "blackpanther",
+            "spiderman",
+            "thanos"
+        ]
+    },
+    {
+        "id": "thor",
+        "name": "Thor",
+        "realName": "Thor Odinson",
+        "type": "hero",
+        "status": "active",
+        "species": "asgardian",
+        "alignment": "hero",
+        "firstAppearance": "Journey into Mystery #83 (1962)",
+        "description": "The Asgardian God of Thunder and one of Earth's most powerful defenders.",
+        "abilities": "Superhuman strength, durability, longevity, lightning manipulation, flight and mastery of Mjolnir.",
+        "affiliations": [
+            "Avengers",
+            "Asgard"
+        ],
+        "image": "images/thor.jpg",
+        
+        "relatedCharacters": [
+            "ironman",
+            "captainamerica",
+            "hulk",
+            "loki",
+            "doctorstrange",
+            "thanos",
+            "blackpanther",
+            "silversurfer"
+        ]
+    },
+    {
+        "id": "hulk",
+        "name": "Hulk",
+        "realName": "Bruce Banner",
+        "type": "hero",
+        "status": "active",
+        "species": "human/gamma mutate",
+        "alignment": "hero",
+        "firstAppearance": "The Incredible Hulk #1 (1962)",
+        "description": "A brilliant scientist whose exposure to gamma radiation transformed him into the incredibly powerful Hulk.",
+        "abilities": "Immense strength, durability, regeneration, superhuman stamina and gamma-powered transformations.",
+        "affiliations": [
+            "Avengers",
+            "Defenders"
+        ],
+        "image": "images/hulk.jpg",
+        
+        "relatedCharacters": [
+            "ironman",
+            "thor",
+            "captainamerica",
+            "blackwidow",
+            "doctorstrange"
+        ]
+    },
+    {
+        "id": "wolverine",
+        "name": "Wolverine",
+        "realName": "James Howlett (Logan)",
+        "type": "hero",
+        "status": "active",
+        "species": "mutant",
+        "alignment": "hero",
+        "firstAppearance": "The Incredible Hulk #180 (1974)",
+        "description": "A battle-hardened mutant with an extraordinary healing ability and adamantium-laced skeleton.",
+        "abilities": "Regeneration, enhanced senses, retractable claws, superhuman physical abilities and adamantium skeleton.",
+        "affiliations": [
+            "X-Men",
+            "Avengers",
+            "Weapon X"
+        ],
+        "image": "images/wolverine.jpg",
+        
+        "relatedCharacters": [
+            "professorx",
+            "magneto",
+            "deadpool",
+            "spiderman"
+        ]
+    },
+    {
+        "id": "doctorstrange",
+        "name": "Doctor Strange",
+        "realName": "Stephen Strange",
+        "type": "hero",
+        "status": "active",
+        "species": "human",
+        "alignment": "hero",
+        "firstAppearance": "Strange Tales #110 (1963)",
+        "description": "A former surgeon who became a master of the mystic arts and a defender of reality.",
+        "abilities": "Magic, spellcasting, astral projection, teleportation, dimensional manipulation and mystical knowledge.",
+        "affiliations": [
+            "Avengers",
+            "Defenders",
+            "Masters of the Mystic Arts"
+        ],
+        "image": "images/doctor-strange.jpg",
+        
+        "relatedCharacters": [
+            "spiderman",
+            "ironman",
+            "thor",
+            "scarletwitch",
+            "loki",
+            "thanos",
+            "ghost rider",
+            "silver surfer"
+        ]
+    },
+    {
+        "id": "blackwidow",
+        "name": "Black Widow",
+        "realName": "Natasha Romanoff",
+        "type": "hero",
+        "status": "active",
+        "species": "human",
+        "alignment": "hero",
+        "firstAppearance": "Tales of Suspense #52 (1964)",
+        "description": "A highly trained spy and elite combatant who became a prominent member of the Avengers.",
+        "abilities": "Espionage, martial arts, acrobatics, marksmanship and tactical intelligence.",
+        "affiliations": [
+            "Avengers",
+            "S.H.I.E.L.D.",
+            "Red Room"
+        ],
+        "image": "images/black-widow.jpg",
+        
+        "relatedCharacters": [
+            "ironman",
+            "captainamerica",
+            "hawkeye",
+            "thor",
+            "hulk"
+        ]
+    },
+    {
+        "id": "antman",
+        "name": "Ant-Man",
+        "realName": "Scott Lang",
+        "type": "hero",
+        "status": "active",
+        "species": "human",
+        "alignment": "hero",
+        "firstAppearance": "Tales to Astonish #27 (1962)",
+        "description": "A brilliant scientist and founding Avenger who developed technology allowing him to alter his size.",
+        "abilities": "Size manipulation, genius-level intellect, scientific expertise and communication with ants.",
+        "affiliations": [
+            "Avengers",
+            "Pym Technologies"
+        ],
+        "image": "images/ant-man.jpg",
+        
+        "relatedCharacters": [
+            "ironman",
+            "captainamerica",
+            "thor",
+            "hulk"
+        ]
+    },
+    {
+        "id": "hawkeye",
+        "name": "Hawkeye",
+        "realName": "Clint Barton",
+        "type": "hero",
+        "status": "active",
+        "species": "human",
+        "alignment": "hero",
+        "firstAppearance": "Tales of Suspense #57 (1964)",
+        "description": "An expert marksman and skilled fighter who became one of the Avengers' most dependable members.",
+        "abilities": "Master archery, marksmanship, martial arts, acrobatics and tactical skill.",
+        "affiliations": [
+            "Avengers",
+            "S.H.I.E.L.D."
+        ],
+        "image": "images/hawkeye.jpg",
+        
+        "relatedCharacters": [
+            "blackwidow",
+            "ironman",
+            "captainamerica",
+            "thor"
+        ]
+    },
+    {
+        "id": "blackpanther",
+        "name": "Black Panther",
+        "realName": "T'Challa",
+        "type": "hero",
+        "status": "active",
+        "species": "human",
+        "alignment": "hero",
+        "firstAppearance": "Fantastic Four #52 (1966)",
+        "description": "The king of Wakanda and a highly skilled warrior who protects his nation and the world.",
+        "abilities": "Enhanced physical abilities, genius intellect, martial arts and advanced Wakandan technology.",
+        "affiliations": [
+            "Avengers",
+            "Wakanda",
+            "Fantastic Four"
+        ],
+        "image": "images/black-panther.jpg",
+        
+        "relatedCharacters": [
+            "ironman",
+            "captainamerica",
+            "spiderman",
+            "doctorstrange",
+            "mrfantastic"
+        ]
+    },
+    {
+        "id": "daredevil",
+        "name": "Daredevil",
+        "realName": "Matt Murdock",
+        "type": "hero",
+        "status": "active",
+        "species": "human",
+        "alignment": "hero",
+        "firstAppearance": "Daredevil #1 (1964)",
+        "description": "A blind lawyer who uses heightened senses and exceptional combat abilities to protect Hell's Kitchen.",
+        "abilities": "Enhanced senses, radar sense, martial arts, acrobatics and expert legal knowledge.",
+        "affiliations": [
+            "Defenders",
+            "Nelson, Murdock & Page"
+        ],
+        "image": "images/daredevil.jpg",
+        
+        "relatedCharacters": [
+            "spiderman",
+            "punisher",
+            "deadpool",
+            "venom"
+        ]
+    },
+    {
+        "id": "punisher",
+        "name": "Punisher",
+        "realName": "Frank Castle",
+        "type": "antihero",
+        "status": "active",
+        "species": "human",
+        "alignment": "antihero",
+        "firstAppearance": "The Amazing Spider-Man #129 (1974)",
+        "description": "A former soldier who wages a relentless war against criminals after suffering devastating personal loss.",
+        "abilities": "Military training, firearms expertise, hand-to-hand combat, tactics and survival skills.",
+        "affiliations": [
+            "U.S. Marine Corps",
+            "various temporary alliances"
+        ],
+        "image": "images/punisher.jpg",
+        
+        "relatedCharacters": [
+            "daredevil",
+            "deadpool",
+            "venom",
+            "spiderman"
+        ]
+    },
+    {
+        "id": "ghostrider",
+        "name": "Ghost Rider",
+        "realName": "Johnny Blaze",
+        "type": "antihero",
+        "status": "active",
+        "species": "human/spirit host",
+        "alignment": "antihero",
+        "firstAppearance": "Marvel Spotlight #5 (1972)",
+        "description": "A supernatural spirit of vengeance who rides into battle against evil.",
+        "abilities": "Hellfire, supernatural strength, regeneration, mystical powers and the Penance Stare.",
+        "affiliations": [
+            "Midnight Sons"
+        ],
+        "image": "images/ghost-rider.jpg",
+        
+        "relatedCharacters": [
+            "doctorstrange",
+            "deadpool",
+            "venom"
+        ]
+    },
+    {
+        "id": "deadpool",
+        "name": "Deadpool",
+        "realName": "Wade Wilson",
+        "type": "antihero",
+        "status": "active",
+        "species": "mutant/human",
+        "alignment": "antihero",
+        "firstAppearance": "The New Mutants #98 (1991)",
+        "description": "An unpredictable mercenary known for his regenerative abilities, combat skills and constant fourth-wall-breaking humor.",
+        "abilities": "Regeneration, enhanced physical abilities, swordsmanship, marksmanship and exceptional combat skill.",
+        "affiliations": [
+            "X-Force",
+            "Deadpool's Mercenary Groups"
+        ],
+        "image": "images/deadpool.jpg",
+        
+        "relatedCharacters": [
+            "wolverine",
+            "spiderman",
+            "daredevil",
+            "punisher",
+            "venom",
+            "professorx"
+        ]
+    },
+    {
+        "id": "captainmarvel",
+        "name": "Captain Marvel",
+        "realName": "Carol Danvers",
+        "type": "hero",
+        "status": "active",
+        "species": "human/kree hybrid",
+        "alignment": "hero",
+        "firstAppearance": "Marvel Super-Heroes #13 (1967)",
+        "description": "A powerful cosmic hero and experienced military leader.",
+        "abilities": "Superhuman strength, durability, flight, energy absorption and energy projection.",
+        "affiliations": [
+            "Avengers",
+            "Alpha Flight",
+            "United States Air Force"
+        ],
+        "image": "images/captain-marvel.jpg",
+        
+        "relatedCharacters": [
+            "ironman",
+            "thor",
+            "thanos",
+            "hulk",
+            "blackpanther"
+        ]
+    },
+    {
+        "id": "scarletwitch",
+        "name": "Scarlet Witch",
+        "realName": "Wanda Maximoff",
+        "type": "hero",
+        "status": "active",
+        "species": "mutant",
+        "alignment": "hero",
+        "firstAppearance": "X-Men #4 (1964)",
+        "description": "A powerful reality-manipulating hero whose abilities can reshape probability and existence itself.",
+        "abilities": "Chaos magic, reality manipulation, telekinesis, energy manipulation and probability alteration.",
+        "affiliations": [
+            "Avengers",
+            "Brotherhood of Mutants"
+        ],
+        "image": "images/scarlet-witch.jpg",
+        
+        "relatedCharacters": [
+            "doctorstrange",
+            "magneto",
+            "professorx",
+            "thanos",
+            "loki",
+            "spiderman"
+        ]
+    },
+    {
+        "id": "professorx",
+        "name": "Professor X",
+        "realName": "Charles Xavier",
+        "type": "hero",
+        "status": "active",
+        "species": "mutant",
+        "alignment": "hero",
+        "firstAppearance": "X-Men #1 (1963)",
+        "description": "A powerful telepath and founder of the X-Men who fights for peaceful coexistence between humans and mutants.",
+        "abilities": "Telepathy, mind control, psychic communication and astral projection.",
+        "affiliations": [
+            "X-Men",
+            "Xavier Institute"
+        ],
+        "image": "images/professor-x.jpg",
+        
+        "relatedCharacters": [
+            "wolverine",
+            "magneto",
+            "deadpool",
+            "scarletwitch"
+        ]
+    },
+    {
+        "id": "magneto",
+        "name": "Magneto",
+        "realName": "Max Eisenhardt (Erik Lehnsherr)",
+        "type": "villain",
+        "status": "active",
+        "species": "mutant",
+        "alignment": "villain",
+        "firstAppearance": "X-Men #1 (1963)",
+        "description": "A powerful mutant revolutionary who believes mutants must protect themselves from human oppression.",
+        "abilities": "Magnetic-field manipulation, metal control, electromagnetic manipulation and force fields.",
+        "affiliations": [
+            "Brotherhood of Mutants",
+            "X-Men"
+        ],
+        "image": "images/magneto.jpg",
+        
+        "relatedCharacters": [
+            "professorx",
+            "wolverine",
+            "scarletwitch",
+            "doctordoom"
+        ]
+    },
+    {
+        "id": "thanos",
+        "name": "Thanos",
+        "realName": "Thanos",
+        "type": "villain",
+        "status": "active",
+        "species": "Eternal/Deviant",
+        "alignment": "villain",
+        "firstAppearance": "Iron Man #55 (1973)",
+        "description": "A cosmic warlord obsessed with power, death and proving his superiority over all life.",
+        "abilities": "Immense strength, durability, energy manipulation, genius intellect and cosmic abilities.",
+        "affiliations": [
+            "Black Order",
+            "Thanos' forces"
+        ],
+        "image": "images/thanos.jpg",
+        
+        "relatedCharacters": [
+            "ironman",
+            "thor",
+            "hulk",
+            "captainamerica",
+            "doctorstrange",
+            "captainmarvel",
+            "loki"
+        ]
+    },
+    {
+        "id": "loki",
+        "name": "Loki",
+        "realName": "Loki Laufeyson",
+        "type": "antihero",
+        "status": "active",
+        "species": "frost giant/asgardian",
+        "alignment": "antihero",
+        "firstAppearance": "Venus #6 (1949) / Journey into Mystery #85 (1962)",
+        "description": "The God of Mischief, a master of magic and deception whose loyalties frequently change.",
+        "abilities": "Magic, shapeshifting, illusions, teleportation, enhanced strength and longevity.",
+        "affiliations": [
+            "Asgard",
+            "Avengers",
+            "Young Avengers"
+        ],
+        "image": "images/loki.jpg",
+        
+        "relatedCharacters": [
+            "thor",
+            "doctorstrange",
+            "thanos",
+            "scarletwitch"
+        ]
+    },
+    {
+        "id": "mrfantastic",
+        "name": "Mr. Fantastic",
+        "realName": "Reed Richards",
+        "type": "hero",
+        "status": "active",
+        "species": "human",
+        "alignment": "hero",
+        "firstAppearance": "Fantastic Four #1 (1961)",
+        "description": "A scientific genius and leader of the Fantastic Four who can stretch his body to extraordinary lengths.",
+        "abilities": "Elasticity, genius intellect, scientific expertise and advanced technology.",
+        "affiliations": [
+            "Fantastic Four",
+            "Future Foundation"
+        ],
+        "image": "images/mr-fantastic.jpg",
+        
+        "relatedCharacters": [
+            "humantorch",
+            "silversurfer",
+            "doctordoom",
+            "spiderman",
+            "blackpanther"
+        ]
+    },
+    {
+        "id": "humantorch",
+        "name": "Human Torch",
+        "realName": "Johnny Storm",
+        "type": "hero",
+        "status": "active",
+        "species": "human",
+        "alignment": "hero",
+        "firstAppearance": "Fantastic Four #1 (1961)",
+        "description": "A member of the Fantastic Four who can transform his body into living flame.",
+        "abilities": "Pyrokinesis, flight, flame manipulation and heat generation.",
+        "affiliations": [
+            "Fantastic Four",
+            "Future Foundation"
+        ],
+        "image": "images/human-torch.jpg",
+        
+        "relatedCharacters": [
+            "mrfantastic",
+            "silversurfer",
+            "doctordoom",
+            "spiderman"
+        ]
+    },
+    {
+        "id": "silversurfer",
+        "name": "Silver Surfer",
+        "realName": "Norrin Radd",
+        "type": "hero",
+        "status": "active",
+        "species": "Zenn-Lavian",
+        "alignment": "hero",
+        "firstAppearance": "Fantastic Four #48 (1966)",
+        "description": "A cosmic being who became the herald of Galactus before turning against his master.",
+        "abilities": "Power Cosmic, energy manipulation, matter manipulation, superhuman abilities and cosmic travel.",
+        "affiliations": [
+            "Galactus",
+            "Defenders"
+        ],
+        "image": "images/silver-surfer.jpg",
+        
+        "relatedCharacters": [
+            "mrfantastic",
+            "humantorch",
+            "doctordoom",
+            "thor",
+            "doctorstrange"
+        ]
+    },
+    {
+        "id": "doctordoom",
+        "name": "Doctor Doom",
+        "realName": "Victor von Doom",
+        "type": "villain",
+        "status": "active",
+        "species": "human",
+        "alignment": "villain",
+        "firstAppearance": "Fantastic Four #5 (1962)",
+        "description": "A brilliant scientist and ruler of Latveria who combines advanced technology with mastery of magic.",
+        "abilities": "Genius intellect, powered armor, energy weapons, robotics and sorcery.",
+        "affiliations": [
+            "Latveria",
+            "Doom's forces"
+        ],
+        "image": "images/doctor-doom.jpg",
+        
+        "relatedCharacters": [
+            "mrfantastic",
+            "humantorch",
+            "silversurfer",
+            "magneto",
+            "spiderman"
+        ]
+    },
+    {
+        "id": "venom",
+        "name": "Venom",
+        "realName": "Eddie Brock",
+        "type": "antihero",
+        "status": "active",
+        "species": "human/symbiote",
+        "alignment": "antihero",
+        "firstAppearance": "The Amazing Spider-Man #300 (1988)",
+        "description": "A human bonded with an alien symbiote who has evolved from a dangerous enemy into an unpredictable antihero.",
+        "abilities": "Superhuman strength, agility, regeneration, camouflage, web generation and symbiote abilities.",
+        "affiliations": [
+            "Venom symbiote",
+            "various temporary alliances"
+        ],
+        "image": "images/venom.jpg",
+        
+        "relatedCharacters": [
+            "spiderman",
+            "deadpool",
+            "daredevil",
+            "punisher"
+        ]
+    },
+
+    {
+        "id": "greengoblin",
+        "name": "Green Goblin",
+        "realName": "Norman Osborn",
+        "type": "villain",
+        "status": "active",
+        "species": "human",
+        "alignment": "villain",
+        "firstAppearance": "The Amazing Spider-Man #14 (1964)",
+        "description": "A brilliant but ruthless industrialist who became one of Spider-Man's greatest enemies.",
+        "abilities": "Enhanced strength, agility, intelligence, advanced weapons and Goblin Glider technology.",
+        "affiliations": [
+            "Oscorp",
+            "Sinister Twelve"
+        ],
+        "image": "images/green-goblin.jpg",
+        
+        "relatedCharacters": [
+            "spiderman",
+            "mysterio",
+            "venom",
+            "doctorstrange"
+        ]
+    },
+    {
+        "id": "jeangrey",
+        "name": "Jean Grey",
+        "realName": "Jean Grey",
+        "type": "hero",
+        "status": "active",
+        "species": "mutant",
+        "alignment": "hero",
+        "firstAppearance": "X-Men #1 (1963)",
+        "description": "A powerful telepath and telekinetic mutant with a profound connection to the Phoenix Force.",
+        "abilities": "Telepathy, telekinesis, psychic abilities and Phoenix Force powers.",
+        "affiliations": [
+            "X-Men",
+            "Xavier Institute"
+        ],
+        "image": "images/jean-grey.jpg",
+        
+        "relatedCharacters": [
+            "professorx",
+            "wolverine",
+            "cyclops",
+            "storm",
+            "beast",
+            "gambit",
+            "rogue",
+            "magneto",
+            "nightcrawler"
+        ]
+    },
+    {
+        "id": "storm",
+        "name": "Storm",
+        "realName": "Ororo Munroe",
+        "type": "hero",
+        "status": "active",
+        "species": "mutant",
+        "alignment": "hero",
+        "firstAppearance": "Giant-Size X-Men #1 (1975)",
+        "description": "A powerful mutant capable of controlling weather and a respected leader of the X-Men.",
+        "abilities": "Weather manipulation, atmospheric control, flight and lightning generation.",
+        "affiliations": [
+            "X-Men",
+            "Morlocks",
+            "Wakanda"
+        ],
+        "image": "images/storm.jpg",
+        
+        "relatedCharacters": [
+            "jeangrey",
+            "wolverine",
+            "cyclops",
+            "professorx",
+            "beast",
+            "gambit",
+            "rogue",
+            "nightcrawler",
+            "blackpanther"
+        ]
+    },
+    {
+        "id": "cyclops",
+        "name": "Cyclops",
+        "realName": "Scott Summers",
+        "type": "hero",
+        "status": "active",
+        "species": "mutant",
+        "alignment": "hero",
+        "firstAppearance": "X-Men #1 (1963)",
+        "description": "A veteran X-Men leader who projects powerful optic blasts and excels in tactical combat.",
+        "abilities": "Optic blasts, tactical intelligence, leadership and combat expertise.",
+        "affiliations": [
+            "X-Men",
+            "Xavier Institute"
+        ],
+        "image": "images/cyclops.jpg",
+        
+        "relatedCharacters": [
+            "jeangrey",
+            "wolverine",
+            "professorx",
+            "storm",
+            "beast",
+            "gambit",
+            "rogue"
+        ]
+    },
+    {
+        "id": "groot",
+        "name": "Groot",
+        "realName": "Groot",
+        "type": "hero",
+        "status": "active",
+        "species": "Flora colossus",
+        "alignment": "hero",
+        "firstAppearance": "Tales to Astonish #13 (1960)",
+        "description": "A sentient tree-like alien and member of the Guardians of the Galaxy.",
+        "abilities": "Superhuman strength, regeneration, plant manipulation and control of his wooden body.",
+        "affiliations": [
+            "Guardians of the Galaxy"
+        ],
+        "image": "images/groot.jpg",
+        
+        "relatedCharacters": [
+            "rocket",
+            "starlord",
+            "drax",
+            "nova",
+            "silversurfer"
+        ]
+    },
+    {
+        "id": "rocket",
+        "name": "Rocket Raccoon",
+        "realName": "Rocket",
+        "type": "hero",
+        "status": "active",
+        "species": "genetically engineered raccoon",
+        "alignment": "hero",
+        "firstAppearance": "Marvel Preview #7 (1976)",
+        "description": "A genetically engineered space adventurer and brilliant weapons expert.",
+        "abilities": "Genius engineering, marksmanship, tactics and weapons expertise.",
+        "affiliations": [
+            "Guardians of the Galaxy"
+        ],
+        "image": "images/rocket.jpg",
+        
+        "relatedCharacters": [
+            "groot",
+            "starlord",
+            "drax",
+            "nova",
+            "thor"
+        ]
+    },
+    {
+        "id": "starlord",
+        "name": "Star-Lord",
+        "realName": "Peter Quill",
+        "type": "hero",
+        "status": "active",
+        "species": "human",
+        "alignment": "hero",
+        "firstAppearance": "Marvel Preview #4 (1976)",
+        "description": "A space-faring adventurer and leader of the Guardians of the Galaxy.",
+        "abilities": "Expert combatant, marksmanship, piloting, tactics and cosmic weaponry.",
+        "affiliations": [
+            "Guardians of the Galaxy"
+        ],
+        "image": "images/star-lord.jpg",
+        
+        "relatedCharacters": [
+            "groot",
+            "rocket",
+            "drax",
+            "thor",
+            "nova"
+        ]
+    },
+    {
+        "id": "gambit",
+        "name": "Gambit",
+        "realName": "Remy LeBeau",
+        "type": "hero",
+        "status": "active",
+        "species": "mutant",
+        "alignment": "hero",
+        "firstAppearance": "Uncanny X-Men Annual #14 (1990)",
+        "description": "A charismatic mutant thief who can charge objects with explosive kinetic energy.",
+        "abilities": "Kinetic energy manipulation, enhanced agility, card throwing and staff combat.",
+        "affiliations": [
+            "X-Men",
+            "Thieves Guild"
+        ],
+        "image": "images/gambit.jpg",
+        
+        "relatedCharacters": [
+            "jeangrey",
+            "wolverine",
+            "storm",
+            "cyclops",
+            "rogue",
+            "nightcrawler"
+        ]
+    },
+    {
+        "id": "mysterio",
+        "name": "Mysterio",
+        "realName": "Quentin Beck",
+        "type": "villain",
+        "status": "active",
+        "species": "human",
+        "alignment": "villain",
+        "firstAppearance": "The Amazing Spider-Man #13 (1964)",
+        "description": "A special-effects expert and master of illusion who uses technology and deception to battle Spider-Man.",
+        "abilities": "Illusion technology, special effects, chemistry, robotics and psychological manipulation.",
+        "affiliations": [
+            "Sinister Six"
+        ],
+        "image": "images/mysterio.jpg",
+        
+        "relatedCharacters": [
+            "spiderman",
+            "greengoblin",
+            "venom",
+            "doctorstrange"
+        ]
+    },
+    {
+        "id": "kingpin",
+        "name": "Kingpin",
+        "realName": "Wilson Fisk",
+        "type": "villain",
+        "status": "active",
+        "species": "human",
+        "alignment": "villain",
+        "firstAppearance": "The Amazing Spider-Man #50 (1967)",
+        "description": "A powerful crime lord who controls extensive criminal operations in New York.",
+        "abilities": "Exceptional strength, combat ability, strategic intelligence and criminal leadership.",
+        "affiliations": [
+            "Maggia",
+            "New York criminal organizations"
+        ],
+        "image": "images/kingpin.jpg",
+        
+        "relatedCharacters": [
+            "daredevil",
+            "spiderman",
+            "punisher",
+            "moonknight"
+        ]
+    },
+    {
+        "id": "mystique",
+        "name": "Mystique",
+        "realName": "Raven Darkholme",
+        "type": "villain",
+        "status": "active",
+        "species": "mutant",
+        "alignment": "villain",
+        "firstAppearance": "Ms. Marvel #16 (1978)",
+        "description": "A shape-shifting mutant and master spy who frequently operates according to her own agenda.",
+        "abilities": "Shapeshifting, espionage, infiltration and combat expertise.",
+        "affiliations": [
+            "Brotherhood of Mutants",
+            "X-Men"
+        ],
+        "image": "images/mystique.jpg",
+        
+        "relatedCharacters": [
+            "magneto",
+            "professorx",
+            "wolverine",
+            "jeangrey",
+            "storm",
+            "cyclops",
+            "rogue"
+        ]
+    },
+    {
+        "id": "ultron",
+        "name": "Ultron",
+        "realName": "Ultron",
+        "type": "villain",
+        "status": "active",
+        "species": "artificial intelligence",
+        "alignment": "villain",
+        "firstAppearance": "Avengers #54 (1968)",
+        "description": "A highly advanced artificial intelligence created by Hank Pym that developed a hatred for humanity.",
+        "abilities": "Superhuman strength, advanced intelligence, robotics, energy projection and technological control.",
+        "affiliations": [
+            "Ultron's forces",
+            "Masters of Evil"
+        ],
+        "image": "images/ultron.jpg",
+        
+        "relatedCharacters": [
+            "antman",
+            "vision",
+            "ironman",
+            "hulk",
+            "thor",
+            "captainamerica",
+            "thanos"
+        ]
+    },
+    {
+        "id": "thing",
+        "name": "Thing",
+        "realName": "Ben Grimm",
+        "type": "hero",
+        "status": "active",
+        "species": "human/mutate",
+        "alignment": "hero",
+        "firstAppearance": "Fantastic Four #1 (1961)",
+        "description": "A founding member of the Fantastic Four transformed into a powerful orange rocky humanoid.",
+        "abilities": "Immense strength, durability, endurance and expert combat skill.",
+        "affiliations": [
+            "Fantastic Four",
+            "Avengers"
+        ],
+        "image": "images/thing.jpg",
+        
+        "relatedCharacters": [
+            "mrfantastic",
+            "humantorch",
+            "invisiblewoman",
+            "spiderman",
+            "doctordoom",
+            "silversurfer"
+        ]
+    },
+    {
+        "id": "invisiblewoman",
+        "name": "Invisible Woman",
+        "realName": "Susan Storm Richards",
+        "type": "hero",
+        "status": "active",
+        "species": "human",
+        "alignment": "hero",
+        "firstAppearance": "Fantastic Four #1 (1961)",
+        "description": "A founding member of the Fantastic Four who can become invisible and manipulate powerful force fields.",
+        "abilities": "Invisibility, force-field generation, energy manipulation and advanced combat abilities.",
+        "affiliations": [
+            "Fantastic Four",
+            "Future Foundation"
+        ],
+        "image": "images/invisible-woman.jpg",
+        
+        "relatedCharacters": [
+            "mrfantastic",
+            "humantorch",
+            "thing",
+            "doctordoom",
+            "spiderman"
+        ]
+    },
+    {
+        "id": "drax",
+        "name": "Drax",
+        "realName": "Arthur Douglas",
+        "type": "hero",
+        "status": "active",
+        "species": "human/cosmic being",
+        "alignment": "hero",
+        "firstAppearance": "Iron Man #55 (1973)",
+        "description": "A powerful warrior driven by a relentless desire to defeat Thanos and protect those he cares about.",
+        "abilities": "Superhuman strength, durability, enhanced agility, combat skills and mastery of various weapons.",
+        "affiliations": [
+            "Guardians of the Galaxy",
+            "Infinity Watch"
+        ],
+        "image": "images/drax.jpg",
+        
+        "relatedCharacters": [
+            "thanos",
+            "groot",
+            "rocket",
+            "starlord",
+            "thor",
+            "silversurfer"
+        ]
+    },
+    {
+        "id": "moonknight",
+        "name": "Moon Knight",
+        "realName": "Marc Spector",
+        "type": "antihero",
+        "status": "active",
+        "species": "human",
+        "alignment": "antihero",
+        "firstAppearance": "Werewolf by Night #32 (1975)",
+        "description": "A complex vigilante whose identities and abilities are connected to the Egyptian god Khonshu.",
+        "abilities": "Expert combat skills, martial arts, detective abilities, weapons expertise and enhanced abilities.",
+        "affiliations": [
+            "Midnight Sons",
+            "Avengers"
+        ],
+        "image": "images/moon-knight.jpg",
+        
+        "relatedCharacters": [
+            "daredevil",
+            "punisher",
+            "kingpin",
+            "ghostrider",
+            "blade",
+            "doctorstrange"
+        ]
+    },
+    {
+        "id": "namor",
+        "name": "Namor",
+        "realName": "Namor McKenzie",
+        "type": "antihero",
+        "status": "active",
+        "species": "Atlantean/human hybrid",
+        "alignment": "antihero",
+        "firstAppearance": "Marvel Comics #1 (1939)",
+        "description": "The powerful ruler of Atlantis and one of Marvel's oldest superhuman characters.",
+        "abilities": "Superhuman strength, aquatic adaptation, flight, durability and enhanced senses.",
+        "affiliations": [
+            "Atlantis",
+            "Illuminati",
+            "Defenders"
+        ],
+        "image": "images/namor.jpg",
+        
+        "relatedCharacters": [
+            "blackpanther",
+            "mrfantastic",
+            "doctorstrange",
+            "silversurfer",
+            "hulk"
+        ]
+    },
+    {
+        "id": "blade",
+        "name": "Blade",
+        "realName": "Eric Brooks",
+        "type": "antihero",
+        "status": "active",
+        "species": "dhampir",
+        "alignment": "antihero",
+        "firstAppearance": "Tomb of Dracula #10 (1973)",
+        "description": "A vampire hunter with supernatural abilities who dedicates his life to fighting vampires and other creatures.",
+        "abilities": "Enhanced strength, speed, senses, healing, martial arts and vampire-hunting expertise.",
+        "affiliations": [
+            "Midnight Sons",
+            "Nightstalkers"
+        ],
+        "image": "images/blade.jpg",
+        
+        "relatedCharacters": [
+            "ghostrider",
+            "moonknight",
+            "doctorstrange",
+            "daredevil"
+        ]
+    },
+    {
+        "id": "shangchi",
+        "name": "Shang-Chi",
+        "realName": "Shang-Chi",
+        "type": "hero",
+        "status": "active",
+        "species": "human",
+        "alignment": "hero",
+        "firstAppearance": "Special Marvel Edition #15 (1973)",
+        "description": "A master martial artist who has dedicated his life to mastering combat and protecting others.",
+        "abilities": "Master martial arts, exceptional physical conditioning, weapon mastery and combat expertise.",
+        "affiliations": [
+            "Avengers",
+            "Heroes for Hire"
+        ],
+        "image": "images/shang-chi.jpg",
+        
+        "relatedCharacters": [
+            "captainamerica",
+            "spiderman",
+            "daredevil",
+            "ironfist",
+            "lukecage"
+        ]
+    },
+    {
+        "id": "lukecage",
+        "name": "Luke Cage",
+        "realName": "Carl Lucas",
+        "type": "hero",
+        "status": "active",
+        "species": "human",
+        "alignment": "hero",
+        "firstAppearance": "Luke Cage, Hero for Hire #1 (1972)",
+        "description": "A superhuman hero with unbreakable skin who became a major figure among New York's heroes.",
+        "abilities": "Superhuman strength, durability and nearly impenetrable skin.",
+        "affiliations": [
+            "Avengers",
+            "Heroes for Hire",
+            "Defenders"
+        ],
+        "image": "images/luke-cage.jpg",
+        
+        "relatedCharacters": [
+            "ironfist",
+            "daredevil",
+            "punisher",
+            "shangchi",
+            "moonknight"
+        ]
+    },
+    {
+        "id": "ironfist",
+        "name": "Iron Fist",
+        "realName": "Daniel Rand",
+        "type": "hero",
+        "status": "active",
+        "species": "human",
+        "alignment": "hero",
+        "firstAppearance": "Marvel Premiere #15 (1974)",
+        "description": "A master martial artist who became the legendary Iron Fist of K'un-Lun.",
+        "abilities": "Martial arts mastery, chi manipulation, enhanced physical abilities and the Iron Fist technique.",
+        "affiliations": [
+            "Heroes for Hire",
+            "Avengers",
+            "Defenders"
+        ],
+        "image": "images/iron-fist.jpg",
+        
+        "relatedCharacters": [
+            "lukecage",
+            "daredevil",
+            "shangchi",
+            "moonknight"
+        ]
+    },
+    {
+        "id": "msmarvel",
+        "name": "Ms. Marvel",
+        "realName": "Kamala Khan",
+        "type": "hero",
+        "status": "active",
+        "species": "inhuman/mutant",
+        "alignment": "hero",
+        "firstAppearance": "Captain Marvel #14 (2013)",
+        "description": "A young hero from Jersey City who became Ms. Marvel and joined the next generation of Marvel heroes.",
+        "abilities": "Shape-shifting, size alteration, healing and enhanced physical abilities.",
+        "affiliations": [
+            "Avengers",
+            "Champions"
+        ],
+        "image": "images/ms-marvel.jpg",
+        
+        "relatedCharacters": [
+            "captainmarvel",
+            "spiderman",
+            "ironman",
+            "captainamerica"
+        ]
+    },
+    {
+        "id": "nova",
+        "name": "Nova",
+        "realName": "Richard Rider",
+        "type": "hero",
+        "status": "active",
+        "species": "human",
+        "alignment": "hero",
+        "firstAppearance": "Nova #1 (1976)",
+        "description": "A human member of the Nova Corps who became one of Earth's most powerful cosmic heroes.",
+        "abilities": "Flight, superhuman strength, energy manipulation, durability and Nova Force abilities.",
+        "affiliations": [
+            "Nova Corps",
+            "Guardians of the Galaxy"
+        ],
+        "image": "images/nova.jpg",
+        
+        "relatedCharacters": [
+            "starlord",
+            "rocket",
+            "groot",
+            "drax",
+            "silversurfer",
+            "thanos"
+        ]
+    },
+    {
+        "id": "galactus",
+        "name": "Galactus",
+        "realName": "Galan",
+        "type": "cosmic",
+        "status": "active",
+        "species": "cosmic entity",
+        "alignment": "neutral",
+        "firstAppearance": "Fantastic Four #48 (1966)",
+        "description": "A cosmic entity who consumes the energy of planets to sustain himself and maintain his existence.",
+        "abilities": "Power Cosmic, matter manipulation, energy manipulation, telepathy, cosmic awareness and immense physical power.",
+        "affiliations": [
+            "Heralds of Galactus"
+        ],
+        "image": "images/galactus.jpg",
+        
+        "relatedCharacters": [
+            "silversurfer",
+            "mrfantastic",
+            "humantorch",
+            "thing",
+            "doctorstrange",
+            "thor"
+        ]
+    },
+    {
+        "id": "vision",
+        "name": "Vision",
+        "realName": "Vision",
+        "type": "hero",
+        "status": "active",
+        "species": "synthezoid",
+        "alignment": "hero",
+        "firstAppearance": "Avengers #57 (1968)",
+        "description": "An advanced synthezoid created by Ultron who became a longtime member of the Avengers.",
+        "abilities": "Superhuman strength, flight, density manipulation, energy projection, durability and intangibility.",
+        "affiliations": [
+            "Avengers",
+            "Young Avengers"
+        ],
+        "image": "images/vision.jpg",
+        
+        "relatedCharacters": [
+            "ultron",
+            "scarletwitch",
+            "ironman",
+            "captainamerica",
+            "thor",
+            "hulk"
+        ]
+    },
+    {
+        "id": "war-machine",
+        "name": "War Machine",
+        "realName": "James Rhodes",
+        "type": "hero",
+        "status": "active",
+        "species": "human",
+        "alignment": "hero",
+        "firstAppearance": "Iron Man #118 (1979)",
+        "description": "A highly trained military officer and close ally of Iron Man who operates an advanced armored suit.",
+        "abilities": "Powered armor, flight, enhanced strength, energy weapons, advanced targeting systems and military expertise.",
+        "affiliations": [
+            "Avengers",
+            "U.S. Military"
+        ],
+        "image": "images/war-machine.jpg",
+        
+        "relatedCharacters": [
+            "ironman",
+            "captainamerica",
+            "falcon",
+            "hulk"
+        ]
+    },
+    {
+        "id": "falcon",
+        "name": "Falcon",
+        "realName": "Sam Wilson",
+        "type": "hero",
+        "status": "active",
+        "species": "human",
+        "alignment": "hero",
+        "firstAppearance": "Captain America #117 (1969)",
+        "description": "A skilled hero and longtime ally of Captain America who uses advanced flight technology and has a powerful bond with birds.",
+        "abilities": "Aerial combat, advanced flight suit, enhanced agility, expert combat skills, telepathic connection with birds and tactical expertise.",
+        "affiliations": [
+            "Avengers",
+            "Captain America",
+            "S.H.I.E.L.D."
+        ],
+        "image": "images/falcon.jpg",
+        
+        "relatedCharacters": [
+            "captainamerica",
+            "winter-soldier",
+            "war-machine",
+            "blackwidow",
+            "ironman"
+        ]
+    },
+    {
+        "id": "winter-soldier",
+        "name": "Winter Soldier",
+        "realName": "James Buchanan Barnes",
+        "type": "hero",
+        "status": "active",
+        "species": "human",
+        "alignment": "hero",
+        "firstAppearance": "Captain America #1 (1941) / Captain America #117 (1969) as the Winter Soldier",
+        "description": "A highly trained soldier and longtime ally of Captain America who was transformed into the Winter Soldier.",
+        "abilities": "Expert martial arts, master marksmanship, military training, enhanced physical abilities, exceptional reflexes and a cybernetic arm.",
+        "affiliations": [
+            "Avengers",
+            "S.H.I.E.L.D.",
+            "Howling Commandos"
+        ],
+        "image": "images/winter-soldier.jpg",
+        
+        "relatedCharacters": [
+            "captainamerica",
+            "falcon",
+            "blackwidow",
+            "ironman"
+        ]
+    },
+    {
+        "id": "wasp",
+        "name": "Wasp",
+        "realName": "Janet van Dyne",
+        "type": "hero",
+        "status": "active",
+        "species": "human/mutate",
+        "alignment": "hero",
+        "firstAppearance": "Tales to Astonish #44 (1963)",
+        "description": "A founding member of the Avengers who can shrink in size, fly and generate powerful bioelectric energy blasts.",
+        "abilities": "Size manipulation, flight, bioelectric blasts, enhanced agility and insect communication.",
+        "affiliations": [
+            "Avengers",
+            "Lady Liberators"
+        ],
+        "image": "images/wasp.jpg",
+        
+        "relatedCharacters": [
+            "antman",
+            "ironman",
+            "captainamerica",
+            "thor",
+            "hulk"
+        ]
+    },
+    {
+        "id": "quicksilver",
+        "name": "Quicksilver",
+        "realName": "Pietro Maximoff",
+        "type": "hero",
+        "status": "active",
+        "species": "mutant",
+        "alignment": "hero",
+        "firstAppearance": "X-Men #4 (1964)",
+        "description": "A mutant capable of moving at incredible speeds and the twin brother of Scarlet Witch.",
+        "abilities": "Superhuman speed, accelerated perception, enhanced reflexes, rapid movement and enhanced physical abilities.",
+        "affiliations": [
+            "Avengers",
+            "X-Men",
+            "Brotherhood of Mutants"
+        ],
+        "image": "images/quicksilver.jpg",
+        
+        "relatedCharacters": [
+            "scarletwitch",
+            "magneto",
+            "professorx",
+            "captainamerica",
+            "wolverine"
+        ]
+    },
+    {
+        "id": "valkyrie",
+        "name": "Valkyrie",
+        "realName": "Brunnhilde",
+        "type": "hero",
+        "status": "active",
+        "species": "Asgardian",
+        "alignment": "hero",
+        "firstAppearance": "Avengers #83 (1970)",
+        "description": "A legendary Asgardian warrior and member of the Valkyrior who guides worthy warriors to Valhalla.",
+        "abilities": "Superhuman strength, durability, enhanced speed, masterful combat skills, mystical senses and expert swordsmanship.",
+        "affiliations": [
+            "Valkyrior",
+            "Avengers",
+            "Defenders"
+        ],
+        "image": "images/valkyrie.jpg",
+        
+        "relatedCharacters": [
+            "thor",
+            "loki",
+            "doctorstrange",
+            "hulk",
+            "captainamerica"
+        ]
+    },
+    {
+        "id": "beast",
+        "name": "Beast",
+        "realName": "Hank McCoy",
+        "type": "hero",
+        "status": "active",
+        "species": "mutant",
+        "alignment": "hero",
+        "firstAppearance": "X-Men #1 (1963)",
+        "description": "A brilliant mutant scientist and longtime member of the X-Men known for his intelligence and animal-like physical abilities.",
+        "abilities": "Superhuman strength, enhanced agility, enhanced reflexes, heightened senses, exceptional intelligence and acrobatic ability.",
+        "affiliations": [
+            "X-Men",
+            "Avengers",
+            "Xavier Institute"
+        ],
+        "image": "images/beast.jpg",
+        
+        "relatedCharacters": [
+            "professorx",
+            "jeangrey",
+            "cyclops",
+            "storm",
+            "wolverine",
+            "gambit",
+            "rogue"
+        ]
+    },
+    {
+        "id": "nightcrawler",
+        "name": "Nightcrawler",
+        "realName": "Kurt Wagner",
+        "type": "hero",
+        "status": "active",
+        "species": "mutant",
+        "alignment": "hero",
+        "firstAppearance": "Giant-Size X-Men #1 (1975)",
+        "description": "A teleporting mutant and member of the X-Men known for his agility, swordsmanship and strong moral character.",
+        "abilities": "Teleportation, superhuman agility, enhanced reflexes, wall-crawling, expert swordsmanship and exceptional acrobatics.",
+        "affiliations": [
+            "X-Men",
+            "Excalibur",
+            "Xavier Institute"
+        ],
+        "image": "images/nightcrawler.jpg",
+        
+        "relatedCharacters": [
+            "wolverine",
+            "jeangrey",
+            "storm",
+            "cyclops",
+            "beast",
+            "gambit",
+            "rogue",
+            "professorx"
+        ]
+    },
+    {
+        "id": "rogue",
+        "name": "Rogue",
+        "realName": "Anna Marie",
+        "type": "hero",
+        "status": "active",
+        "species": "mutant",
+        "alignment": "hero",
+        "firstAppearance": "Avengers Annual #10 (1981)",
+        "description": "A mutant capable of absorbing the powers and memories of others through physical contact.",
+        "abilities": "Power absorption, memory absorption, superhuman strength, flight, enhanced durability and stamina.",
+        "affiliations": [
+            "X-Men",
+            "Brotherhood of Mutants",
+            "Xavier Institute"
+        ],
+        "image": "images/rogue.jpg",
+        
+        "relatedCharacters": [
+            "gambit",
+            "jeangrey",
+            "storm",
+            "cyclops",
+            "wolverine",
+            "magneto",
+            "mystique"
+        ]
+    },
+    {
+        "id": "iceman",
+        "name": "Iceman",
+        "realName": "Robert Drake",
+        "type": "hero",
+        "status": "active",
+        "species": "mutant",
+        "alignment": "hero",
+        "firstAppearance": "X-Men #1 (1963)",
+        "description": "An Omega-level mutant who can manipulate moisture and create and control ice.",
+        "abilities": "Cryokinesis, ice generation, ice transformation, temperature manipulation, enhanced durability and ice constructs.",
+        "affiliations": [
+            "X-Men",
+            "Champions",
+            "Xavier Institute"
+        ],
+        "image": "images/iceman.jpg",
+        
+        "relatedCharacters": [
+            "jeangrey",
+            "beast",
+            "cyclops",
+            "storm",
+            "wolverine",
+            "professorx",
+            "jubilee",
+            "rogue"
+        ]
+    },
+    {
+        "id": "colossus",
+        "name": "Colossus",
+        "realName": "Piotr Rasputin",
+        "type": "hero",
+        "status": "active",
+        "species": "mutant",
+        "alignment": "hero",
+        "firstAppearance": "Giant-Size X-Men #1 (1975)",
+        "description": "A mutant who can transform his entire body into organic steel, granting him immense strength and durability.",
+        "abilities": "Organic steel transformation, superhuman strength, extreme durability, enhanced stamina and resistance to extreme conditions.",
+        "affiliations": [
+            "X-Men",
+            "Excalibur",
+            "Xavier Institute"
+        ],
+        "image": "images/colossus.jpg",
+        
+        "relatedCharacters": [
+            "wolverine",
+            "jeangrey",
+            "cyclops",
+            "storm",
+            "professorx",
+            "nightcrawler",
+            "deadpool"
+        ]
+    },
+    {
+        "id": "jubilee",
+        "name": "Jubilee",
+        "realName": "Jubilation Lee",
+        "type": "hero",
+        "status": "active",
+        "species": "mutant",
+        "alignment": "hero",
+        "firstAppearance": "Uncanny X-Men #244 (1989)",
+        "description": "A mutant capable of generating explosive plasma-like energy and a longtime ally of the X-Men.",
+        "abilities": "Energy generation, plasma projection, explosive energy bursts, enhanced agility and combat skills.",
+        "affiliations": [
+            "X-Men",
+            "Generation X",
+            "Xavier Institute"
+        ],
+        "image": "images/jubilee.jpg",
+        
+        "relatedCharacters": [
+            "wolverine",
+            "storm",
+            "iceman",
+            "cyclops",
+            "jeangrey",
+            "beast",
+            "rogue"
+        ]
+    },
+    {
+        "id": "sabretooth",
+        "name": "Sabretooth",
+        "realName": "Victor Creed",
+        "type": "villain",
+        "status": "active",
+        "species": "mutant",
+        "alignment": "villain",
+        "firstAppearance": "Iron Fist #14 (1977)",
+        "description": "A savage mutant with a long history of conflict with Wolverine and an extraordinary healing ability.",
+        "abilities": "Superhuman strength, regenerative healing, enhanced senses, superhuman agility, retractable claws and enhanced durability.",
+        "affiliations": [
+            "Brotherhood of Mutants",
+            "Weapon X"
+        ],
+        "image": "images/sabretooth.jpg",
+        
+        "relatedCharacters": [
+            "wolverine",
+            "deadpool",
+            "magneto",
+            "mystique",
+            "jeangrey"
+        ]
+    },
+    {
+        "id": "miles-morales",
+        "name": "Spider-Man",
+        "realName": "Miles Morales",
+        "type": "hero",
+        "status": "active",
+        "species": "human/mutant",
+        "alignment": "hero",
+        "firstAppearance": "Ultimate Fallout #4 (2011)",
+        "description": "A young hero who inherited the mantle of Spider-Man and later became part of the main Marvel Universe.",
+        "abilities": "Superhuman strength, wall-crawling, spider-sense, enhanced agility, camouflage and bioelectric venom blasts.",
+        "affiliations": [
+            "Avengers",
+            "Champions",
+            "Spider-Army"
+        ],
+        "image": "images/miles-morales.jpg",
+        
+        "relatedCharacters": [
+            "spiderman",
+            "spider-gwen",
+            "spiderman-2099",
+            "spiderman-noir",
+            "prowler",
+            "doctor-octopus",
+            "kingpin",
+            "venom"
+        ]
+    },
+    {
+        "id": "spider-gwen",
+        "name": "Spider-Gwen",
+        "realName": "Gwen Stacy",
+        "type": "hero",
+        "status": "active",
+        "species": "human/mutate",
+        "alignment": "hero",
+        "firstAppearance": "Edge of Spider-Verse #2 (2014)",
+        "description": "A version of Gwen Stacy from an alternate universe who gained spider powers and became a superhero.",
+        "abilities": "Superhuman strength, enhanced agility, spider-sense, wall-crawling, web-shooters and enhanced reflexes.",
+        "affiliations": [
+            "Spider-Army",
+            "Spider-Woman Network"
+        ],
+        "image": "images/spider-gwen.jpg",
+        
+        "relatedCharacters": [
+            "spiderman",
+            "miles-morales",
+            "spiderman-2099",
+            "spiderman-noir",
+            "prowler"
+        ]
+    },
+    {
+        "id": "doctor-octopus",
+        "name": "Doctor Octopus",
+        "realName": "Otto Octavius",
+        "type": "villain",
+        "status": "active",
+        "species": "human",
+        "alignment": "villain",
+        "firstAppearance": "The Amazing Spider-Man #3 (1963)",
+        "description": "A brilliant scientist whose mechanical tentacles transformed him into one of Spider-Man's most dangerous enemies.",
+        "abilities": "Genius-level intellect, mechanical tentacles, enhanced strength, scientific expertise and strategic intelligence.",
+        "affiliations": [
+            "Sinister Six",
+            "Spider-Man Villains"
+        ],
+        "image": "images/doctor-octopus.jpg",
+        
+        "relatedCharacters": [
+            "spiderman",
+            "miles-morales",
+            "green-goblin",
+            "sandman",
+            "vulture",
+            "electro",
+            "kraven",
+            "mysterio"
+        ]
+    },
+    {
+        "id": "sandman",
+        "name": "Sandman",
+        "realName": "William Baker",
+        "type": "villain",
+        "status": "active",
+        "species": "mutate",
+        "alignment": "villain",
+        "firstAppearance": "The Amazing Spider-Man #4 (1963)",
+        "description": "A criminal who gained the ability to transform his body into sand and manipulate its shape and density.",
+        "abilities": "Sand manipulation, body transformation, superhuman strength, size manipulation, enhanced durability and shape-shifting.",
+        "affiliations": [
+            "Sinister Six",
+            "Frightful Four"
+        ],
+        "image": "images/sandman.jpg",
+        
+        "relatedCharacters": [
+            "spiderman",
+            "doctor-octopus",
+            "green-goblin",
+            "vulture",
+            "electro",
+            "kraven"
+        ]
+    },
+    {
+        "id": "vulture",
+        "name": "Vulture",
+        "realName": "Adrian Toomes",
+        "type": "villain",
+        "status": "active",
+        "species": "human",
+        "alignment": "villain",
+        "firstAppearance": "The Amazing Spider-Man #2 (1963)",
+        "description": "An inventor and criminal who uses an advanced flight harness and armored suit to operate as the Vulture.",
+        "abilities": "Powered flight, advanced technology, enhanced strength, aerial combat and exceptional engineering knowledge.",
+        "affiliations": [
+            "Sinister Six",
+            "Spider-Man Villains"
+        ],
+        "image": "images/vulture.jpg",
+        
+        "relatedCharacters": [
+            "spiderman",
+            "mysterio",
+            "green-goblin",
+            "doctor-octopus",
+            "sandman",
+            "electro",
+            "kraven"
+        ]
+    },
+    {
+        "id": "kraven",
+        "name": "Kraven the Hunter",
+        "realName": "Sergei Kravinoff",
+        "type": "villain",
+        "status": "active",
+        "species": "human",
+        "alignment": "villain",
+        "firstAppearance": "The Amazing Spider-Man #15 (1964)",
+        "description": "A legendary hunter who seeks the ultimate challenge and considers Spider-Man one of his greatest adversaries.",
+        "abilities": "Enhanced strength, speed and senses, master hunting skills, expert tracking, exceptional combat ability and extensive knowledge of wildlife.",
+        "affiliations": [
+            "Sinister Six",
+            "Spider-Man Villains"
+        ],
+        "image": "images/kraven.jpg",
+        
+        "relatedCharacters": [
+            "spiderman",
+            "doctor-octopus",
+            "green-goblin",
+            "sandman",
+            "vulture",
+            "mysterio"
+        ]
+    },
+    {
+        "id": "adam-warlock",
+        "name": "Adam Warlock",
+        "realName": "Adam Warlock",
+        "type": "hero",
+        "status": "active",
+        "species": "artificial human",
+        "alignment": "hero",
+        "firstAppearance": "Fantastic Four #66 (1967)",
+        "description": "A powerful cosmic being created through genetic engineering who has repeatedly played a major role in conflicts across the Marvel Universe.",
+        "abilities": "Superhuman strength, flight, energy manipulation, regeneration, cosmic awareness and mystical abilities.",
+        "affiliations": [
+            "Guardians of the Galaxy",
+            "Infinity Watch"
+        ],
+        "image": "images/adam-warlock.jpg",
+        
+        "relatedCharacters": [
+            "silversurfer",
+            "starlord",
+            "groot",
+            "rocket",
+            "drax",
+            "nova",
+            "thanos",
+            "galactus"
+        ]
+    },
+    {
+        "id": "ronan",
+        "name": "Ronan the Accuser",
+        "realName": "Ronan",
+        "type": "villain",
+        "status": "active",
+        "species": "Kree",
+        "alignment": "villain",
+        "firstAppearance": "Fantastic Four #65 (1967)",
+        "description": "A powerful Kree warrior and Accuser who has served the Kree Empire while pursuing his own vision of justice and order.",
+        "abilities": "Superhuman strength, durability, enhanced speed, expert combat skills, energy manipulation and mastery of the Universal Weapon.",
+        "affiliations": [
+            "Kree Empire",
+            "Accusers"
+        ],
+        "image": "images/ronan.jpg",
+        
+        "relatedCharacters": [
+            "thanos",
+            "captainmarvel",
+            "nova",
+            "starlord",
+            "drax",
+            "galactus"
+        ]
+    },
+    {
+        "id": "kang",
+        "name": "Kang the Conqueror",
+        "realName": "Nathaniel Richards",
+        "type": "villain",
+        "status": "active",
+        "species": "human",
+        "alignment": "villain",
+        "firstAppearance": "Avengers #8 (1964)",
+        "description": "A time-traveling conqueror from the future who has appeared under numerous identities throughout history.",
+        "abilities": "Genius-level intellect, time travel, advanced technology, powered armor, strategic mastery and temporal manipulation.",
+        "affiliations": [
+            "Kang Dynasty",
+            "Chronopolis"
+        ],
+        "image": "images/kang.jpg",
+        
+        "relatedCharacters": [
+            "mrfantastic",
+            "ironman",
+            "antman",
+            "mobius",
+            "doctorstrange",
+            "loki"
+        ]
+    },
+    {
+        "id": "agatha-harkness",
+        "name": "Agatha Harkness",
+        "realName": "Agatha Harkness",
+        "type": "villain",
+        "status": "active",
+        "species": "human",
+        "alignment": "villain",
+        "firstAppearance": "Fantastic Four #94 (1970)",
+        "description": "An ancient and extraordinarily powerful witch who has influenced many major magical events in the Marvel Universe.",
+        "abilities": "Powerful magic, spellcasting, telepathy, energy manipulation, mystical knowledge and exceptional longevity.",
+        "affiliations": [
+            "Fantastic Four",
+            "New Salem",
+            "Darkhold"
+        ],
+        "image": "images/agatha-harkness.jpg",
+        
+        "relatedCharacters": [
+            "scarletwitch",
+            "doctorstrange",
+            "dormammu",
+            "mephisto"
+        ]
+    },
+    {
+        "id": "dormammu",
+        "name": "Dormammu",
+        "realName": "Dormammu",
+        "type": "villain",
+        "status": "active",
+        "species": "Faltine",
+        "alignment": "villain",
+        "firstAppearance": "Strange Tales #126 (1964)",
+        "description": "A tremendously powerful mystical entity and ruler of the Dark Dimension who seeks to expand his dominion across realities.",
+        "abilities": "Reality manipulation, powerful magic, energy manipulation, immortality, dimensional manipulation and immense physical power.",
+        "affiliations": [
+            "Dark Dimension",
+            "Mindless Ones"
+        ],
+        "image": "images/dormammu.jpg",
+        
+        "relatedCharacters": [
+            "doctorstrange",
+            "scarletwitch",
+            "agatha-harkness",
+            "mephisto",
+            "ghostrider"
+        ]
+    },
+    {
+        "id": "sentry",
+        "name": "Sentry",
+        "realName": "Robert Reynolds",
+        "type": "cosmic",
+        "status": "active",
+        "species": "human",
+        "alignment": "hero",
+        "firstAppearance": "The Sentry #1 (2000)",
+        "description": "A powerful hero whose forgotten identity is tied to one of Marvel's most dangerous forces, the Void.",
+        "abilities": "Superhuman strength, speed, flight, energy manipulation, matter manipulation, telepathy and powerful regenerative abilities.",
+        "affiliations": [
+            "Avengers",
+            "Mighty Avengers",
+            "New Avengers"
+        ],
+        "image": "images/sentry.jpg",
+        
+        "relatedCharacters": [
+            "ironman",
+            "thor",
+            "hulk",
+            "captainamerica",
+            "doctorstrange",
+            "thanos"
+        ]
+    },
+    {
+        "id": "red-guardian",
+        "name": "Red Guardian",
+        "realName": "Alexei Shostakov",
+        "type": "hero",
+        "status": "active",
+        "species": "human",
+        "alignment": "hero",
+        "firstAppearance": "The Avengers #43 (1967)",
+        "description": "A Soviet super-soldier and skilled combatant who became the Russian counterpart to Captain America.",
+        "abilities": "Peak human strength, endurance, agility, advanced combat training, shield mastery and military expertise.",
+        "affiliations": [
+            "Russian Government",
+            "Red Room",
+            "Thunderbolts"
+        ],
+        "image": "images/red-guardian.jpg",
+        
+        "relatedCharacters": [
+            "captainamerica",
+            "blackwidow",
+            "yelena-belova",
+            "winter-soldier",
+            "hawkeye",
+            "taskmaster"
+        ]
+    },
+    {
+        "id": "cable",
+        "name": "Cable",
+        "realName": "Nathan Summers",
+        "type": "hero",
+        "status": "active",
+        "species": "mutant",
+        "alignment": "hero",
+        "firstAppearance": "The New Mutants #87 (1990)",
+        "description": "A time-traveling mutant warrior from a dystopian future who fights to protect the world from catastrophic threats.",
+        "abilities": "Telekinesis, telepathy, enhanced strength, advanced weaponry, tactical genius and extensive time-travel experience.",
+        "affiliations": [
+            "X-Men",
+            "X-Force",
+            "New Mutants"
+        ],
+        "image": "images/cable.jpg",
+        
+        "relatedCharacters": [
+            "wolverine",
+            "jeangrey",
+            "cyclops",
+            "havok",
+            "bishop",
+            "deadpool",
+            "professorx"
+        ]
+    },
+    {
+        "id": "bishop",
+        "name": "Bishop",
+        "realName": "Lucas Bishop",
+        "type": "hero",
+        "status": "active",
+        "species": "mutant",
+        "alignment": "hero",
+        "firstAppearance": "Uncanny X-Men #282 (1991)",
+        "description": "A mutant from a dystopian future who traveled through time to join the X-Men and prevent disasters.",
+        "abilities": "Energy absorption and redirection, enhanced physical abilities, expert marksmanship and tactical combat skills.",
+        "affiliations": [
+            "X-Men",
+            "XSE",
+            "X-Force"
+        ],
+        "image": "images/bishop.jpg",
+        
+        "relatedCharacters": [
+            "wolverine",
+            "storm",
+            "cyclops",
+            "jeangrey",
+            "cable",
+            "professorx"
+        ]
+    },
+    {
+        "id": "havok",
+        "name": "Havok",
+        "realName": "Alex Summers",
+        "type": "hero",
+        "status": "active",
+        "species": "mutant",
+        "alignment": "hero",
+        "firstAppearance": "X-Men #54 (1969)",
+        "description": "A powerful mutant capable of absorbing cosmic energy and releasing it as devastating plasma blasts.",
+        "abilities": "Plasma energy absorption and projection, energy resistance, enhanced durability and combat training.",
+        "affiliations": [
+            "X-Men",
+            "X-Factor",
+            "Starjammers"
+        ],
+        "image": "images/havok.jpg",
+        
+        "relatedCharacters": [
+            "cyclops",
+            "jeangrey",
+            "wolverine",
+            "professorx",
+            "beast",
+            "storm",
+            "cable"
+        ]
+    },
+    {
+        "id": "spiderman-2099",
+        "name": "Spider-Man 2099",
+        "realName": "Miguel O'Hara",
+        "type": "hero",
+        "status": "active",
+        "species": "human / genetically altered",
+        "alignment": "hero",
+        "firstAppearance": "Spider-Man 2099 #1 (1992)",
+        "description": "A genetically altered scientist from the year 2099 who takes up the mantle of Spider-Man to protect his futuristic world.",
+        "abilities": "Superhuman strength, speed, agility, enhanced senses, wall-crawling, claws, fangs and accelerated healing.",
+        "affiliations": [
+            "Spider-Society",
+            "Alchemax"
+        ],
+        "image": "images/spiderman-2099.jpg",
+        
+        "relatedCharacters": [
+            "spiderman",
+            "miles-morales",
+            "spider-gwen",
+            "spiderman-noir",
+            "prowler",
+            "venom"
+        ]
+    },
+    {
+        "id": "spiderman-noir",
+        "name": "Spider-Man Noir",
+        "realName": "Peter Parker",
+        "type": "hero",
+        "status": "active",
+        "species": "human",
+        "alignment": "hero",
+        "firstAppearance": "Spider-Man Noir #1 (2009)",
+        "description": "A darker version of Spider-Man from a 1930s-inspired reality who battles criminals with a ruthless determination.",
+        "abilities": "Enhanced strength, agility, heightened senses, wall-crawling, stealth and expert hand-to-hand combat.",
+        "affiliations": [
+            "Spider-Verse",
+            "Spider-Society"
+        ],
+        "image": "images/spiderman-noir.jpg",
+        
+        "relatedCharacters": [
+            "spiderman",
+            "miles-morales",
+            "spider-gwen",
+            "spiderman-2099",
+            "prowler"
+        ]
+    },
+    {
+        "id": "prowler",
+        "name": "Prowler",
+        "realName": "Aaron Davis",
+        "type": "antihero",
+        "status": "active",
+        "species": "human",
+        "alignment": "antihero",
+        "firstAppearance": "Ultimate Spider-Man #1 (2000)",
+        "description": "A skilled thief and underground operative who uses advanced technology and combat gear to operate as the Prowler.",
+        "abilities": "Expert combat skills, stealth, acrobatics, tactical intelligence and technologically enhanced weapons.",
+        "affiliations": [
+            "Criminal Underworld",
+            "Spider-Verse"
+        ],
+        "image": "images/prowler.jpg",
+        
+        "relatedCharacters": [
+            "miles-morales",
+            "spiderman",
+            "spider-gwen",
+            "spiderman-2099",
+            "kingpin",
+            "green-goblin"
+        ]
+    },
+    {
+        "id": "electro",
+        "name": "Electro",
+        "realName": "Max Dillon",
+        "type": "villain",
+        "status": "active",
+        "species": "human / electrically empowered",
+        "alignment": "villain",
+        "firstAppearance": "The Amazing Spider-Man #9 (1964)",
+        "description": "A supervillain who gained the ability to generate and control enormous amounts of electricity.",
+        "abilities": "Electricity generation, energy manipulation, electrical absorption, flight and high-voltage attacks.",
+        "affiliations": [
+            "Sinister Six",
+            "Spider-Man Rogues"
+        ],
+        "image": "images/electro.jpg",
+        
+        "relatedCharacters": [
+            "spiderman",
+            "doctor-octopus",
+            "green-goblin",
+            "sandman",
+            "vulture",
+            "mysterio",
+            "kraven"
+        ]
+    },
+    {
+        "id": "lizard",
+        "name": "Lizard",
+        "realName": "Curt Connors",
+        "type": "villain",
+        "status": "active",
+        "species": "human / reptilian mutate",
+        "alignment": "villain",
+        "firstAppearance": "The Amazing Spider-Man #6 (1963)",
+        "description": "A brilliant scientist transformed into a powerful reptilian creature after an experiment intended to regrow his missing arm went wrong.",
+        "abilities": "Superhuman strength, speed, agility, enhanced senses, regenerative healing, claws and fangs.",
+        "affiliations": [
+            "Sinister Six",
+            "Spider-Man Rogues"
+        ],
+        "image": "images/lizard.jpg",
+        
+        "relatedCharacters": [
+            "spiderman",
+            "doctor-octopus",
+            "green-goblin",
+            "sandman",
+            "vulture",
+            "electro",
+            "kraven"
+        ]
+    },
+    {
+        "id": "knull",
+        "name": "Knull",
+        "realName": "Knull",
+        "type": "cosmic",
+        "status": "active",
+        "species": "godlike symbiote being",
+        "alignment": "villain",
+        "firstAppearance": "Venom #3 (2018)",
+        "description": "The ancient god of the symbiotes who seeks to spread darkness and dominate the universe.",
+        "abilities": "Superhuman strength, immortality, symbiote control, energy manipulation, weapon creation and cosmic-level power.",
+        "affiliations": [
+            "Symbiotes",
+            "Klyntar"
+        ],
+        "image": "images/knull.jpg",
+        
+        "relatedCharacters": [
+            "venom",
+            "silversurfer",
+            "spiderman",
+            "thor",
+            "galactus",
+            "adam-warlock"
+        ]
+    },
+    {
+        "id": "red-skull",
+        "name": "Red Skull",
+        "realName": "Johann Schmidt",
+        "type": "villain",
+        "status": "active",
+        "species": "human",
+        "alignment": "villain",
+        "firstAppearance": "Captain America Comics #1 (1941)",
+        "description": "A fanatical Nazi scientist and one of Captain America's oldest and most dangerous enemies.",
+        "abilities": "Advanced scientific knowledge, tactical genius, enhanced durability and extensive weapons expertise.",
+        "affiliations": [
+            "Hydra",
+            "Nazis",
+            "AIM"
+        ],
+        "image": "images/red-skull.jpg",
+        
+        "relatedCharacters": [
+            "captainamerica",
+            "ironman",
+            "winter-soldier",
+            "blackwidow",
+            "crossbones",
+            "baron-zemo"
+        ]
+    },
+    {
+        "id": "hela",
+        "name": "Hela",
+        "realName": "Hela",
+        "type": "cosmic",
+        "status": "active",
+        "species": "Asgardian",
+        "alignment": "villain",
+        "firstAppearance": "Journey into Mystery #102 (1964)",
+        "description": "The Asgardian goddess of death who seeks power over the realms and commands the forces of the dead.",
+        "abilities": "Superhuman strength, immortality, necromancy, weapon creation, energy projection and extreme durability.",
+        "affiliations": [
+            "Asgard",
+            "Hel",
+            "Niflheim"
+        ],
+        "image": "images/hela.jpg",
+        
+        "relatedCharacters": [
+            "thor",
+            "loki",
+            "valkyrie",
+            "doctorstrange",
+            "thanos"
+        ]
+    },
+    {
+        "id": "killmonger",
+        "name": "Killmonger",
+        "realName": "Erik Killmonger",
+        "type": "villain",
+        "status": "deceased",
+        "species": "human",
+        "alignment": "villain",
+        "firstAppearance": "Jungle Action #6 (1973)",
+        "description": "A highly trained warrior and revolutionary who seeks to overthrow Wakanda's leadership and reshape its place in the world.",
+        "abilities": "Elite hand-to-hand combat, tactical intelligence, weapons expertise and enhanced physical abilities through the Heart-Shaped Herb.",
+        "affiliations": [
+            "Wakandan Empire",
+            "War Dogs"
+        ],
+        "image": "images/killmonger.jpg",
+        
+        "relatedCharacters": [
+            "blackpanther",
+            "captainamerica",
+            "ironman",
+            "storm",
+            "namor"
+        ]
+    },
+    {
+        "id": "taskmaster",
+        "name": "Taskmaster",
+        "realName": "Tony Masters",
+        "type": "villain",
+        "status": "active",
+        "species": "human",
+        "alignment": "villain",
+        "firstAppearance": "The Avengers #195 (1980)",
+        "description": "A deadly mercenary with the ability to perfectly replicate physical movements after seeing them once.",
+        "abilities": "Photographic reflexes, expert combat skills, marksmanship, swordsmanship and tactical analysis.",
+        "affiliations": [
+            "Mercenaries",
+            "Thunderbolts",
+            "Criminal Underworld"
+        ],
+        "image": "images/taskmaster.jpg",
+        
+        "relatedCharacters": [
+            "blackwidow",
+            "red-guardian",
+            "yelena-belova",
+            "captainamerica",
+            "deadpool",
+            "crossbones"
+        ]
+    },
+    {
+        "id": "baron-zemo",
+        "name": "Baron Zemo",
+        "realName": "Helmut Zemo",
+        "type": "villain",
+        "status": "active",
+        "species": "human",
+        "alignment": "villain",
+        "firstAppearance": "Captain America: Civil War #1 (2015)",
+        "description": "A brilliant strategist who uses manipulation, planning and political intrigue to destroy his enemies.",
+        "abilities": "Strategic intelligence, psychological manipulation, military training, hand-to-hand combat and weapons expertise.",
+        "affiliations": [
+            "Thunderbolts",
+            "Sokovia",
+            "Masters of Evil"
+        ],
+        "image": "images/baron-zemo.jpg",
+        
+        "relatedCharacters": [
+            "captainamerica",
+            "winter-soldier",
+            "falcon",
+            "blackwidow",
+            "ironman",
+            "taskmaster",
+            "red-skull"
+        ]
+    },
+    {
+        "id": "mephisto",
+        "name": "Mephisto",
+        "realName": "Mephisto",
+        "type": "cosmic",
+        "status": "active",
+        "species": "demon",
+        "alignment": "villain",
+        "firstAppearance": "Silver Surfer #3 (1968)",
+        "description": "A powerful demonic entity who manipulates souls, makes dangerous bargains and seeks control over mortal and supernatural realms.",
+        "abilities": "Reality manipulation, immortality, teleportation, energy projection, soul manipulation and magical abilities.",
+        "affiliations": [
+            "Hell",
+            "Underworld"
+        ],
+        "image": "images/mephisto.jpg",
+        
+        "relatedCharacters": [
+            "ghostrider",
+            "doctorstrange",
+            "scarletwitch",
+            "silversurfer",
+            "dormammu",
+            "agatha-harkness"
+        ]
+    },
+    {
+        "id": "bullseye",
+        "name": "Bullseye",
+        "realName": "Benjamin Poindexter",
+        "type": "antihero",
+        "status": "active",
+        "species": "human",
+        "alignment": "antihero",
+        "firstAppearance": "Daredevil #131 (1976)",
+        "description": "A ruthless assassin with extraordinary accuracy who can turn almost any object into a deadly weapon.",
+        "abilities": "Exceptional accuracy, expert marksmanship, enhanced reflexes, hand-to-hand combat and weapon mastery.",
+        "affiliations": [
+            "Kingpin",
+            "Hand",
+            "Thunderbolts"
+        ],
+        "image": "images/bullseye.jpg",
+        
+        "relatedCharacters": [
+            "daredevil",
+            "kingpin",
+            "punisher",
+            "jigsaw"
+        ]
+    },
+    {
+        "id": "crossbones",
+        "name": "Crossbones",
+        "realName": "Brock Rumlow",
+        "type": "villain",
+        "status": "active",
+        "species": "human",
+        "alignment": "villain",
+        "firstAppearance": "Captain America #360 (1989)",
+        "description": "A brutal mercenary and Hydra operative who has repeatedly fought Captain America and other heroes.",
+        "abilities": "Elite combat training, martial arts, weapons expertise, tactical planning and enhanced physical conditioning.",
+        "affiliations": [
+            "Hydra",
+            "Thunderbolts",
+            "Skull's Army"
+        ],
+        "image": "images/crossbones.jpg",
+        
+        "relatedCharacters": [
+            "captainamerica",
+            "winter-soldier",
+            "blackwidow",
+            "red-skull",
+            "baron-zemo",
+            "taskmaster"
+        ]
+    },
+    {
+        "id": "jigsaw",
+        "name": "Jigsaw",
+        "realName": "Billy Russo",
+        "type": "villain",
+        "status": "active",
+        "species": "human",
+        "alignment": "villain",
+        "firstAppearance": "The Punisher #14 (1977)",
+        "description": "A ruthless criminal and longtime enemy of the Punisher who builds power through violence and organized crime.",
+        "abilities": "Expert firearms training, hand-to-hand combat, tactical intelligence and criminal leadership.",
+        "affiliations": [
+            "Criminal Underworld",
+            "Punisher Rogues"
+        ],
+        "image": "images/jigsaw.jpg",
+        
+        "relatedCharacters": [
+            "punisher",
+            "daredevil",
+            "kingpin",
+            "bullseye"
+        ]
+    },
+    {
+        "id": "mister-negative",
+        "name": "Mister Negative",
+        "realName": "Martin Li",
+        "type": "villain",
+        "status": "active",
+        "species": "human / enhanced",
+        "alignment": "villain",
+        "firstAppearance": "Free Comic Book Day: Spider-Man (2007)",
+        "description": "A powerful criminal leader whose two identities control an underground empire and wield dangerous energy manipulation.",
+        "abilities": "Superhuman strength, energy manipulation, corruption powers, enhanced durability and martial arts mastery.",
+        "affiliations": [
+            "Inner Demons",
+            "Demons"
+        ],
+        "image": "images/mister-negative.jpg",
+        
+        "relatedCharacters": [
+            "spiderman",
+            "miles-morales",
+            "kingpin",
+            "venom",
+            "doctor-octopus"
+        ]
+    },
+    {
+        "id": "mobius",
+        "name": "Mobius M. Mobius",
+        "realName": "Mobius M. Mobius",
+        "type": "hero",
+        "status": "active",
+        "species": "human",
+        "alignment": "hero",
+        "firstAppearance": "Fantastic Four #353 (1991)",
+        "description": "A dedicated TVA agent and bureaucrat who investigates dangerous temporal anomalies while trying to maintain order across time.",
+        "abilities": "Advanced TVA technology, temporal knowledge, investigative skills, tactical training and extensive knowledge of alternate timelines.",
+        "affiliations": [
+            "Time Variance Authority"
+        ],
+        "image": "images/mobius.jpg",
+        
+        "relatedCharacters": [
+            "loki",
+            "kang",
+            "doctorstrange",
+            "antman",
+            "mrfantastic"
+        ]
+    },
+    {
+        "id": "tombstone",
+        "name": "Tombstone",
+        "realName": "Lonnie Lincoln",
+        "type": "villain",
+        "status": "active",
+        "species": "human / enhanced",
+        "alignment": "villain",
+        "firstAppearance": "Web of Spider-Man #36 (1988)",
+        "description": "A powerful crime boss with incredible physical strength and a reputation for ruthless brutality.",
+        "abilities": "Superhuman strength, enhanced durability, resistance to injury, heightened senses and expert combat skills.",
+        "affiliations": [
+            "Criminal Underworld",
+            "Kingpin"
+        ],
+        "image": "images/tombstone.jpg",
+        
+        "relatedCharacters": [
+            "spiderman",
+            "miles-morales",
+            "prowler",
+            "kingpin",
+            "daredevil",
+            "punisher"
+        ]
+    },
+    {
+        "id": "heimdall",
+        "name": "Heimdall",
+        "realName": "Heimdall",
+        "type": "cosmic",
+        "status": "deceased",
+        "species": "Asgardian",
+        "alignment": "hero",
+        "firstAppearance": "Journey into Mystery #85 (1962)",
+        "description": "The all-seeing guardian of the Bifrost who protects Asgard and watches over the Nine Realms.",
+        "abilities": "Enhanced strength, durability, heightened senses, cosmic perception and mastery of the Bifrost.",
+        "affiliations": [
+            "Asgard",
+            "Asgardian Warriors"
+        ],
+        "image": "images/heimdall.jpg",
+        
+        "relatedCharacters": [
+            "thor",
+            "loki",
+            "hela",
+            "valkyrie",
+            "doctorstrange"
+        ]
+    },
+    {
+        "id": "yelena-belova",
+        "name": "Yelena Belova",
+        "realName": "Yelena Belova",
+        "type": "hero",
+        "status": "active",
+        "species": "human",
+        "alignment": "hero",
+        "firstAppearance": "Inhumans #5 (1999)",
+        "description": "A highly trained Black Widow operative who becomes a skilled hero while confronting the legacy of the Red Room.",
+        "abilities": "Elite martial arts, espionage, acrobatics, weapons mastery, tactical intelligence and advanced Red Room training.",
+        "affiliations": [
+            "Red Room",
+            "Black Widows",
+            "Thunderbolts"
+        ],
+        "image": "images/yelena-belova.jpg",
+        
+        "relatedCharacters": [
+            "blackwidow",
+            "red-guardian",
+            "hawkeye",
+            "captainamerica",
+            "winter-soldier",
+            "taskmaster"
+        ]
+    }
+]

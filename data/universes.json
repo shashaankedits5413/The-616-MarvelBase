@@ -1,0 +1,446 @@
+[
+  {
+    "id": "earth-616",
+    "name": "Prime Marvel Universe",
+    "designation": "Earth-616",
+    "type": "Mainstream Comic Continuity",
+    "threatLevel": "Level 3 - Standard",
+    "status": "Active",
+    "firstAppearance": "Marvel Mystery Comics #1 (1939) / Modern designation established in Captain Britain #14 (1981)",
+    "description": "The primary Marvel Comics reality and the central continuity from which the majority of Marvel's classic heroes, villains, civilizations, and cosmic events originate.",
+    "keyLocations": [
+      "New York City",
+      "Wakanda",
+      "Latveria",
+      "Krakoa",
+      "Asgard",
+      "Sanctum Sanctorum",
+      "Avengers Mansion"
+    ],
+    "characters": [
+      "Spider-Man (Peter Parker)",
+      "Iron Man (Tony Stark)",
+      "Captain America (Steve Rogers)",
+      "Thor Odinson",
+      "Hulk (Bruce Banner)",
+      "Doctor Strange (Stephen Strange)",
+      "Black Panther (T'Challa)",
+      "Wolverine (Logan)",
+      "Storm (Ororo Munroe)"
+    ],
+    "events": [
+      "Secret Invasion",
+      "Civil War",
+      "Infinity Gauntlet",
+      "Secret Wars (2015)",
+      "Avengers vs. X-Men",
+      "Krakoan Era"
+    ],
+    "themeColor": "#24D7E8"
+  },
+  {
+    "id": "earth-199999",
+    "name": "Marvel Cinematic Universe",
+    "designation": "Earth-199999 / Earth-616 (Marvel Studios designation)",
+    "type": "Live-Action Cinematic Continuity",
+    "threatLevel": "Level 4 - High",
+    "status": "Active",
+    "firstAppearance": "Iron Man (2008)",
+    "description": "The interconnected cinematic reality of the Marvel Studios saga, where superhuman individuals, alien civilizations, mystical forces, and multiversal phenomena reshape Earth and the wider universe.",
+    "keyLocations": [
+      "New York City",
+      "Avengers Compound",
+      "Kamar-Taj",
+      "Wakanda",
+      "Knowhere",
+      "Westview",
+      "Sokovia",
+      "Kree-Lar"
+    ],
+    "characters": [
+      "Iron Man (Tony Stark)",
+      "Captain America (Steve Rogers)",
+      "Thor Odinson",
+      "Loki Laufeyson",
+      "Doctor Strange",
+      "Spider-Man (Peter Parker)",
+      "Thanos",
+      "Captain Marvel (Carol Danvers)",
+      "Wanda Maximoff"
+    ],
+    "events": [
+      "Battle of New York",
+      "Avengers: Age of Ultron",
+      "Infinity War",
+      "The Blip",
+      "Battle of Earth",
+      "Multiversal Incursions",
+      "Formation of the TVA's Multiversal Order"
+    ],
+    "themeColor": "#E62429"
+  },
+  {
+    "id": "earth-1610",
+    "name": "Ultimate Universe",
+    "designation": "Earth-1610",
+    "type": "Alternate Comic Continuity",
+    "threatLevel": "Level 5 - Severe",
+    "status": "Reconstructed",
+    "firstAppearance": "Ultimate Spider-Man #1 (2000)",
+    "description": "A modernized Marvel reality that reimagined iconic heroes with younger identities, contemporary origins, and radically altered histories before being destroyed and ultimately reconstructed.",
+    "keyLocations": [
+      "New York City",
+      "Triskelion",
+      "Baxter Building",
+      "Latveria",
+      "Wakanda"
+    ],
+    "characters": [
+      "Miles Morales",
+      "Ultimate Spider-Man (Peter Parker)",
+      "The Maker (Reed Richards)",
+      "Ultimate Nick Fury",
+      "Ultimate Captain America",
+      "The Ultimates"
+    ],
+    "events": [
+      "Ultimatum",
+      "Death of Spider-Man",
+      "Cataclysm",
+      "Secret Wars (2015)",
+      "Reconstruction of the Ultimate Universe"
+    ],
+    "themeColor": "#9B51E0"
+  },
+  {
+    "id": "earth-838",
+    "name": "Illuminati Reality",
+    "designation": "Earth-838",
+    "type": "Alternate Cinematic Reality",
+    "threatLevel": "Level 2 - Moderate",
+    "status": "Uncertain",
+    "firstAppearance": "Doctor Strange in the Multiverse of Madness (2022)",
+    "description": "A technologically advanced reality whose governments and superhero community developed powerful systems for controlling global and multiversal threats, including an elite Illuminati council.",
+    "keyLocations": [
+      "New York City",
+      "Illuminati Headquarters",
+      "Baxter Foundation",
+      "Kamar-Taj",
+      "Sanctum Sanctorum"
+    ],
+    "characters": [
+      "Captain Carter (Peggy Carter)",
+      "Black Bolt (Blackagar Boltagon)",
+      "Professor X (Charles Xavier)",
+      "Captain Marvel (Maria Rambeau)",
+      "Mister Fantastic (Reed Richards)",
+      "Supreme Strange"
+    ],
+    "events": [
+      "Creation of the Illuminati",
+      "Ultron Sentry Program",
+      "Supreme Strange's Incursion",
+      "Death of Supreme Strange",
+      "Scarlet Witch's Assault on the Illuminati"
+    ],
+    "themeColor": "#00F0FF"
+  },
+  {
+    "id": "earth-928",
+    "name": "Marvel 2099",
+    "designation": "Earth-928",
+    "type": "Futuristic Comic Continuity",
+    "threatLevel": "Level 4 - High",
+    "status": "Active / Variable",
+    "firstAppearance": "Spider-Man 2099 #1 (1992)",
+    "description": "A dystopian future dominated by powerful corporations and technological inequality, where a new generation of heroes inherits the legacies of Marvel's classic champions.",
+    "keyLocations": [
+      "Nueva York",
+      "Alchemax Tower",
+      "Downtown",
+      "Trans-Sabal",
+      "Valhalla"
+    ],
+    "characters": [
+      "Miguel O'Hara (Spider-Man 2099)",
+      "Doom 2099",
+      "Punisher 2099 (Jake Gallows)",
+      "Ghost Rider 2099 (Kenshiro Cochrane)",
+      "Ravager 2099"
+    ],
+    "events": [
+      "Rise of Alchemax",
+      "Corporate Control of Society",
+      "Heroic Age Rebirth",
+      "2099 Temporal Conflicts",
+      "Spider-Society Multiversal Activity"
+    ],
+    "themeColor": "#FF2A6D"
+  },
+  {
+    "id": "earth-trn700",
+    "name": "Spider-Verse Reality",
+    "designation": "Earth-TRN700",
+    "type": "Animated Multiversal Continuity",
+    "threatLevel": "Level 5 - Critical",
+    "status": "Active",
+    "firstAppearance": "Spider-Man: Into the Spider-Verse (2018)",
+    "description": "A collection of interconnected Spider-Man realities linked through the Web of Life and Destiny, where Spider-heroes from radically different dimensions can converge against multiversal threats.",
+    "keyLocations": [
+      "Brooklyn",
+      "Spider-Society Headquarters",
+      "The Spider-Verse",
+      "The Great Web",
+      "Alchemax Collider Facility"
+    ],
+    "characters": [
+      "Miles Morales",
+      "Gwen Stacy",
+      "Miguel O'Hara",
+      "Spider-Man Noir",
+      "Spider-Punk (Hobie Brown)",
+      "Peni Parker & SP//dr",
+      "Spider-Ham"
+    ],
+    "events": [
+      "Alchemax Super-Collider Incident",
+      "Kingpin's Multiversal Experiment",
+      "Spider-Society Formation",
+      "Canon Event Conflict",
+      "Spot's Multiversal Threat"
+    ],
+    "themeColor": "#FFE600"
+  },
+  {
+    "id": "earth-2149",
+    "name": "Marvel Zombies",
+    "designation": "Earth-2149",
+    "type": "Alternate Horror Continuity",
+    "threatLevel": "Level 5 - Cataclysmic",
+    "status": "Quarantined / Collapsed",
+    "firstAppearance": "Ultimate Fantastic Four #21 (2005)",
+    "description": "A devastated reality where a mysterious infection transformed Earth's superhuman population into intelligent but uncontrollably hungry undead beings, triggering a civilization-ending catastrophe.",
+    "keyLocations": [
+      "New York City",
+      "Avengers Mansion",
+      "Asteroid M",
+      "Latveria",
+      "Wakanda"
+    ],
+    "characters": [
+      "Zombie Spider-Man",
+      "Zombie Captain America",
+      "Zombie Iron Man",
+      "Zombie Wolverine",
+      "Zombie Hulk",
+      "Silver Surfer",
+      "Galactus"
+    ],
+    "events": [
+      "Initial Infection",
+      "Collapse of Human Civilization",
+      "Consumption of the Silver Surfer",
+      "Devouring of Galactus",
+      "Cosmic Expansion of the Infection"
+    ],
+    "themeColor": "#39FF14"
+  },
+  {
+    "id": "earth-92131",
+    "name": "Animated Marvel Universe",
+    "designation": "Earth-92131",
+    "type": "1990s Animated Continuity",
+    "threatLevel": "Level 2 - Moderate",
+    "status": "Active / Legacy Continuity",
+    "firstAppearance": "X-Men: The Animated Series (1992)",
+    "description": "The interconnected animated reality associated with Marvel's landmark 1990s television series, home to the X-Men, Spider-Man, and other iconic animated interpretations of Marvel heroes.",
+    "keyLocations": [
+      "Xavier's Institute",
+      "New York City",
+      "Genosha",
+      "Muir Island",
+      "Savage Land",
+      "Daily Bugle"
+    ],
+    "characters": [
+      "Spider-Man (Peter Parker)",
+      "Cyclops (Scott Summers)",
+      "Wolverine (Logan)",
+      "Storm (Ororo Munroe)",
+      "Gambit (Remy LeBeau)",
+      "Rogue",
+      "Magneto"
+    ],
+    "events": [
+      "Night of the Sentinels",
+      "Dark Phoenix Saga",
+      "Genosha Mutant Conflict",
+      "Secret Wars",
+      "Spider-Man's Multiversal Adventures"
+    ],
+    "themeColor": "#FF9900"
+  },
+
+  {
+    "id": "earth-65",
+    "name": "Gwen Stacy's Reality",
+    "designation": "Earth-65",
+    "type": "Alternate Comic Continuity",
+    "threatLevel": "Level 3 - Standard",
+    "status": "Active",
+    "firstAppearance": "Edge of Spider-Verse #2 (2014)",
+    "description": "A reality where Gwen Stacy became Spider-Woman instead of Peter Parker, developing a unique superhero identity while navigating the consequences of a world that treats superhuman activity with suspicion.",
+    "keyLocations": [
+      "New York City",
+      "Earth-65 Midtown High",
+      "The Daily Bugle",
+      "Oscorp"
+    ],
+    "characters": [
+      "Spider-Woman (Gwen Stacy)",
+      "Captain Stacy",
+      "Mary Jane Watson",
+      "Matt Murdock",
+      "Harry Osborn"
+    ],
+    "events": [
+      "Gwen Stacy's Transformation",
+      "Peter Parker's Death",
+      "Battle with the Lizard",
+      "Spider-Verse",
+      "Spider-Geddon"
+    ],
+    "themeColor": "#F15BB5"
+  },
+  {
+    "id": "earth-807128",
+    "name": "Old Man Logan Reality",
+    "designation": "Earth-807128",
+    "type": "Dystopian Alternate Future",
+    "threatLevel": "Level 5 - Severe",
+    "status": "Active / Post-Apocalyptic",
+    "firstAppearance": "Old Man Logan #1 (2008)",
+    "description": "A dark future where supervillains conquered the United States and divided the country into territories. Decades after the fall of the heroes, an aging Wolverine is forced back into action.",
+    "keyLocations": [
+      "Hulkland",
+      "Doom's Territory",
+      "California",
+      "Las Vegas",
+      "Spider-Buggy Route"
+    ],
+    "characters": [
+      "Old Man Logan",
+      "Hawkeye (Clint Barton)",
+      "Red Skull",
+      "President Logan",
+      "Old Man Hawkeye"
+    ],
+    "events": [
+      "Villain Conquest",
+      "Fall of the Avengers",
+      "Death of the X-Men",
+      "Logan's Final Journey",
+      "Fall of the Hulk Gang"
+    ],
+    "themeColor": "#8B6F47"
+  },
+  {
+    "id": "earth-311",
+    "name": "Marvel 1602",
+    "designation": "Earth-311",
+    "type": "Historical Alternate Continuity",
+    "threatLevel": "Level 3 - Standard",
+    "status": "Active / Historical",
+    "firstAppearance": "Marvel 1602 #1 (2003)",
+    "description": "A reality where familiar Marvel heroes and villains were born centuries earlier during the Elizabethan era, transforming the political and supernatural landscape of early modern Europe.",
+    "keyLocations": [
+      "London",
+      "Roanoke Colony",
+      "Spain",
+      "Latveria",
+      "The New World"
+    ],
+    "characters": [
+      "Peter Parquagh",
+      "Virginia Dare",
+      "Sir Nicholas Fury",
+      "Matthew Murdoch",
+      "Carlos Javier",
+      "Natasha",
+      "The Fantastick Four"
+    ],
+    "events": [
+      "The Four-Fantastick Expedition",
+      "Discovery of the Marvels",
+      "The Witchbreed Conflict",
+      "Attack on the 1602 World",
+      "Temporal Crisis"
+    ],
+    "themeColor": "#C89B3C"
+  },
+  {
+    "id": "earth-65-animated",
+    "name": "Uncanny Animated Universe",
+    "designation": "Earth-TRN-UNCANNY",
+    "type": "Stylized Animated Continuity",
+    "threatLevel": "Level 4 - High",
+    "status": "Active",
+    "firstAppearance": "Uncanny X-Men Animated Continuity",
+    "description": "A stylized animated reality where mutantkind, superheroes, and supervillains exist in a highly expressive world shaped by decades of conflict between humans and mutants.",
+    "keyLocations": [
+      "Xavier's Mansion",
+      "New York City",
+      "Genosha",
+      "Asteroid M",
+      "The Savage Land"
+    ],
+    "characters": [
+      "Wolverine",
+      "Cyclops",
+      "Jean Grey",
+      "Storm",
+      "Gambit",
+      "Rogue",
+      "Magneto"
+    ],
+    "events": [
+      "Mutant Registration Crisis",
+      "Sentinel Uprising",
+      "Phoenix Force Crisis",
+      "Brotherhood Conflict",
+      "Genosha Incident"
+    ],
+    "themeColor": "#6A5ACD"
+  },
+  {
+    "id": "earth-51778",
+    "name": "Japanese Spider-Man Reality",
+    "designation": "Earth-51778",
+    "type": "Live-Action Alternate Continuity",
+    "threatLevel": "Level 4 - High",
+    "status": "Active",
+    "firstAppearance": "Spider-Man (Japanese TV Series, 1978)",
+    "description": "A radically reimagined Spider-Man reality where Takuya Yamashiro gains his powers from an extraterrestrial warrior and battles the Iron Cross Army using advanced technology and the giant robot Leopardon.",
+    "keyLocations": [
+      "Tokyo",
+      "Spider-Protector Base",
+      "Iron Cross Army Facilities",
+      "Marveller"
+    ],
+    "characters": [
+      "Spider-Man (Takuya Yamashiro)",
+      "Professor Monster",
+      "Amazoness",
+      "Leopardon",
+      "Iron Cross Army"
+    ],
+    "events": [
+      "Takuya's Transformation",
+      "Formation of the Spider-Protector",
+      "Iron Cross Army Conflict",
+      "Leopardon Battles",
+      "Spider-Verse Recruitment"
+    ],
+    "themeColor": "#E31B23"
+  }
+]

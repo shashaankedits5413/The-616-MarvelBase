@@ -1,0 +1,733 @@
+[
+  {
+    "id": "battle-of-new-york",
+    "name": "Battle of New York",
+    "type": "Major Event",
+    "universe": "Earth-199999",
+    "year": 2012,
+    "location": "New York City",
+    "description": "Loki leads a Chitauri invasion of New York, forcing Earth's emerging superhero team to unite and defend the city.",
+    "participants": [
+      "ironman",
+      "captainamerica",
+      "thor",
+      "hulk",
+      "blackwidow",
+      "hawkeye",
+      "loki"
+    ],
+    "comics": [],
+    "relatedEvents": [
+      "formation-of-the-avengers",
+      "battle-of-sokovia"
+    ],
+    "image": "images/battleofnewyorkevent.jpg"
+  },
+  {
+    "id": "inferno",
+    "name": "Inferno",
+    "type": "Crossover Event",
+    "universe": "Earth-616",
+    "year": 1989,
+    "location": "New York City",
+    "description": "A supernatural crisis transforms New York as demons invade the city, drawing the X-Men and other heroes into a battle against powerful mystical forces.",
+    "participants": [
+      "cyclops",
+      "jeangrey",
+      "storm",
+      "wolverine",
+      "magneto"
+    ],
+    "comics": [
+      "Inferno"
+    ],
+    "relatedEvents": [
+      "mutant-massacre",
+      "fall-of-the-mutants"
+    ],
+    "image": "images/infernoevent.jpg"
+  },
+  {
+    "id": "infinity-war",
+    "name": "Infinity War / Infinity Gauntlet",
+    "type": "Cosmic Event",
+    "universe": "Earth-616",
+    "year": 1991,
+    "location": "Earth and the Marvel Universe",
+    "description": "Thanos gains immense power through the Infinity Gems, leading to a cosmic crisis that draws Earth's heroes and the universe's greatest powers into the conflict.",
+    "participants": [
+      "thanos",
+      "adamwarlock",
+      "silver-surfer",
+      "doctorstrange",
+      "hulk",
+      "spiderman",
+      "captainamerica",
+      "ironman"
+    ],
+    "comics": [
+      "Infinity Gauntlet",
+      "Infinity War"
+    ],
+    "relatedEvents": [
+      "secret-wars-1984",
+      "annihilation"
+    ],
+    "image": "images/infinitywarevent.jpg"
+  },
+  {
+    "id": "age-of-apocalypse",
+    "name": "Age of Apocalypse",
+    "type": "Alternate Reality Event",
+    "universe": "Earth-295",
+    "year": 1995,
+    "location": "North America",
+    "description": "After history is altered, Apocalypse rises to power and creates a dystopian world where mutants and humans fight for survival.",
+    "participants": [
+      "wolverine",
+      "magneto",
+      "cyclops",
+      "storm",
+      "jeangrey",
+      "apocalypse"
+    ],
+    "comics": [
+      "Age of Apocalypse"
+    ],
+    "relatedEvents": [
+      "days-of-future-past",
+      "secret-wars-2015"
+    ],
+    "image": "images/ageofapocalypseevent.jpg"
+  },
+  {
+    "id": "onslaught",
+    "name": "Onslaught",
+    "type": "Major Event",
+    "universe": "Earth-616",
+    "year": 1996,
+    "location": "Earth",
+    "description": "A powerful psychic entity known as Onslaught emerges from the combined aspects of Professor X and Magneto, threatening the entire Marvel Universe.",
+    "participants": [
+      "professorx",
+      "magneto",
+      "cyclops",
+      "wolverine",
+      "hulk",
+      "captainamerica",
+      "ironman"
+    ],
+    "comics": [
+      "Onslaught"
+    ],
+    "relatedEvents": [
+      "heroes-reborn",
+      "avengers-disassembled"
+    ],
+    "image": "images/onslaughtevent.jpg"
+  },
+  {
+    "id": "heroes-reborn",
+    "name": "Heroes Reborn",
+    "type": "Alternate Reality Event",
+    "universe": "Earth-616",
+    "year": 1996,
+    "location": "Heroes Reborn Universe",
+    "description": "Several major Marvel heroes are transported into an alternate reality where their histories and lives are dramatically rewritten.",
+    "participants": [
+      "captainamerica",
+      "ironman",
+      "thor",
+      "hulk",
+      "fantasticfour"
+    ],
+    "comics": [
+      "Heroes Reborn"
+    ],
+    "relatedEvents": [
+      "onslaught",
+      "secret-wars-2015"
+    ],
+    "image": "images/heroesrebornevent.jpg"
+  },
+  {
+    "id": "house-of-m",
+    "name": "House of M",
+    "type": "Reality-Altering Event",
+    "universe": "Earth-616",
+    "year": 2005,
+    "location": "Earth",
+    "description": "Scarlet Witch alters reality and creates a world where mutants have become the dominant population and Magneto rules over a powerful mutant dynasty.",
+    "participants": [
+      "scarletwitch",
+      "magneto",
+      "quicksilver",
+      "wolverine",
+      "captainamerica",
+      "spiderman"
+    ],
+    "comics": [
+      "House of M"
+    ],
+    "relatedEvents": [
+      "decimation",
+      "avengers-vs-x-men"
+    ],
+    "image": "images/houseofmevent.jpg"
+  },
+  {
+    "id": "decimation",
+    "name": "Decimation",
+    "type": "Mutant Event",
+    "universe": "Earth-616",
+    "year": 2005,
+    "location": "Earth",
+    "description": "The aftermath of House of M leaves the vast majority of mutants without their powers, dramatically changing the future of mutantkind.",
+    "participants": [
+      "scarletwitch",
+      "magneto",
+      "wolverine",
+      "cyclops",
+      "beast",
+      "storm"
+    ],
+    "comics": [
+      "Decimation"
+    ],
+    "relatedEvents": [
+      "house-of-m",
+      "second-coming",
+      "avengers-vs-x-men"
+    ],
+    "image": "images/decimationevent.jpg"
+  },
+  {
+    "id": "secret-invasion",
+    "name": "Secret Invasion",
+    "type": "Invasion Event",
+    "universe": "Earth-616",
+    "year": 2008,
+    "location": "Earth",
+    "description": "Skrulls secretly infiltrate Earth by replacing important heroes and influential individuals with shapeshifting impostors.",
+    "participants": [
+      "nickfury",
+      "spiderman",
+      "ironman",
+      "captainamerica",
+      "msmarvel",
+      "thor"
+    ],
+    "comics": [
+      "Secret Invasion"
+    ],
+    "relatedEvents": [
+      "dark-reign",
+      "siege"
+    ],
+    "image": "images/secretinvasionevent.jpg"
+  },
+  {
+    "id": "dark-reign",
+    "name": "Dark Reign",
+    "type": "Political Event",
+    "universe": "Earth-616",
+    "year": 2008,
+    "location": "United States",
+    "description": "Norman Osborn rises to political power and establishes a government-backed superhuman organization while manipulating the world's heroes.",
+    "participants": [
+      "green-goblin",
+      "ironman",
+      "captainamerica",
+      "spiderman",
+      "nickfury"
+    ],
+    "comics": [
+      "Dark Reign"
+    ],
+    "relatedEvents": [
+      "secret-invasion",
+      "siege"
+    ],
+    "image": "images/darkreignevent.jpg"
+  },
+  {
+    "id": "avengers-vs-x-men",
+    "name": "Avengers vs. X-Men",
+    "type": "Crossover Event",
+    "universe": "Earth-616",
+    "year": 2012,
+    "location": "Earth",
+    "description": "The Avengers and X-Men clash over the return of the Phoenix Force and the future of mutantkind.",
+    "participants": [
+      "captainamerica",
+      "ironman",
+      "thor",
+      "cyclops",
+      "wolverine",
+      "storm",
+      "scarletwitch"
+    ],
+    "comics": [
+      "Avengers vs. X-Men"
+    ],
+    "relatedEvents": [
+      "house-of-m",
+      "decimation",
+      "judgment-day"
+    ],
+    "image": "images/avengersvsxmenevent.jpg"
+  },
+  {
+    "id": "secret-wars-2015",
+    "name": "Secret Wars (2015)",
+    "type": "Multiversal Event",
+    "universe": "Earth-616",
+    "year": 2015,
+    "location": "Battleworld",
+    "description": "The Marvel Multiverse collapses as universes collide, leaving Battleworld as a patchwork reality ruled by Doctor Doom.",
+    "participants": [
+      "doctorstrange",
+      "doctor-doom",
+      "reedrichards",
+      "blackpanther",
+      "spiderman"
+    ],
+    "comics": [
+      "Secret Wars (2015)"
+    ],
+    "relatedEvents": [
+      "age-of-apocalypse",
+      "heroes-reborn"
+    ],
+    "image": "images/secretwars2015event.jpg"
+  },
+  {
+    "id": "king-in-black",
+    "name": "King in Black",
+    "type": "Cosmic Event",
+    "universe": "Earth-616",
+    "year": 2020,
+    "location": "Earth",
+    "description": "Knull, the god of the symbiotes, arrives on Earth with an enormous symbiote army and attempts to conquer the planet.",
+    "participants": [
+      "venom",
+      "spiderman",
+      "thor",
+      "captainamerica",
+      "ironman"
+    ],
+    "comics": [
+      "King in Black"
+    ],
+    "relatedEvents": [
+      "maximum-carnage",
+      "secret-wars-2015"
+    ],
+    "image": "images/kinginblackevent.jpg"
+  },
+  {
+    "id": "judgment-day",
+    "name": "Judgment Day",
+    "type": "Crossover Event",
+    "universe": "Earth-616",
+    "year": 2022,
+    "location": "Earth",
+    "description": "The Avengers, X-Men, and Eternals become caught in a conflict over the fate of mutantkind and humanity as the Celestial known as the Progenitor judges Earth.",
+    "participants": [
+      "captainamerica",
+      "ironman",
+      "cyclops",
+      "jeangrey",
+      "storm",
+      "thor"
+    ],
+    "comics": [
+      "Judgment Day"
+    ],
+    "relatedEvents": [
+      "avengers-vs-x-men",
+      "war-of-the-realms"
+    ],
+    "image": "images/judgmentdayevent.jpg"
+  },
+  {
+    "id": "battle-of-sokovia",
+    "name": "Battle of Sokovia",
+    "type": "Major Event",
+    "universe": "Earth-199999",
+    "year": 2015,
+    "location": "Sokovia",
+    "description": "The Avengers battle Ultron and his forces as the nation of Sokovia becomes the center of a catastrophic attempt to destroy humanity.",
+    "participants": [
+      "ironman",
+      "captainamerica",
+      "thor",
+      "hulk",
+      "blackwidow",
+      "hawkeye",
+      "scarletwitch",
+      "quicksilver"
+    ],
+    "comics": [],
+    "relatedEvents": [
+      "battle-of-new-york",
+      "civil-war",
+      "age-of-ultron"
+    ],
+    "image": "images/battleofsokoviaevent.jpg"
+  },
+  {
+    "id": "civil-war",
+    "name": "Civil War",
+    "type": "Superhero Conflict",
+    "universe": "Earth-199999",
+    "year": 2016,
+    "location": "Earth",
+    "description": "The Avengers fracture over the Sokovia Accords, dividing Earth's heroes into opposing sides.",
+    "participants": [
+      "captainamerica",
+      "ironman",
+      "spiderman",
+      "blackwidow",
+      "hawkeye",
+      "blackpanther",
+      "winter-soldier"
+    ],
+    "comics": [],
+    "relatedEvents": [
+      "battle-of-sokovia",
+      "battle-of-wakanda"
+    ],
+    "image": "images/civilwarevent.jpg"
+  },
+  {
+    "id": "ragnarok",
+    "name": "Ragnarok",
+    "type": "Cosmic Event",
+    "universe": "Earth-199999",
+    "year": 2017,
+    "location": "Asgard",
+    "description": "Hela returns and destroys Asgard, forcing Thor and the surviving Asgardians to escape and begin a new chapter.",
+    "participants": [
+      "thor",
+      "loki",
+      "hulk",
+      "hela",
+      "valkyrie"
+    ],
+    "comics": [],
+    "relatedEvents": [
+      "battle-of-wakanda",
+      "battle-of-earth"
+    ],
+    "image": "images/ragnarokevent.jpg"
+  },
+  {
+    "id": "age-of-ultron",
+    "name": "Age of Ultron",
+    "type": "Alternate Future Event",
+    "universe": "Earth-61112",
+    "year": 2013,
+    "location": "Earth",
+    "description": "A future devastated by Ultron forces the remaining heroes to attempt to change history and prevent his rise to power.",
+    "participants": [
+      "wolverine",
+      "hulk",
+      "captainamerica",
+      "ironman",
+      "blackwidow"
+    ],
+    "comics": [
+      "Age of Ultron"
+    ],
+    "relatedEvents": [
+      "avengers-disassembled",
+      "secret-wars-2015"
+    ],
+    "image": "images/ageofultronevent.jpg"
+  },
+  {
+    "id": "spider-verse",
+    "name": "Spider-Verse",
+    "type": "Multiversal Event",
+    "universe": "Multiple Universes",
+    "year": 2014,
+    "location": "Multiverse",
+    "description": "Spider-heroes from across the multiverse unite to battle the Inheritors, who are hunting Spider-Totems throughout reality.",
+    "participants": [
+      "spiderman",
+      "spider-gwen",
+      "miles-morales",
+      "spider-man-2099"
+    ],
+    "comics": [
+      "Spider-Verse"
+    ],
+    "relatedEvents": [
+      "secret-wars-2015",
+      "age-of-apocalypse"
+    ],
+    "image": "images/spiderverseevent.jpg"
+  },
+  {
+    "id": "maximum-carnage",
+    "name": "Maximum Carnage",
+    "type": "Street-Level Event",
+    "universe": "Earth-616",
+    "year": 1993,
+    "location": "New York City",
+    "description": "Carnage escapes and unleashes widespread chaos across New York, forcing Spider-Man and several allies to work together against him.",
+    "participants": [
+      "spiderman",
+      "venom",
+      "carnage",
+      "blackcat"
+    ],
+    "comics": [
+      "Maximum Carnage"
+    ],
+    "relatedEvents": [
+      "king-in-black",
+      "spider-verse"
+    ],
+    "image": "images/maximumcarnageevent.jpg"
+  },
+  {
+    "id": "days-of-future-past",
+    "name": "Days of Future Past",
+    "type": "Time-Travel Event",
+    "universe": "Earth-811",
+    "year": 1981,
+    "location": "Earth",
+    "description": "A dystopian future ruled by Sentinels leads to an attempt to alter the past and prevent the catastrophe.",
+    "participants": [
+      "wolverine",
+      "storm",
+      "kitty-pryde",
+      "cyclops",
+      "magneto"
+    ],
+    "comics": [
+      "Days of Future Past"
+    ],
+    "relatedEvents": [
+      "age-of-apocalypse",
+      "secret-wars-2015"
+    ],
+    "image": "images/daysoffuturepastevent.jpg"
+  },
+  {
+    "id": "secret-empire",
+    "name": "Secret Empire",
+    "type": "Political Event",
+    "universe": "Earth-616",
+    "year": 2017,
+    "location": "United States",
+    "description": "Hydra takes control of the United States after Captain America is revealed to have been altered by the cosmic entity Kobik.",
+    "participants": [
+      "captainamerica",
+      "ironman",
+      "blackwidow",
+      "spiderman",
+      "thor"
+    ],
+    "comics": [
+      "Secret Empire"
+    ],
+    "relatedEvents": [
+      "dark-reign",
+      "civil-war"
+    ],
+    "image": "images/secretempireevent.jpg"
+  },
+  {
+    "id": "doom-latveria",
+    "name": "Doctor Doom Takes Control of Latveria",
+    "type": "Political Event",
+    "universe": "Earth-616",
+    "year": 1960,
+    "location": "Latveria",
+    "description": "Victor von Doom rises to power in Latveria and establishes himself as its absolute ruler, creating one of Marvel's most infamous fictional regimes.",
+    "participants": [
+      "doctor-doom",
+      "fantasticfour"
+    ],
+    "comics": [
+      "Fantastic Four"
+    ],
+    "relatedEvents": [
+      "secret-wars-2015",
+      "heroes-reborn"
+    ],
+    "image": "images/doomlatveriaevent.jpg"
+  },
+  {
+    "id": "kravens-last-hunt",
+    "name": "Kraven's Last Hunt",
+    "type": "Spider-Man Event",
+    "universe": "Earth-616",
+    "year": 1987,
+    "location": "New York City",
+    "description": "Kraven the Hunter becomes obsessed with proving that he is superior to Spider-Man, leading to one of Spider-Man's most famous confrontations.",
+    "participants": [
+      "spiderman",
+      "kraven"
+    ],
+    "comics": [
+      "Kraven's Last Hunt"
+    ],
+    "relatedEvents": [
+      "maximum-carnage",
+      "spider-verse"
+    ],
+    "image": "images/kravenslasthuntevent.jpg"
+  },
+  {
+    "id": "dark-phoenix-saga",
+    "name": "Dark Phoenix Saga",
+    "type": "Mutant Event",
+    "universe": "Earth-616",
+    "year": 1980,
+    "location": "Earth and Space",
+    "description": "Jean Grey's connection to the Phoenix Force reaches a dangerous point, placing the X-Men and the wider universe in conflict over her fate.",
+    "participants": [
+      "jeangrey",
+      "cyclops",
+      "wolverine",
+      "storm",
+      "professorx"
+    ],
+    "comics": [
+      "Dark Phoenix Saga"
+    ],
+    "relatedEvents": [
+      "days-of-future-past",
+      "avengers-vs-x-men"
+    ],
+    "image": "images/darkphoenixsagaevent.jpg"
+  },
+  {
+    "id": "war-of-the-realms",
+    "name": "War of the Realms",
+    "type": "Cosmic Event",
+    "universe": "Earth-616",
+    "year": 2019,
+    "location": "Nine Realms",
+    "description": "Malekith launches an invasion across the Nine Realms, bringing the conflict directly to Earth and forcing heroes from across Marvel to unite.",
+    "participants": [
+      "thor",
+      "captainamerica",
+      "ironman",
+      "spiderman",
+      "loki"
+    ],
+    "comics": [
+      "War of the Realms"
+    ],
+    "relatedEvents": [
+      "ragnarok",
+      "judgment-day",
+      "king-in-black"
+    ],
+    "image": "images/waroftheevent.jpg"
+  },
+  {
+    "id": "world-war-hulk",
+    "name": "World War Hulk",
+    "type": "Superhero Conflict",
+    "universe": "Earth-616",
+    "year": 2007,
+    "location": "Earth",
+    "description": "Hulk returns to Earth after his exile and seeks revenge against the Illuminati and the heroes he believes betrayed him.",
+    "participants": [
+      "hulk",
+      "ironman",
+      "doctorstrange",
+      "blackbolt",
+      "misterfantastic"
+    ],
+    "comics": [
+      "World War Hulk"
+    ],
+    "relatedEvents": [
+      "planet-hulk",
+      "avengers-vs-x-men"
+    ],
+    "image": "images/worldwarhulkevent.jpg"
+  },
+  {
+    "id": "annihilation",
+    "name": "Annihilation",
+    "type": "Cosmic Event",
+    "universe": "Earth-616",
+    "year": 2006,
+    "location": "Marvel Universe",
+    "description": "Annihilus launches a devastating invasion across the universe, forcing numerous cosmic heroes and civilizations to unite against the Annihilation Wave.",
+    "participants": [
+      "silver-surfer",
+      "nova",
+      "drax",
+      "star-lord",
+      "thanos"
+    ],
+    "comics": [
+      "Annihilation"
+    ],
+    "relatedEvents": [
+      "infinity-war",
+      "king-in-black"
+    ],
+    "image": "images/annihilationevent.jpg"
+  },
+  {
+    "id": "kree-skrull-war",
+    "name": "Kree-Skrull War",
+    "type": "Cosmic War",
+    "universe": "Earth-616",
+    "year": 1971,
+    "location": "Earth and Space",
+    "description": "The Avengers become caught in the ancient conflict between the Kree and Skrulls as the two alien civilizations battle for supremacy.",
+    "participants": [
+      "captainamerica",
+      "ironman",
+      "thor",
+      "vision",
+      "marvel"
+    ],
+    "comics": [
+      "Kree-Skrull War"
+    ],
+    "relatedEvents": [
+      "secret-invasion",
+      "annihilation"
+    ],
+    "image": "images/kreeskrullwarevent.jpg"
+  },
+  {
+    "id": "avengers-disassembled",
+    "name": "Avengers Disassembled",
+    "type": "Avengers Event",
+    "universe": "Earth-616",
+    "year": 2004,
+    "location": "Avengers Mansion",
+    "description": "A series of devastating attacks and betrayals tears the Avengers apart and brings the team's classic era to an end.",
+    "participants": [
+      "captainamerica",
+      "ironman",
+      "thor",
+      "hulk",
+      "scarletwitch",
+      "hawkeye",
+      "vision"
+    ],
+    "comics": [
+      "Avengers Disassembled"
+    ],
+    "relatedEvents": [
+      "house-of-m",
+      "dark-reign",
+      "heroes-reborn"
+    ],
+    "image": "images/avengersdisassembledevent.jpg"
+  }
+]

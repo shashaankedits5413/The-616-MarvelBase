@@ -1,0 +1,825 @@
+[
+    {
+        "id": "sanctum-sanctorum",
+        "name": "Sanctum Sanctorum",
+        "type": "Mystical Headquarters",
+        "status": "Active",
+        "universe": "Earth-616",
+        "description": "The New York residence and primary headquarters of Doctor Strange, serving as a major center for Earth's mystical defenders.",
+        "characters": [
+            "doctorstrange",
+            "wong"
+        ],
+        "movies": [
+            "Doctor Strange",
+            "Avengers: Infinity War",
+            "Avengers: Endgame",
+            "Spider-Man: No Way Home"
+        ],
+        "teams": [
+            "defenders",
+            "midnight-sons"
+        ],
+        "events": [
+            "Secret Wars",
+            "Infinity Gauntlet"
+        ],
+        "relatedLocations": [
+            "hells-kitchen",
+            "kamar-taj"
+        ],
+        "image": "images/locations/sanctumsanctorum.jpg"
+    },
+    {
+        "id": "baxter-building",
+        "name": "Baxter Building",
+        "type": "Headquarters",
+        "status": "Active",
+        "universe": "Earth-616",
+        "description": "The famous New York headquarters and laboratory of the Fantastic Four, containing advanced scientific technology and research facilities.",
+        "characters": [
+            "mrfantastic",
+            "invisiblewoman",
+            "humantorch",
+            "thing"
+        ],
+        "movies": [
+            "Fantastic Four",
+            "Fantastic Four: Rise of the Silver Surfer"
+        ],
+        "teams": [
+            "fantastic-four",
+            "illuminati"
+        ],
+        "events": [
+            "Secret Wars",
+            "Infinity Gauntlet"
+        ],
+        "relatedLocations": [
+            "new-york-city"
+        ],
+        "image": "images/locations/baxterbuilding.jpg"
+    },
+    {
+        "id": "xaviers-school",
+        "name": "Xavier's School for Gifted Youngsters",
+        "type": "School / Headquarters",
+        "status": "Active",
+        "universe": "Earth-616",
+        "description": "The school founded by Professor X to provide young mutants with an education while helping them understand and control their abilities.",
+        "characters": [
+            "professorx",
+            "cyclops",
+            "wolverine",
+            "jeangrey",
+            "storm",
+            "beast"
+        ],
+        "movies": [
+            "X-Men",
+            "X2",
+            "X-Men: The Last Stand",
+            "X-Men: First Class",
+            "X-Men: Days of Future Past",
+            "X-Men: Apocalypse",
+            "Dark Phoenix"
+        ],
+        "teams": [
+            "x-men",
+            "x-force"
+        ],
+        "events": [
+            "House of M",
+            "Secret Wars"
+        ],
+        "relatedLocations": [
+            "genosha",
+            "weapon-x-facility"
+        ],
+        "image": "images/locations/xaviersschool.jpg"
+    },
+    {
+        "id": "wakanda",
+        "name": "Wakanda",
+        "type": "Kingdom / Nation",
+        "status": "Active",
+        "universe": "Earth-616",
+        "description": "A technologically advanced African kingdom built around its vast vibranium resources and protected by the Black Panther.",
+        "characters": [
+            "blackpanther",
+            "shuri"
+        ],
+        "movies": [
+            "Black Panther",
+            "Avengers: Infinity War",
+            "Avengers: Endgame",
+            "Black Panther: Wakanda Forever"
+        ],
+        "teams": [
+            "avengers",
+            "illuminati"
+        ],
+        "events": [
+            "Infinity Gauntlet",
+            "Secret Wars"
+        ],
+        "relatedLocations": [
+            "wakandan-royal-palace"
+        ],
+        "image": "images/locations/wakanda.jpg"
+    },
+    {
+        "id": "latveria",
+        "name": "Latveria",
+        "type": "Nation",
+        "status": "Active",
+        "universe": "Earth-616",
+        "description": "A European nation ruled by Doctor Doom and closely connected to his political power, scientific achievements, and plans for global domination.",
+        "characters": [
+            "doctordoom"
+        ],
+        "movies": [],
+        "teams": [],
+        "events": [
+            "Secret Wars"
+        ],
+        "relatedLocations": [
+            "wundagore-mountain"
+        ],
+        "image": "images/locations/latveria.jpg"
+    },
+    {
+        "id": "asgard",
+        "name": "Asgard",
+        "type": "Realm",
+        "status": "Destroyed / Rebuilt",
+        "universe": "Earth-616",
+        "description": "The legendary realm of the Asgardians and former home of Odin, Thor, Loki, and many other Asgardian beings.",
+        "characters": [
+            "thor",
+            "loki",
+            "heimdall"
+        ],
+        "movies": [
+            "Thor",
+            "Thor: The Dark World",
+            "Thor: Ragnarok",
+            "Avengers: Endgame"
+        ],
+        "teams": [
+            "avengers"
+        ],
+        "events": [
+            "Ragnarok",
+            "Infinity Gauntlet"
+        ],
+        "relatedLocations": [
+            "new-asgard",
+            "sakaar"
+        ],
+        "image": "images/locations/asgard.jpg"
+    },
+    {
+        "id": "new-asgard",
+        "name": "New Asgard",
+        "type": "Settlement",
+        "status": "Active",
+        "universe": "Earth-616",
+        "description": "The settlement established by surviving Asgardians on Earth after the destruction of Asgard.",
+        "characters": [
+            "thor",
+            "valkyrie"
+        ],
+        "movies": [
+            "Avengers: Endgame",
+            "Thor: Love and Thunder"
+        ],
+        "teams": [
+            "avengers"
+        ],
+        "events": [
+            "Infinity Gauntlet"
+        ],
+        "relatedLocations": [
+            "asgard"
+        ],
+        "image": "images/locations/newasgard.jpg"
+    },
+    {
+        "id": "knowhere",
+        "name": "Knowhere",
+        "type": "Space Station",
+        "status": "Active",
+        "universe": "Earth-616",
+        "description": "A massive space station built within the severed head of a Celestial and later used as a major base by the Guardians of the Galaxy.",
+        "characters": [
+            "starlord",
+            "rocket",
+            "groot",
+            "drax"
+        ],
+        "movies": [
+            "Guardians of the Galaxy",
+            "Guardians of the Galaxy Vol. 2",
+            "Avengers: Infinity War",
+            "Guardians of the Galaxy Vol. 3"
+        ],
+        "teams": [
+            "guardians-of-the-galaxy"
+        ],
+        "events": [
+            "Infinity Gauntlet"
+        ],
+        "relatedLocations": [
+            "xandar"
+        ],
+        "image": "images/locations/knowhere.jpg"
+    },
+    {
+        "id": "kamar-taj",
+        "name": "Kamar-Taj",
+        "type": "Mystical Sanctuary",
+        "status": "Active",
+        "universe": "Earth-616",
+        "description": "A mystical sanctuary where sorcerers study and defend the world against supernatural and dimensional threats.",
+        "characters": [
+            "doctorstrange"
+        ],
+        "movies": [
+            "Doctor Strange",
+            "Avengers: Infinity War",
+            "Doctor Strange in the Multiverse of Madness"
+        ],
+        "teams": [
+            "midnight-sons"
+        ],
+        "events": [
+            "Secret Wars"
+        ],
+        "relatedLocations": [
+            "sanctum-sanctorum",
+            "mirror-dimension",
+            "dark-dimension"
+        ],
+        "image": "images/locations/kamar-taj.jpg"
+    },
+    {
+        "id": "the-raft",
+        "name": "The Raft",
+        "type": "Superhuman Prison",
+        "status": "Active",
+        "universe": "Earth-616",
+        "description": "A high-security prison designed to contain dangerous superhuman criminals.",
+        "characters": [
+            "daredevil",
+            "punisher"
+        ],
+        "movies": [
+            "Captain America: Civil War"
+        ],
+        "teams": [
+            "avengers"
+        ],
+        "events": [
+            "Civil War"
+        ],
+        "relatedLocations": [
+            "hells-kitchen"
+        ],
+        "image": "images/locations/the-raft.jpg"
+    },
+    {
+        "id": "hells-kitchen",
+        "name": "Hell's Kitchen",
+        "type": "Neighborhood",
+        "status": "Active",
+        "universe": "Earth-616",
+        "description": "A New York neighborhood strongly associated with Daredevil and his battles against organized crime and supervillains.",
+        "characters": [
+            "daredevil",
+            "punisher",
+            "kingpin"
+        ],
+        "movies": [
+            "Daredevil"
+        ],
+        "teams": [
+            "defenders",
+            "heroes-for-hire"
+        ],
+        "events": [
+            "Shadowland"
+        ],
+        "relatedLocations": [
+            "new-york-city",
+            "sanctum-sanctorum"
+        ],
+        "image": "images/locations/hellskitchen.jpg"
+    },
+    {
+        "id": "daily-bugle",
+        "name": "Daily Bugle",
+        "type": "Newspaper Headquarters",
+        "status": "Active",
+        "universe": "Earth-616",
+        "description": "The influential newspaper organization famously associated with J. Jonah Jameson and Spider-Man's public reputation.",
+        "characters": [
+            "spiderman"
+        ],
+        "movies": [
+            "Spider-Man",
+            "Spider-Man 2",
+            "Spider-Man 3",
+            "Spider-Man: No Way Home"
+        ],
+        "teams": [],
+        "events": [],
+        "relatedLocations": [
+            "new-york-city"
+        ],
+        "image": "images/locations/dailybugle.jpg"
+    },
+    {
+        "id": "oscorp",
+        "name": "Oscorp",
+        "type": "Corporation / Laboratory",
+        "status": "Active",
+        "universe": "Earth-616",
+        "description": "A powerful technology and research corporation founded by Norman Osborn and frequently connected to Spider-Man's enemies.",
+        "characters": [
+            "greengoblin",
+            "spiderman"
+        ],
+        "movies": [
+            "Spider-Man",
+            "The Amazing Spider-Man",
+            "Spider-Man: No Way Home"
+        ],
+        "teams": [
+            "sinister-six"
+        ],
+        "events": [],
+        "relatedLocations": [
+            "daily-bugle",
+            "new-york-city"
+        ],
+        "image": "images/locations/oscorp.jpg"
+    },
+    {
+        "id": "weapon-x-facility",
+        "name": "Weapon X Facility",
+        "type": "Secret Laboratory",
+        "status": "Destroyed / Unknown",
+        "universe": "Earth-616",
+        "description": "A secret facility associated with the Weapon X program and the experiments that transformed Wolverine.",
+        "characters": [
+            "wolverine",
+            "sabretooth"
+        ],
+        "movies": [
+            "X-Men",
+            "X2",
+            "X-Men: Days of Future Past"
+        ],
+        "teams": [
+            "x-men",
+            "x-force"
+        ],
+        "events": [
+            "Weapon X"
+        ],
+        "relatedLocations": [
+            "xaviers-school",
+            "savage-land"
+        ],
+        "image": "images/locations/weaponx.jpg"
+    },
+    {
+        "id": "savage-land",
+        "name": "Savage Land",
+        "type": "Hidden Region",
+        "status": "Active",
+        "universe": "Earth-616",
+        "description": "A prehistoric hidden land containing dinosaurs, ancient civilizations, and unusual environments beneath Antarctica.",
+        "characters": [
+            "wolverine",
+            "storm"
+        ],
+        "movies": [],
+        "teams": [
+            "x-men"
+        ],
+        "events": [
+            "Secret Wars"
+        ],
+        "relatedLocations": [
+            "genosha"
+        ],
+        "image": "images/locations/savagedland.jpg"
+    },
+    {
+        "id": "genosha",
+        "name": "Genosha",
+        "type": "Island Nation",
+        "status": "Destroyed / Rebuilt",
+        "universe": "Earth-616",
+        "description": "An island nation whose history is deeply connected to mutant oppression, mutant politics, and the X-Men.",
+        "characters": [
+            "magneto",
+            "professorx",
+            "cyclops",
+            "storm"
+        ],
+        "movies": [
+            "X-Men: The Last Stand"
+        ],
+        "teams": [
+            "x-men",
+            "brotherhood-of-mutants"
+        ],
+        "events": [
+            "House of M",
+            "Secret Wars"
+        ],
+        "relatedLocations": [
+            "xaviers-school",
+            "savage-land"
+        ],
+        "image": "images/locations/genosha.jpg"
+    },
+    {
+        "id": "attilan",
+        "name": "Attilan",
+        "type": "Inhuman City",
+        "status": "Mobile / Relocated",
+        "universe": "Earth-616",
+        "description": "The ancient home and capital of the Inhumans, traditionally ruled by the Inhuman royal family.",
+        "characters": [
+            "black-bolt"
+        ],
+        "movies": [],
+        "teams": [],
+        "events": [
+            "Secret Invasion"
+        ],
+        "relatedLocations": [
+            "wakanda"
+        ],
+        "image": "images/locations/attilan.jpg"
+    },
+    {
+        "id": "battleworld",
+        "name": "Battleworld",
+        "type": "Artificial Planet / Realm",
+        "status": "Destroyed / Recreated",
+        "universe": "Multiverse",
+        "description": "A world created from fragments of different realities and most famously ruled by powerful beings during major multiversal conflicts.",
+        "characters": [
+            "doctordoom",
+            "mrfantastic",
+            "spiderman"
+        ],
+        "movies": [],
+        "teams": [
+            "avengers",
+            "illuminati",
+            "fantastic-four"
+        ],
+        "events": [
+            "Secret Wars"
+        ],
+        "relatedLocations": [
+            "negative-zone",
+            "mirror-dimension"
+        ],
+        "image": "images/locations/battleworld.jpg"
+    },
+    {
+        "id": "negative-zone",
+        "name": "Negative Zone",
+        "type": "Alternate Dimension",
+        "status": "Active",
+        "universe": "Multiverse",
+        "description": "A dangerous antimatter dimension that has been repeatedly explored and studied by the Fantastic Four.",
+        "characters": [
+            "mrfantastic",
+            "thing",
+            "humantorch",
+            "invisiblewoman"
+        ],
+        "movies": [],
+        "teams": [
+            "fantastic-four"
+        ],
+        "events": [
+            "Secret Wars"
+        ],
+        "relatedLocations": [
+            "baxter-building",
+            "battleworld"
+        ],
+        "image": "images/locations/negativezone.jpg"
+    },
+    {
+        "id": "xandar",
+        "name": "Xandar",
+        "type": "Planet / Civilization",
+        "status": "Destroyed / Unknown",
+        "universe": "Earth-616",
+        "description": "The homeworld of the Xandarians and the location of the Nova Corps.",
+        "characters": [
+            "nova",
+            "starlord"
+        ],
+        "movies": [
+            "Guardians of the Galaxy",
+            "Avengers: Infinity War"
+        ],
+        "teams": [
+            "guardians-of-the-galaxy"
+        ],
+        "events": [
+            "Infinity Gauntlet"
+        ],
+        "relatedLocations": [
+            "knowhere"
+        ],
+        "image": "images/locations/xandar.jpg"
+    },
+    {
+        "id": "vormir",
+        "name": "Vormir",
+        "type": "Planet",
+        "status": "Active",
+        "universe": "Earth-616",
+        "description": "A remote world associated with the Soul Stone and guarded by forces connected to the Stone's ancient power.",
+        "characters": [
+            "thanos",
+            "red-skull"
+        ],
+        "movies": [
+            "Avengers: Infinity War",
+            "Avengers: Endgame"
+        ],
+        "teams": [],
+        "events": [
+            "Infinity Gauntlet"
+        ],
+        "relatedLocations": [
+            "titan"
+        ],
+        "image": "images/locations/vormir.jpg"
+    },
+    {
+        "id": "titan",
+        "name": "Titan",
+        "type": "Planet / Moon",
+        "status": "Active",
+        "universe": "Earth-616",
+        "description": "The homeworld of Thanos and a major location in the history of the Infinity Stones.",
+        "characters": [
+            "thanos"
+        ],
+        "movies": [
+            "Avengers: Infinity War",
+            "Avengers: Endgame"
+        ],
+        "teams": [],
+        "events": [
+            "Infinity Gauntlet"
+        ],
+        "relatedLocations": [
+            "vormir"
+        ],
+        "image": "images/locations/titan.jpg"
+    },
+    {
+        "id": "morag",
+        "name": "Morag",
+        "type": "Planet",
+        "status": "Active",
+        "universe": "Earth-616",
+        "description": "A largely abandoned planet that became significant because the Orb containing the Power Stone was hidden there.",
+        "characters": [
+            "starlord"
+        ],
+        "movies": [
+            "Guardians of the Galaxy",
+            "Avengers: Endgame"
+        ],
+        "teams": [
+            "guardians-of-the-galaxy"
+        ],
+        "events": [
+            "Infinity Gauntlet"
+        ],
+        "relatedLocations": [
+            "knowhere",
+            "xandar"
+        ],
+        "image": "images/locations/morag.jpg"
+    },
+    {
+        "id": "sakaar",
+        "name": "Sakaar",
+        "type": "Planet",
+        "status": "Active",
+        "universe": "Earth-616",
+        "description": "A chaotic planet ruled by the Grandmaster and known for its gladiatorial contests and diverse population.",
+        "characters": [
+            "thor",
+            "hulk",
+            "loki",
+            "valkyrie"
+        ],
+        "movies": [
+            "Thor: Ragnarok"
+        ],
+        "teams": [
+            "avengers"
+        ],
+        "events": [
+            "Ragnarok"
+        ],
+        "relatedLocations": [
+            "asgard"
+        ],
+        "image": "images/locations/sakaar.jpg"
+    },
+    {
+        "id": "quantum-realm",
+        "name": "Quantum Realm",
+        "type": "Subatomic Dimension",
+        "status": "Active",
+        "universe": "Earth-616",
+        "description": "A strange subatomic realm accessible through unusual forms of technology and energy, playing a major role in time travel and multiversal research.",
+        "characters": [
+            "antman",
+            "wasp"
+        ],
+        "movies": [
+            "Ant-Man",
+            "Ant-Man and the Wasp",
+            "Avengers: Endgame",
+            "Ant-Man and the Wasp: Quantumania"
+        ],
+        "teams": [
+            "avengers"
+        ],
+        "events": [
+            "Infinity Gauntlet",
+            "Secret Wars"
+        ],
+        "relatedLocations": [
+            "mirror-dimension"
+        ],
+        "image": "images/locations/quantumrealm.jpg"
+    },
+    {
+        "id": "mirror-dimension",
+        "name": "Mirror Dimension",
+        "type": "Mystical Dimension",
+        "status": "Active",
+        "universe": "Earth-616",
+        "description": "A parallel dimension controlled through mystical forces and frequently used by sorcerers to isolate threats and manipulate space.",
+        "characters": [
+            "doctorstrange"
+        ],
+        "movies": [
+            "Doctor Strange",
+            "Doctor Strange in the Multiverse of Madness"
+        ],
+        "teams": [
+            "midnight-sons"
+        ],
+        "events": [
+            "Secret Wars"
+        ],
+        "relatedLocations": [
+            "kamar-taj",
+            "dark-dimension"
+        ],
+        "image": "images/locations/mirrordimension.jpg"
+    },
+    {
+        "id": "dark-dimension",
+        "name": "Dark Dimension",
+        "type": "Dimension",
+        "status": "Active",
+        "universe": "Earth-616",
+        "description": "The realm ruled by Dormammu and a major supernatural threat to Earth and the mystic arts.",
+        "characters": [
+            "doctorstrange",
+            "dormammu"
+        ],
+        "movies": [
+            "Doctor Strange"
+        ],
+        "teams": [
+            "midnight-sons"
+        ],
+        "events": [
+            "Secret Wars"
+        ],
+        "relatedLocations": [
+            "kamar-taj",
+            "mirror-dimension"
+        ],
+        "image": "images/locations/darkdimension.jpg"
+    },
+    {
+        "id": "kun-lun",
+        "name": "K'un-Lun",
+        "type": "Mystical City",
+        "status": "Active",
+        "universe": "Earth-616",
+        "description": "A mystical hidden city associated with the Iron Fist and one of the legendary Seven Capital Cities of Heaven.",
+        "characters": [
+            "ironfist"
+        ],
+        "movies": [],
+        "teams": [
+            "heroes-for-hire"
+        ],
+        "events": [
+            "Shadowland"
+        ],
+        "relatedLocations": [
+            "kamar-taj"
+        ],
+        "image": "images/locations/kunlun.jpg"
+    },
+    {
+        "id": "madripoor",
+        "name": "Madripoor",
+        "type": "Island Nation / City",
+        "status": "Active",
+        "universe": "Earth-616",
+        "description": "A fictional island nation in Southeast Asia known for its criminal underworld, mercenaries, and connections to Wolverine and other heroes.",
+        "characters": [
+            "wolverine",
+            "winter-soldier"
+        ],
+        "movies": [],
+        "teams": [
+            "x-men",
+            "new-avengers"
+        ],
+        "events": [
+            "Secret Wars"
+        ],
+        "relatedLocations": [
+            "weapon-x-facility"
+        ],
+        "image": "images/locations/madripoor.jpg"
+    },
+    {
+        "id": "wundagore-mountain",
+        "name": "Wundagore Mountain",
+        "type": "Mountain / Mystical Site",
+        "status": "Destroyed",
+        "universe": "Earth-616",
+        "description": "A mysterious mountain associated with ancient magic, Chthon, and the Scarlet Witch.",
+        "characters": [
+            "scarletwitch"
+        ],
+        "movies": [
+            "Doctor Strange in the Multiverse of Madness"
+        ],
+        "teams": [],
+        "events": [
+            "House of M",
+            "Secret Wars"
+        ],
+        "relatedLocations": [
+            "dark-dimension",
+            "latveria"
+        ],
+        "image": "images/locations/wundagore.jpg"
+    },
+    {
+        "id": "wakandan-royal-palace",
+        "name": "Wakandan Royal Palace",
+        "type": "Royal Palace",
+        "status": "Active",
+        "universe": "Earth-616",
+        "description": "The royal residence and political center of Wakanda, closely associated with the Black Panther and Wakandan royal family.",
+        "characters": [
+            "blackpanther"
+        ],
+        "movies": [
+            "Black Panther",
+            "Black Panther: Wakanda Forever"
+        ],
+        "teams": [
+            "avengers"
+        ],
+        "events": [
+            "Infinity Gauntlet"
+        ],
+        "relatedLocations": [
+            "wakanda"
+        ],
+        "image": "images/locations/wakandanpalace.jpg"
+    }
+]

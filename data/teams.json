@@ -1,0 +1,502 @@
+[
+    {
+        "id": "avengers",
+        "name": "Avengers",
+        "type": "Superhero Team",
+        "status": "Active",
+        "universe": "Earth-616",
+        "founded": "1963",
+        "description": "Earth's premier superhero team, assembled to defend the world against threats too powerful for any single hero.",
+        "members": [
+            "ironman",
+            "captainamerica",
+            "thor",
+            "hulk",
+            "blackwidow",
+            "hawkeye"
+        ],
+        "movies": [
+            "The Avengers",
+            "Avengers: Age of Ultron",
+            "Avengers: Infinity War",
+            "Avengers: Endgame"
+        ],
+        "relatedTeams": [
+            "new-avengers",
+            "west-coast-avengers",
+            "young-avengers"
+        ]
+    },
+
+    {
+        "id": "x-men",
+        "name": "X-Men",
+        "type": "Mutant Superhero Team",
+        "status": "Active",
+        "universe": "Earth-616",
+        "founded": "1963",
+        "description": "A team of mutant heroes dedicated to protecting both mutantkind and humanity while fighting for peaceful coexistence.",
+        "members": [
+            "professorx",
+            "cyclops",
+            "wolverine",
+            "jeangrey",
+            "storm",
+            "beast"
+        ],
+        "movies": [
+            "X-Men",
+            "X2",
+            "X-Men: The Last Stand",
+            "X-Men: First Class",
+            "X-Men: Days of Future Past",
+            "X-Men: Apocalypse",
+            "Dark Phoenix"
+        ],
+        "relatedTeams": [
+            "x-force",
+            "brotherhood-of-mutants",
+            "illuminati"
+        ]
+    },
+
+    {
+        "id": "fantastic-four",
+        "name": "Fantastic Four",
+        "type": "Superhero Family",
+        "status": "Active",
+        "universe": "Earth-616",
+        "founded": "1961",
+        "description": "A family of explorers and superheroes whose scientific missions have repeatedly placed them at the center of cosmic and dimensional threats.",
+        "members": [
+            "mrfantastic",
+            "invisiblewoman",
+            "humantorch",
+            "thing"
+        ],
+        "movies": [
+            "Fantastic Four",
+            "Fantastic Four: Rise of the Silver Surfer",
+            "Fantastic Four"
+        ],
+        "relatedTeams": [
+            "illuminati",
+            "avengers"
+        ]
+    },
+
+    {
+        "id": "guardians-of-the-galaxy",
+        "name": "Guardians of the Galaxy",
+        "type": "Cosmic Superhero Team",
+        "status": "Active",
+        "universe": "Earth-616",
+        "founded": "2008",
+        "description": "A group of unlikely heroes who defend the galaxy from cosmic threats.",
+        "members": [
+            "starlord",
+            "gamora",
+            "drax",
+            "rocket",
+            "groot",
+            "nebula"
+        ],
+        "movies": [
+            "Guardians of the Galaxy",
+            "Guardians of the Galaxy Vol. 2",
+            "Avengers: Infinity War",
+            "Avengers: Endgame",
+            "Guardians of the Galaxy Vol. 3"
+        ],
+        "relatedTeams": [
+            "avengers",
+            "eternals"
+        ]
+    },
+
+    {
+        "id": "thunderbolts",
+        "name": "Thunderbolts",
+        "type": "Superhero / Anti-Hero Team",
+        "status": "Active",
+        "universe": "Earth-616",
+        "founded": "1997",
+        "description": "A team assembled from powerful individuals whose methods and histories often place them outside traditional superhero groups.",
+        "members": [
+            "winter-soldier",
+            "yelena-belova",
+            "red-guardian",
+            "johnwalker",
+            "ghost"
+        ],
+        "movies": [
+            "Thunderbolts*"
+        ],
+        "relatedTeams": [
+            "avengers",
+            "dark-avengers"
+        ]
+    },
+
+    {
+        "id": "new-avengers",
+        "name": "New Avengers",
+        "type": "Superhero Team",
+        "status": "Active",
+        "universe": "Earth-616",
+        "founded": "2005",
+        "description": "A reformed Avengers lineup created from a broader group of heroes following major changes within the original team.",
+        "members": [
+            "captainamerica",
+            "ironman",
+            "spiderman",
+            "wolverine",
+            "lukecage",
+            "spiderwoman"
+        ],
+        "movies": [],
+        "relatedTeams": [
+            "avengers",
+            "young-avengers",
+            "secret-avengers"
+        ]
+    },
+
+    {
+        "id": "midnight-sons",
+        "name": "Midnight Sons",
+        "type": "Supernatural Superhero Team",
+        "status": "Active",
+        "universe": "Earth-616",
+        "founded": "1992",
+        "description": "A supernatural alliance of heroes formed to confront mystical and occult threats beyond the reach of conventional superhero teams.",
+        "members": [
+            "doctorstrange",
+            "blade",
+            "ghostrider",
+            "moonknight",
+            "wolverine"
+        ],
+        "movies": [],
+        "relatedTeams": [
+            "avengers",
+            "defenders"
+        ]
+    },
+
+    {
+        "id": "x-force",
+        "name": "X-Force",
+        "type": "Mutant Strike Team",
+        "status": "Active",
+        "universe": "Earth-616",
+        "founded": "1991",
+        "description": "A covert mutant strike team created to handle threats and missions requiring methods more aggressive than those traditionally used by the X-Men.",
+        "members": [
+            "wolverine",
+            "deadpool",
+            "cable",
+            "domino",
+            "psylocke"
+        ],
+        "movies": [
+            "Deadpool 2"
+        ],
+        "relatedTeams": [
+            "x-men",
+            "brotherhood-of-mutants"
+        ]
+    },
+
+    {
+        "id": "brotherhood-of-mutants",
+        "name": "Brotherhood of Mutants",
+        "type": "Mutant Organization",
+        "status": "Active",
+        "universe": "Earth-616",
+        "founded": "1964",
+        "description": "A mutant organization whose members have frequently pursued mutant interests through methods opposed to the ideals of the X-Men.",
+        "members": [
+            "magneto",
+            "mystique",
+            "sabretooth",
+            "toad",
+            "quicksilver"
+        ],
+        "movies": [
+            "X-Men",
+            "X2: X-Men United",
+            "X-Men: Days of Future Past"
+        ],
+        "relatedTeams": [
+            "x-men",
+            "x-force"
+        ]
+    },
+
+    {
+        "id": "illuminati",
+        "name": "Illuminati",
+        "type": "Secret Superhero Council",
+        "status": "Active",
+        "universe": "Earth-616",
+        "founded": "2005",
+        "description": "A secret council of influential heroes formed to quietly address threats and decisions affecting the wider Marvel Universe.",
+        "members": [
+            "mrfantastic",
+            "doctorstrange",
+            "ironman",
+            "professorx",
+            "namor",
+            "black-bolt"
+        ],
+        "movies": [
+            "Doctor Strange in the Multiverse of Madness"
+        ],
+        "relatedTeams": [
+            "avengers",
+            "fantastic-four",
+            "x-men"
+        ]
+    },
+
+    {
+        "id": "eternals",
+        "name": "Eternals",
+        "type": "Cosmic Superpowered Group",
+        "status": "Active",
+        "universe": "Earth-616",
+        "founded": "Ancient",
+        "description": "An ancient group of powerful beings created to protect Earth and humanity from cosmic threats.",
+        "members": [
+            "ikaris",
+            "thena",
+            "sersi",
+            "kingo",
+            "makkari",
+            "phastos"
+        ],
+        "movies": [
+            "Eternals"
+        ],
+        "relatedTeams": [
+            "guardians-of-the-galaxy",
+            "avengers"
+        ]
+    },
+
+    {
+        "id": "heroes-for-hire",
+        "name": "Heroes for Hire",
+        "type": "Superhero Team",
+        "status": "Active",
+        "universe": "Earth-616",
+        "founded": "1978",
+        "description": "A group of heroes who take on missions and cases while operating as a professional superhero organization.",
+        "members": [
+            "lukecage",
+            "ironfist",
+            "misty-knight",
+            "colleen-wing"
+        ],
+        "movies": [],
+        "relatedTeams": [
+            "defenders",
+            "avengers"
+        ]
+    },
+
+    {
+        "id": "shield",
+        "name": "S.H.I.E.L.D.",
+        "type": "Intelligence Organization",
+        "status": "Active",
+        "universe": "Earth-616",
+        "founded": "1965",
+        "description": "A global intelligence and defense organization responsible for responding to extraordinary threats.",
+        "members": [
+            "nickfury",
+            "mariahill",
+            "philcoulson",
+            "daisyjohnson"
+        ],
+        "movies": [
+            "Iron Man",
+            "The Avengers",
+            "Captain America: The Winter Soldier",
+            "Avengers: Age of Ultron"
+        ],
+        "relatedTeams": [
+            "avengers",
+            "hydra"
+        ]
+    },
+
+    {
+        "id": "hydra",
+        "name": "Hydra",
+        "type": "Villainous Organization",
+        "status": "Active",
+        "universe": "Earth-616",
+        "founded": "Ancient",
+        "description": "A secretive organization dedicated to achieving global power through infiltration, manipulation, and advanced technology.",
+        "members": [
+            "red-skull",
+            "baron-zemo",
+            "madamehydra",
+            "arnimzola"
+        ],
+        "movies": [
+            "Captain America: The First Avenger",
+            "Captain America: The Winter Soldier",
+            "Avengers: Age of Ultron"
+        ],
+        "relatedTeams": [
+            "shield",
+            "masters-of-evil",
+            "dark-avengers"
+        ]
+    },
+
+    {
+        "id": "sinister-six",
+        "name": "Sinister Six",
+        "type": "Supervillain Team",
+        "status": "Active",
+        "universe": "Earth-616",
+        "founded": "1964",
+        "description": "A coalition of Spider-Man's most dangerous enemies who unite to defeat their common adversary.",
+        "members": [
+            "doctor-octopus",
+            "greengoblin",
+            "electro",
+            "sandman",
+            "vulture",
+            "mysterio"
+        ],
+        "movies": [
+            "Spider-Man: No Way Home"
+        ],
+        "relatedTeams": [
+            "masters-of-evil",
+            "spider-society"
+        ]
+    },
+
+    {
+        "id": "masters-of-evil",
+        "name": "Masters of Evil",
+        "type": "Supervillain Team",
+        "status": "Active",
+        "universe": "Earth-616",
+        "founded": "1964",
+        "description": "A recurring alliance of powerful villains assembled to oppose Earth's greatest heroes.",
+        "members": [
+            "baron-zemo",
+            "ultron",
+            "enchantress",
+            "absorbing-man",
+            "radioactiveman"
+        ],
+        "movies": [],
+        "relatedTeams": [
+            "avengers",
+            "hydra",
+            "dark-avengers"
+        ]
+    },
+
+    {
+        "id": "spider-society",
+        "name": "Spider-Society",
+        "type": "Multiversal Superhero Network",
+        "status": "Active",
+        "universe": "Multiverse",
+        "founded": "Unknown",
+        "description": "A multiversal network of Spider-powered heroes dedicated to protecting the Spider-Verse and maintaining its stability.",
+        "members": [
+            "spiderman",
+            "spider-gwen",
+            "spiderman-2099",
+            "spiderpunk",
+            "spidermanindia"
+        ],
+        "movies": [
+            "Spider-Man: Across the Spider-Verse"
+        ],
+        "relatedTeams": [
+            "avengers",
+            "spider-verse"
+        ]
+    },
+
+    {
+        "id": "champions",
+        "name": "Champions",
+        "type": "Young Superhero Team",
+        "status": "Active",
+        "universe": "Earth-616",
+        "founded": "2016",
+        "description": "A younger generation of heroes who came together to create a team focused on protecting people and challenging established superhero traditions.",
+        "members": [
+            "msmarvel",
+            "miles-morales",
+            "nova",
+            "vivvision",
+            "cyclops"
+        ],
+        "movies": [],
+        "relatedTeams": [
+            "young-avengers",
+            "avengers"
+        ]
+    },
+
+    {
+        "id": "young-avengers",
+        "name": "Young Avengers",
+        "type": "Young Superhero Team",
+        "status": "Active",
+        "universe": "Earth-616",
+        "founded": "2005",
+        "description": "A younger generation of heroes inspired by the Avengers and determined to establish their own legacy.",
+        "members": [
+            "katebishop",
+            "wiccan",
+            "hulkling",
+            "cassie-lang",
+            "patriot",
+            "ironlad"
+        ],
+        "movies": [],
+        "relatedTeams": [
+            "avengers",
+            "new-avengers",
+            "champions"
+        ]
+    },
+
+    {
+        "id": "dark-avengers",
+        "name": "Dark Avengers",
+        "type": "Villain / Anti-Hero Team",
+        "status": "Active",
+        "universe": "Earth-616",
+        "founded": "2009",
+        "description": "A controversial team built around villains and morally ambiguous figures presented as an alternative version of the Avengers.",
+        "members": [
+            "greengoblin",
+            "moonstone",
+            "bullseye",
+            "venom",
+            "daken",
+            "ares"
+        ],
+        "movies": [],
+        "relatedTeams": [
+            "avengers",
+            "thunderbolts",
+            "masters-of-evil"
+        ]
+    }
+]

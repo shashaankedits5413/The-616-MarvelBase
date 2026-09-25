@@ -1,0 +1,1849 @@
+[
+  {
+    "id": "iron-man-2008",
+    "title": "Iron Man",
+    "year": 2008,
+    "type": "MCU",
+    "phase": "Phase 1",
+    "director": "Jon Favreau",
+    "image": "images/ironmanmovie.jpg",
+    "description": "Tony Stark builds a powerful armored suit and becomes Iron Man.",
+    "plot": "Billionaire weapons manufacturer Tony Stark is captured by terrorists and forced to confront the consequences of his work. He builds an advanced armored suit to escape and returns home determined to use his technology for good.",
+    "mainCharacters": [
+      "Tony Stark",
+      "Pepper Potts",
+      "James Rhodes",
+      "Obadiah Stane"
+    ],
+    "relatedMovies": [
+      "Iron Man 2",
+      "The Avengers"
+    ]
+  },
+  {
+    "id": "the-incredible-hulk-2008",
+    "title": "The Incredible Hulk",
+    "year": 2008,
+    "type": "MCU",
+    "phase": "Phase 1",
+    "director": "Louis Leterrier",
+    "image": "images/theincrediblehulkmovie.jpg",
+    "description": "Bruce Banner searches for a cure while being hunted for his Hulk transformation.",
+    "plot": "Bruce Banner lives in hiding while searching for a way to control or cure his transformation into the Hulk. When General Ross tracks him down, Banner must confront both the military and another gamma-powered threat.",
+    "mainCharacters": [
+      "Bruce Banner",
+      "Betty Ross",
+      "Emil Blonsky",
+      "Thaddeus Ross"
+    ],
+    "relatedMovies": [
+      "The Avengers",
+      "Avengers: Age of Ultron"
+    ]
+  },
+  {
+    "id": "iron-man-2-2010",
+    "title": "Iron Man 2",
+    "year": 2010,
+    "type": "MCU",
+    "phase": "Phase 1",
+    "director": "Jon Favreau",
+    "image": "images/ironman2movie.jpg",
+    "description": "Tony Stark faces new enemies while dealing with the consequences of becoming Iron Man.",
+    "plot": "Tony Stark struggles with the effects of the technology keeping him alive while facing pressure from the government. He must also deal with Ivan Vanko and industrial rival Justin Hammer as new threats emerge around his armor.",
+    "mainCharacters": [
+      "Tony Stark",
+      "Pepper Potts",
+      "James Rhodes",
+      "Natasha Romanoff",
+      "Ivan Vanko"
+    ],
+    "relatedMovies": [
+      "Iron Man",
+      "The Avengers"
+    ]
+  },
+  {
+    "id": "thor-2011",
+    "title": "Thor",
+    "year": 2011,
+    "type": "MCU",
+    "phase": "Phase 1",
+    "director": "Kenneth Branagh",
+    "image": "images/thormovie.jpg",
+    "description": "The arrogant Asgardian prince Thor is banished to Earth and learns what it means to be worthy.",
+    "plot": "Thor is banished from Asgard after his reckless actions reignite an ancient conflict. Stripped of his powers, he learns humility on Earth while Loki's plans threaten both Asgard and the human world.",
+    "mainCharacters": [
+      "Thor",
+      "Loki",
+      "Jane Foster",
+      "Odin",
+      "Erik Selvig"
+    ],
+    "relatedMovies": [
+      "Thor: The Dark World",
+      "The Avengers"
+    ]
+  },
+  {
+    "id": "captain-america-the-first-avenger-2011",
+    "title": "Captain America: The First Avenger",
+    "year": 2011,
+    "type": "MCU",
+    "phase": "Phase 1",
+    "director": "Joe Johnston",
+    "image": "images/captainamericafirstavengermovie.jpg",
+    "description": "Steve Rogers becomes Captain America and battles Hydra during World War II.",
+    "plot": "Weak but determined Steve Rogers volunteers for an experimental program and becomes the super-soldier Captain America. He leads the fight against Hydra and its leader Red Skull during World War II.",
+    "mainCharacters": [
+      "Steve Rogers",
+      "Peggy Carter",
+      "Bucky Barnes",
+      "Red Skull"
+    ],
+    "relatedMovies": [
+      "The Avengers",
+      "Captain America: The Winter Soldier"
+    ]
+  },
+  {
+    "id": "the-avengers-2012",
+    "title": "The Avengers",
+    "year": 2012,
+    "type": "MCU",
+    "phase": "Phase 1",
+    "director": "Joss Whedon",
+    "image": "images/avengersmovie.jpg",
+    "description": "Earth's mightiest heroes unite to stop Loki and an invading alien army.",
+    "plot": "Nick Fury brings together Iron Man, Captain America, Thor, Hulk, Black Widow and Hawkeye when Loki steals the Tesseract. The heroes must overcome their differences and unite to defend Earth from a massive alien invasion.",
+    "mainCharacters": [
+      "Iron Man",
+      "Captain America",
+      "Thor",
+      "Hulk",
+      "Black Widow",
+      "Hawkeye",
+      "Loki"
+    ],
+    "relatedMovies": [
+      "Iron Man 2",
+      "Thor",
+      "Avengers: Age of Ultron"
+    ]
+  },
+  {
+    "id": "iron-man-3-2013",
+    "title": "Iron Man 3",
+    "year": 2013,
+    "type": "MCU",
+    "phase": "Phase 2",
+    "director": "Shane Black",
+    "image": "images/ironman3movie.jpg",
+    "description": "Tony Stark faces a dangerous terrorist while confronting the aftermath of the Battle of New York.",
+    "plot": "Haunted by the Battle of New York, Tony Stark struggles with anxiety while a mysterious terrorist known as the Mandarin attacks. Tony is forced to rely on his intelligence and determination when his armor and home are taken away.",
+    "mainCharacters": [
+      "Tony Stark",
+      "Pepper Potts",
+      "James Rhodes",
+      "Aldrich Killian",
+      "Maya Hansen"
+    ],
+    "relatedMovies": [
+      "The Avengers",
+      "Avengers: Age of Ultron"
+    ]
+  },
+  {
+    "id": "thor-the-dark-world-2013",
+    "title": "Thor: The Dark World",
+    "year": 2013,
+    "type": "MCU",
+    "phase": "Phase 2",
+    "director": "Alan Taylor",
+    "image": "images/thorthedarkworldmovie.jpg",
+    "description": "Thor must protect the Nine Realms from the Dark Elves and their leader Malekith.",
+    "plot": "An ancient weapon called the Aether awakens the Dark Elf Malekith, who seeks to plunge the universe into darkness. Thor must work with Loki to protect Jane Foster and prevent Malekith from completing his plan.",
+    "mainCharacters": [
+      "Thor",
+      "Loki",
+      "Jane Foster",
+      "Malekith",
+      "Odin"
+    ],
+    "relatedMovies": [
+      "Thor",
+      "Avengers: Age of Ultron"
+    ]
+  },
+  {
+    "id": "captain-america-the-winter-soldier-2014",
+    "title": "Captain America: The Winter Soldier",
+    "year": 2014,
+    "type": "MCU",
+    "phase": "Phase 2",
+    "director": "Anthony Russo and Joe Russo",
+    "image": "images/captainamericawintersoldiermovie.jpg",
+    "description": "Captain America discovers a conspiracy within S.H.I.E.L.D. and faces the mysterious Winter Soldier.",
+    "plot": "Steve Rogers discovers that S.H.I.E.L.D. has been infiltrated by a secret organization planning to eliminate perceived threats. With Black Widow and Falcon, he uncovers the truth behind the Winter Soldier.",
+    "mainCharacters": [
+      "Steve Rogers",
+      "Natasha Romanoff",
+      "Sam Wilson",
+      "Bucky Barnes",
+      "Alexander Pierce"
+    ],
+    "relatedMovies": [
+      "Captain America: The First Avenger",
+      "Captain America: Civil War"
+    ]
+  },
+  {
+    "id": "guardians-of-the-galaxy-2014",
+    "title": "Guardians of the Galaxy",
+    "year": 2014,
+    "type": "MCU",
+    "phase": "Phase 2",
+    "director": "James Gunn",
+    "image": "images/guardiansofthegalaxymovie.jpg",
+    "description": "A group of unlikely cosmic heroes joins forces to protect the galaxy from Ronan.",
+    "plot": "Peter Quill steals a mysterious Orb and becomes the target of Ronan the Accuser. Forced to work with Gamora, Rocket, Groot and Drax, he forms an unlikely team that must protect the galaxy.",
+    "mainCharacters": [
+      "Peter Quill",
+      "Gamora",
+      "Rocket",
+      "Groot",
+      "Drax",
+      "Ronan"
+    ],
+    "relatedMovies": [
+      "Guardians of the Galaxy Vol. 2",
+      "Avengers: Infinity War"
+    ]
+  },
+  {
+    "id": "avengers-age-of-ultron-2015",
+    "title": "Avengers: Age of Ultron",
+    "year": 2015,
+    "type": "MCU",
+    "phase": "Phase 2",
+    "director": "Joss Whedon",
+    "image": "images/avengersageofultronmovie.jpg",
+    "description": "The Avengers face Ultron, an artificial intelligence determined to destroy humanity.",
+    "plot": "Tony Stark and Bruce Banner create an artificial intelligence intended to protect the world, but it becomes the dangerous Ultron. The Avengers must stop Ultron while confronting the mysterious Maximoff twins and the consequences of their own actions.",
+    "mainCharacters": [
+      "Iron Man",
+      "Captain America",
+      "Thor",
+      "Hulk",
+      "Black Widow",
+      "Hawkeye",
+      "Ultron",
+      "Wanda Maximoff",
+      "Vision",
+      "Quicksilver"
+    ],
+    "relatedMovies": [
+      "The Avengers",
+      "Captain America: Civil War"
+    ]
+  },
+  {
+    "id": "ant-man-2015",
+    "title": "Ant-Man",
+    "year": 2015,
+    "type": "MCU",
+    "phase": "Phase 2",
+    "director": "Peyton Reed",
+    "image": "images/antmanmovie.jpg",
+    "description": "Scott Lang becomes Ant-Man and must use his shrinking abilities to stop dangerous technology.",
+    "plot": "Thief Scott Lang is recruited by scientist Hank Pym to become the new Ant-Man. Using a suit that allows him to shrink while gaining incredible strength, Scott must stop Pym's technology from being weaponized.",
+    "mainCharacters": [
+      "Scott Lang",
+      "Hope van Dyne",
+      "Hank Pym",
+      "Darren Cross"
+    ],
+    "relatedMovies": [
+      "Avengers: Age of Ultron",
+      "Ant-Man and the Wasp"
+    ]
+  },
+  {
+    "id": "captain-america-civil-war-2016",
+    "title": "Captain America: Civil War",
+    "year": 2016,
+    "type": "MCU",
+    "phase": "Phase 3",
+    "director": "Anthony Russo and Joe Russo",
+    "image": "images/captainamericacivilwarmovie.jpg",
+    "description": "The Avengers split into opposing sides over government oversight.",
+    "plot": "After a devastating incident, governments around the world demand control over the Avengers. Captain America opposes the agreement while Iron Man supports it, splitting the heroes and turning former allies against one another.",
+    "mainCharacters": [
+      "Captain America",
+      "Iron Man",
+      "Bucky Barnes",
+      "Black Widow",
+      "Black Panther",
+      "Spider-Man",
+      "Falcon",
+      "War Machine",
+      "Ant-Man",
+      "Scarlet Witch",
+      "Vision"
+    ],
+    "relatedMovies": [
+      "Captain America: The Winter Soldier",
+      "Avengers: Infinity War"
+    ]
+  },
+  {
+    "id": "doctor-strange-2016",
+    "title": "Doctor Strange",
+    "year": 2016,
+    "type": "MCU",
+    "phase": "Phase 3",
+    "director": "Scott Derrickson",
+    "image": "images/doctorstrangemovie.jpg",
+    "description": "A brilliant surgeon discovers the mystic arts after a devastating accident changes his life.",
+    "plot": "After a serious accident ends his career as a surgeon, Stephen Strange searches for a way to heal himself. He discovers the mystic arts and becomes a sorcerer while defending Earth from the interdimensional threat of Dormammu.",
+    "mainCharacters": [
+      "Stephen Strange",
+      "The Ancient One",
+      "Karl Mordo",
+      "Wong",
+      "Dormammu"
+    ],
+    "relatedMovies": [
+      "Avengers: Infinity War",
+      "Doctor Strange in the Multiverse of Madness"
+    ]
+  },
+  {
+    "id": "guardians-of-the-galaxy-vol-2-2017",
+    "title": "Guardians of the Galaxy Vol. 2",
+    "year": 2017,
+    "type": "MCU",
+    "phase": "Phase 3",
+    "director": "James Gunn",
+    "image": "images/guardiansofthegalaxyvol2movie.jpg",
+    "description": "The Guardians travel across the galaxy as Peter Quill discovers the truth about his father.",
+    "plot": "The Guardians are hired for a dangerous mission before Peter Quill finally meets his mysterious father, Ego. As the team discovers Ego's true intentions, they must protect the galaxy and confront painful truths about family.",
+    "mainCharacters": [
+      "Peter Quill",
+      "Gamora",
+      "Rocket",
+      "Groot",
+      "Drax",
+      "Ego"
+    ],
+    "relatedMovies": [
+      "Guardians of the Galaxy",
+      "Avengers: Infinity War"
+    ]
+  },
+  {
+    "id": "spider-man-homecoming-2017",
+    "title": "Spider-Man: Homecoming",
+    "year": 2017,
+    "type": "MCU",
+    "phase": "Phase 3",
+    "director": "Jon Watts",
+    "image": "images/spidermanhomecomingmovie.jpg",
+    "description": "Peter Parker balances high school life with his responsibilities as Spider-Man.",
+    "plot": "Peter Parker struggles to balance high school with his new life as Spider-Man. When the dangerous Vulture begins trafficking advanced weapons, Peter tries to prove himself as a hero while learning an important lesson about responsibility.",
+    "mainCharacters": [
+      "Peter Parker",
+      "Tony Stark",
+      "Adrian Toomes",
+      "Ned Leeds",
+      "Michelle Jones"
+    ],
+    "relatedMovies": [
+      "Captain America: Civil War",
+      "Spider-Man: Far From Home"
+    ]
+  },
+  {
+    "id": "thor-ragnarok-2017",
+    "title": "Thor: Ragnarok",
+    "year": 2017,
+    "type": "MCU",
+    "phase": "Phase 3",
+    "director": "Taika Waititi",
+    "image": "images/thorragnarokmovie.jpg",
+    "description": "Thor must escape Sakaar and stop Hela from destroying Asgard.",
+    "plot": "Thor is imprisoned on the distant planet Sakaar and forced to fight the Hulk in a gladiatorial contest. He escapes with unlikely allies and returns to Asgard to stop his sister Hela from bringing about Ragnarok.",
+    "mainCharacters": [
+      "Thor",
+      "Loki",
+      "Hela",
+      "Hulk",
+      "Valkyrie"
+    ],
+    "relatedMovies": [
+      "Thor: The Dark World",
+      "Avengers: Infinity War"
+    ]
+  },
+  {
+    "id": "black-panther-2018",
+    "title": "Black Panther",
+    "year": 2018,
+    "type": "MCU",
+    "phase": "Phase 3",
+    "director": "Ryan Coogler",
+    "image": "images/blackpanthermovie.jpg",
+    "description": "T'Challa returns to Wakanda and faces a challenger who threatens the future of the kingdom.",
+    "plot": "Following his father's death, T'Challa becomes king of Wakanda and must protect his nation from outside threats. His rule is challenged by Killmonger, who seeks to use Wakanda's resources to change the world.",
+    "mainCharacters": [
+      "T'Challa",
+      "Shuri",
+      "Okoye",
+      "Nakia",
+      "Erik Killmonger"
+    ],
+    "relatedMovies": [
+      "Captain America: Civil War",
+      "Avengers: Infinity War"
+    ]
+  },
+  {
+    "id": "avengers-infinity-war-2018",
+    "title": "Avengers: Infinity War",
+    "year": 2018,
+    "type": "MCU",
+    "phase": "Phase 3",
+    "director": "Anthony Russo and Joe Russo",
+    "image": "images/avengersinfinitywarmovie.jpg",
+    "description": "The Avengers and their allies unite to stop Thanos from collecting the Infinity Stones.",
+    "plot": "Thanos begins his quest to collect all six Infinity Stones and reshape the universe according to his vision. Heroes across Earth and the galaxy unite against him, but the scale of his power pushes them to their limits.",
+    "mainCharacters": [
+      "Iron Man",
+      "Thor",
+      "Thanos",
+      "Spider-Man",
+      "Doctor Strange",
+      "Black Panther",
+      "Captain America",
+      "Hulk",
+      "Black Widow",
+      "Vision",
+      "Scarlet Witch",
+      "Star-Lord",
+      "Gamora",
+      "Rocket",
+      "Groot"
+    ],
+    "relatedMovies": [
+      "Thor: Ragnarok",
+      "Avengers: Endgame"
+    ]
+  },
+  {
+    "id": "ant-man-and-the-wasp-2018",
+    "title": "Ant-Man and the Wasp",
+    "year": 2018,
+    "type": "MCU",
+    "phase": "Phase 3",
+    "director": "Peyton Reed",
+    "image": "images/antmanandthewaspmovie.jpg",
+    "description": "Scott Lang teams up with Hope van Dyne to explore the Quantum Realm.",
+    "plot": "Scott Lang works with Hope van Dyne and Hank Pym to rescue Janet van Dyne from the Quantum Realm. Their mission becomes complicated when a mysterious enemy called Ghost seeks access to their technology.",
+    "mainCharacters": [
+      "Scott Lang",
+      "Hope van Dyne",
+      "Hank Pym",
+      "Janet van Dyne",
+      "Ghost"
+    ],
+    "relatedMovies": [
+      "Ant-Man",
+      "Avengers: Endgame"
+    ]
+  },
+  {
+    "id": "captain-marvel-2019",
+    "title": "Captain Marvel",
+    "year": 2019,
+    "type": "MCU",
+    "phase": "Phase 3",
+    "director": "Anna Boden and Ryan Fleck",
+    "image": "images/captainmarvelmovie.jpg",
+    "description": "Carol Danvers becomes one of the universe's most powerful heroes while uncovering the truth about her past.",
+    "plot": "Carol Danvers gains incredible powers after an accident and becomes involved in the conflict between the Kree and Skrulls. Returning to Earth leads her to uncover the truth about her identity and her forgotten past.",
+    "mainCharacters": [
+      "Carol Danvers",
+      "Nick Fury",
+      "Talos",
+      "Yon-Rogg",
+      "Maria Rambeau"
+    ],
+    "relatedMovies": [
+      "Avengers: Infinity War",
+      "Avengers: Endgame"
+    ]
+  },
+  {
+    "id": "avengers-endgame-2019",
+    "title": "Avengers: Endgame",
+    "year": 2019,
+    "type": "MCU",
+    "phase": "Phase 3",
+    "director": "Anthony Russo and Joe Russo",
+    "image": "images/avengersendgamemovie.jpg",
+    "description": "The surviving Avengers attempt to undo the devastation caused by Thanos.",
+    "plot": "After Thanos wipes out half of all life, the surviving heroes struggle to accept their defeat. Years later, an opportunity to reverse the damage emerges, sending the Avengers on a final mission that changes their lives and the future of the universe.",
+    "mainCharacters": [
+      "Iron Man",
+      "Captain America",
+      "Thor",
+      "Black Widow",
+      "Hulk",
+      "Hawkeye",
+      "Thanos",
+      "Ant-Man",
+      "Rocket",
+      "Nebula",
+      "Captain Marvel"
+    ],
+    "relatedMovies": [
+      "Avengers: Infinity War",
+      "Spider-Man: Far From Home"
+    ]
+  },
+  {
+    "id": "spider-man-far-from-home-2019",
+    "title": "Spider-Man: Far From Home",
+    "year": 2019,
+    "type": "MCU",
+    "phase": "Phase 3",
+    "director": "Jon Watts",
+    "image": "images/spidermanfarfromhomemovie.jpg",
+    "description": "Peter Parker joins a school trip to Europe while being recruited to face a new threat.",
+    "plot": "Peter Parker tries to enjoy a school trip across Europe while struggling with the loss of Tony Stark. Nick Fury recruits him to help Mysterio fight a series of mysterious elemental threats.",
+    "mainCharacters": [
+      "Peter Parker",
+      "Mysterio",
+      "Nick Fury",
+      "MJ",
+      "Happy Hogan"
+    ],
+    "relatedMovies": [
+      "Spider-Man: Homecoming",
+      "Spider-Man: No Way Home"
+    ]
+  },
+  {
+    "id": "black-widow-2021",
+    "title": "Black Widow",
+    "year": 2021,
+    "type": "MCU",
+    "phase": "Phase 4",
+    "director": "Cate Shortland",
+    "image": "images/blackwidowmovie.jpg",
+    "description": "Natasha Romanoff confronts her past and reunites with her former family.",
+    "plot": "Natasha Romanoff is forced to confront the consequences of her past after the events of Captain America: Civil War. She reunites with her former family and attempts to destroy the Red Room once and for all.",
+    "mainCharacters": [
+      "Natasha Romanoff",
+      "Yelena Belova",
+      "Alexei Shostakov",
+      "Melina Vostokoff",
+      "Taskmaster"
+    ],
+    "relatedMovies": [
+      "Captain America: Civil War",
+      "Avengers: Endgame"
+    ]
+  },
+  {
+    "id": "shang-chi-and-the-legend-of-the-ten-rings-2021",
+    "title": "Shang-Chi and the Legend of the Ten Rings",
+    "year": 2021,
+    "type": "MCU",
+    "phase": "Phase 4",
+    "director": "Destin Daniel Cretton",
+    "image": "images/shangchimovie.jpg",
+    "description": "Shang-Chi is drawn into the mysterious Ten Rings organization and confronts his family's legacy.",
+    "plot": "Shang-Chi has built a quiet life away from his father and the Ten Rings organization. When his past catches up with him, he returns to his family and discovers a hidden world filled with ancient powers and dangerous secrets.",
+    "mainCharacters": [
+      "Shang-Chi",
+      "Katy Chen",
+      "Wenwu",
+      "Xialing",
+      "Ying Nan"
+    ],
+    "relatedMovies": [
+      "Avengers: Endgame",
+      "The Marvels"
+    ]
+  },
+  {
+    "id": "eternals-2021",
+    "title": "Eternals",
+    "year": 2021,
+    "type": "MCU",
+    "phase": "Phase 4",
+    "director": "Chloé Zhao",
+    "image": "images/eternalsmovie.jpg",
+    "description": "A group of ancient cosmic beings reunites to protect Earth from the Deviants.",
+    "plot": "The Eternals are ancient beings who have secretly protected humanity for thousands of years. When the Deviants return and a much larger cosmic event threatens Earth, the scattered group must reunite.",
+    "mainCharacters": [
+      "Sersi",
+      "Ikaris",
+      "Thena",
+      "Kingō",
+      "Druig",
+      "Ajak"
+    ],
+    "relatedMovies": [
+      "Avengers: Endgame",
+      "Thor: Love and Thunder"
+    ]
+  },
+  {
+    "id": "spider-man-no-way-home-2021",
+    "title": "Spider-Man: No Way Home",
+    "year": 2021,
+    "type": "MCU",
+    "phase": "Phase 4",
+    "director": "Jon Watts",
+    "image": "images/spidermannowayhomemovie.jpg",
+    "description": "Peter Parker's attempt to restore his secret identity opens the door to villains from other realities.",
+    "plot": "Peter Parker asks Doctor Strange to make the world forget his secret identity, but the spell goes wrong. Villains from other realities arrive, forcing Peter to confront the consequences of bringing together multiple Spider-Man worlds.",
+    "mainCharacters": [
+      "Peter Parker",
+      "Doctor Strange",
+      "MJ",
+      "Green Goblin",
+      "Doctor Octopus",
+      "Electro",
+      "Sandman",
+      "Lizard"
+    ],
+    "relatedMovies": [
+      "Spider-Man: Far From Home",
+      "Doctor Strange in the Multiverse of Madness"
+    ]
+  },
+  {
+    "id": "doctor-strange-in-the-multiverse-of-madness-2022",
+    "title": "Doctor Strange in the Multiverse of Madness",
+    "year": 2022,
+    "type": "MCU",
+    "phase": "Phase 4",
+    "director": "Sam Raimi",
+    "image": "images/doctorstrangemultiverseofmadnessmovie.jpg",
+    "description": "Doctor Strange travels through the multiverse while protecting America Chavez.",
+    "plot": "Doctor Strange encounters America Chavez, a young hero who can travel between universes. As they journey through the multiverse, they face a powerful magical threat determined to obtain America's ability.",
+    "mainCharacters": [
+      "Doctor Strange",
+      "Wanda Maximoff",
+      "America Chavez",
+      "Wong"
+    ],
+    "relatedMovies": [
+      "Spider-Man: No Way Home",
+      "Avengers: Endgame"
+    ]
+  },
+  {
+    "id": "thor-love-and-thunder-2022",
+    "title": "Thor: Love and Thunder",
+    "year": 2022,
+    "type": "MCU",
+    "phase": "Phase 4",
+    "director": "Taika Waititi",
+    "image": "images/thorloveandthundermovie.jpg",
+    "description": "Thor faces the god-killing threat of Gorr while being reunited with Jane Foster.",
+    "plot": "Thor's peaceful search for a new purpose is interrupted by Gorr the God Butcher, who seeks to eliminate the gods. Thor reunites with Jane Foster, who now wields Mjolnir, and joins her and Valkyrie against Gorr.",
+    "mainCharacters": [
+      "Thor",
+      "Jane Foster",
+      "Valkyrie",
+      "Gorr",
+      "Korg"
+    ],
+    "relatedMovies": [
+      "Thor: Ragnarok",
+      "Avengers: Endgame"
+    ]
+  },
+  {
+    "id": "black-panther-wakanda-forever-2022",
+    "title": "Black Panther: Wakanda Forever",
+    "year": 2022,
+    "type": "MCU",
+    "phase": "Phase 4",
+    "director": "Ryan Coogler",
+    "image": "images/blackpantherwakandaforevermovie.jpg",
+    "description": "Wakanda faces new threats while mourning the loss of King T'Challa.",
+    "plot": "Wakanda struggles to move forward after the death of King T'Challa while protecting its resources from foreign powers. The arrival of Namor and the underwater kingdom of Talokan forces Wakanda into a dangerous new conflict.",
+    "mainCharacters": [
+      "Shuri",
+      "Ramonda",
+      "Namor",
+      "Okoye",
+      "M'Baku"
+    ],
+    "relatedMovies": [
+      "Black Panther",
+      "Captain America: Civil War"
+    ]
+  },
+  {
+    "id": "ant-man-and-the-wasp-quantumania-2023",
+    "title": "Ant-Man and the Wasp: Quantumania",
+    "year": 2023,
+    "type": "MCU",
+    "phase": "Phase 5",
+    "director": "Peyton Reed",
+    "image": "images/antmanandthewaspquantumaniamovie.jpg",
+    "description": "Scott Lang and his family become trapped in the Quantum Realm and encounter Kang.",
+    "plot": "Scott Lang and his family are pulled into the mysterious Quantum Realm and separated from the outside world. There they encounter strange civilizations and Kang the Conqueror, who seeks to escape and regain his power.",
+    "mainCharacters": [
+      "Scott Lang",
+      "Hope van Dyne",
+      "Cassie Lang",
+      "Kang the Conqueror",
+      "Janet van Dyne"
+    ],
+    "relatedMovies": [
+      "Ant-Man and the Wasp",
+      "Avengers: Endgame"
+    ]
+  },
+  {
+    "id": "guardians-of-the-galaxy-vol-3-2023",
+    "title": "Guardians of the Galaxy Vol. 3",
+    "year": 2023,
+    "type": "MCU",
+    "phase": "Phase 5",
+    "director": "James Gunn",
+    "image": "images/guardiansofthegalaxyvol3movie.jpg",
+    "description": "The Guardians embark on a dangerous mission to save Rocket and confront the High Evolutionary.",
+    "plot": "Rocket is critically injured, forcing the Guardians to uncover the secrets of his creation. The team travels across the galaxy to confront the High Evolutionary while fighting to save their friend and protect countless lives.",
+    "mainCharacters": [
+      "Peter Quill",
+      "Rocket",
+      "Gamora",
+      "Drax",
+      "Nebula",
+      "Groot"
+    ],
+    "relatedMovies": [
+      "Guardians of the Galaxy",
+      "Guardians of the Galaxy Vol. 2"
+    ]
+  },
+  {
+    "id": "the-marvels-2023",
+    "title": "The Marvels",
+    "year": 2023,
+    "type": "MCU",
+    "phase": "Phase 5",
+    "director": "Nia DaCosta",
+    "image": "images/themarvelsmovie.jpg",
+    "description": "Captain Marvel, Ms. Marvel and Monica Rambeau become mysteriously connected and must work together.",
+    "plot": "Carol Danvers, Kamala Khan and Monica Rambeau discover that their powers have become mysteriously linked. Forced to work together, the three heroes face a new threat that could destabilize the universe.",
+    "mainCharacters": [
+      "Carol Danvers",
+      "Kamala Khan",
+      "Monica Rambeau",
+      "Nick Fury",
+      "Dar-Benn"
+    ],
+    "relatedMovies": [
+      "Captain Marvel",
+      "Avengers: Endgame"
+    ]
+  },
+  {
+    "id": "deadpool-and-wolverine-2024",
+    "title": "Deadpool & Wolverine",
+    "year": 2024,
+    "type": "MCU",
+    "phase": "Phase 5",
+    "director": "Shawn Levy",
+    "image": "images/deadpoolandwolverinemovie.jpg",
+    "description": "Deadpool joins forces with Wolverine during a dangerous mission across the multiverse.",
+    "plot": "Deadpool is pulled into a multiversal conflict that threatens his world and encounters a reluctant Wolverine. The two unlikely heroes travel across realities while confronting enemies and consequences from the multiverse.",
+    "mainCharacters": [
+      "Deadpool",
+      "Wolverine",
+      "Mr. Paradox",
+      "Cassandra Nova"
+    ],
+    "relatedMovies": [
+      "Deadpool",
+      "Logan"
+    ]
+  },
+  {
+    "id": "captain-america-brave-new-world-2025",
+    "title": "Captain America: Brave New World",
+    "year": 2025,
+    "type": "MCU",
+    "phase": "Phase 5",
+    "director": "Julius Onah",
+    "image": "images/captainamericabravenewworldmovie.jpg",
+    "description": "Sam Wilson embraces the mantle of Captain America while becoming caught in an international crisis.",
+    "plot": "Sam Wilson officially takes on the mantle of Captain America and becomes involved in an international crisis. As tensions rise around President Ross and a mysterious global threat, Sam must uncover the truth before it is too late.",
+    "mainCharacters": [
+      "Sam Wilson",
+      "Thaddeus Ross",
+      "Joaquin Torres",
+      "Ruth Bat-Seraph",
+      "Samuel Sterns"
+    ],
+    "relatedMovies": [
+      "The Incredible Hulk",
+      "Avengers: Endgame"
+    ]
+  },
+  {
+    "id": "thunderbolts-2025",
+    "title": "Thunderbolts*",
+    "year": 2025,
+    "type": "MCU",
+    "phase": "Phase 5",
+    "director": "Jake Schreier",
+    "image": "images/thunderboltsmovie.jpg",
+    "description": "A group of unconventional heroes and former adversaries is brought together for a dangerous mission.",
+    "plot": "A team of morally complicated operatives is brought together after being caught in a dangerous situation. Forced to cooperate, the group must overcome their personal conflicts while facing a threat far beyond what they expected.",
+    "mainCharacters": [
+      "Yelena Belova",
+      "Bucky Barnes",
+      "Red Guardian",
+      "Ghost",
+      "John Walker",
+      "Bob Reynolds"
+    ],
+    "relatedMovies": [
+      "Black Widow",
+      "Captain America: Brave New World"
+    ]
+  },
+  {
+    "id": "the-fantastic-four-first-steps-2025",
+    "title": "The Fantastic Four: First Steps",
+    "year": 2025,
+    "type": "MCU",
+    "phase": "Phase 6",
+    "director": "Matt Shakman",
+    "image": "images/fantasticfourfirststepsmovie.jpg",
+    "description": "The Fantastic Four defend their retro-futuristic world against the cosmic threat of Galactus.",
+    "plot": "Reed Richards, Sue Storm, Johnny Storm and Ben Grimm become Earth's first family of superheroes in a retro-futuristic world. Their lives change when the cosmic entity Galactus arrives with a devastating threat to their planet.",
+    "mainCharacters": [
+      "Reed Richards",
+      "Sue Storm",
+      "Johnny Storm",
+      "Ben Grimm",
+      "Galactus",
+      "Silver Surfer"
+    ],
+    "relatedMovies": [
+      "Avengers: Endgame",
+      "Deadpool & Wolverine"
+    ]
+  },
+  {
+    "id": "spider-man-brand-new-day-2026",
+    "title": "Spider-Man: Brand New Day",
+    "year": 2026,
+    "type": "MCU",
+    "phase": "Phase 6",
+    "director": "Destin Daniel Cretton",
+    "image": "images/spidermanbrandnewdaymovie.jpg",
+    "description": "Peter Parker begins a new chapter as Spider-Man after the events that changed his life.",
+    "plot": "Peter Parker continues his life as Spider-Man after the world has forgotten his identity. With his personal life fundamentally changed, Peter faces a new chapter filled with unfamiliar threats and challenges.",
+    "mainCharacters": [
+      "Peter Parker"
+    ],
+    "relatedMovies": [
+      "Spider-Man: No Way Home",
+      "Spider-Man: Homecoming"
+    ]
+  },
+
+  {
+    "id": "x-men-2000",
+    "title": "X-Men",
+    "year": 2000,
+    "type": "Fox",
+    "phase": "X-Men Timeline",
+    "director": "Bryan Singer",
+    "image": "images/xmenmovie.jpg",
+    "description": "A team of mutant heroes protects humanity while facing a powerful mutant extremist.",
+    "plot": "Mutant Wolverine and Rogue become involved with Professor Xavier's X-Men, a team dedicated to protecting humans and mutants. They must stop Magneto from carrying out a plan that could permanently change humanity.",
+    "mainCharacters": [
+      "Wolverine",
+      "Professor X",
+      "Magneto",
+      "Jean Grey",
+      "Cyclops",
+      "Storm",
+      "Rogue"
+    ],
+    "relatedMovies": [
+      "X2",
+      "X-Men: The Last Stand"
+    ]
+  },
+  {
+    "id": "x2-2003",
+    "title": "X2",
+    "year": 2003,
+    "type": "Fox",
+    "phase": "X-Men Timeline",
+    "director": "Bryan Singer",
+    "image": "images/x2movie.jpg",
+    "description": "The X-Men unite with former enemies when mutants and humans face a common threat.",
+    "plot": "After an assassination attempt creates fear of mutants, Colonel William Stryker launches an attack on Professor Xavier's school. The X-Men and Magneto's Brotherhood must temporarily work together to stop Stryker.",
+    "mainCharacters": [
+      "Wolverine",
+      "Professor X",
+      "Magneto",
+      "Jean Grey",
+      "Cyclops",
+      "Storm",
+      "Mystique"
+    ],
+    "relatedMovies": [
+      "X-Men",
+      "X-Men: The Last Stand"
+    ]
+  },
+  {
+    "id": "x-men-the-last-stand-2006",
+    "title": "X-Men: The Last Stand",
+    "year": 2006,
+    "type": "Fox",
+    "phase": "X-Men Timeline",
+    "director": "Brett Ratner",
+    "image": "images/xmenthelaststandmovie.jpg",
+    "description": "The mutants face a controversial cure while Jean Grey becomes a powerful threat.",
+    "plot": "A new treatment claims to suppress the mutant gene, dividing the mutant population. At the same time, Jean Grey's immense power emerges as the X-Men and Brotherhood struggle with the consequences.",
+    "mainCharacters": [
+      "Wolverine",
+      "Professor X",
+      "Magneto",
+      "Jean Grey",
+      "Storm",
+      "Beast"
+    ],
+    "relatedMovies": [
+      "X2",
+      "X-Men: Days of Future Past"
+    ]
+  },
+  {
+    "id": "x-men-origins-wolverine-2009",
+    "title": "X-Men Origins: Wolverine",
+    "year": 2009,
+    "type": "Fox",
+    "phase": "X-Men Timeline",
+    "director": "Gavin Hood",
+    "image": "images/xmenoriginswolverinemovie.jpg",
+    "description": "Wolverine's violent past and transformation into the weapon known as Weapon XI are revealed.",
+    "plot": "Logan and his brother Victor Creed fight through decades of conflict before Logan undergoes an experiment that bonds adamantium to his skeleton. He then seeks revenge against those who manipulated him.",
+    "mainCharacters": [
+      "Wolverine",
+      "Victor Creed",
+      "William Stryker",
+      "Gambit",
+      "Deadpool"
+    ],
+    "relatedMovies": [
+      "X-Men",
+      "The Wolverine"
+    ]
+  },
+  {
+    "id": "x-men-first-class-2011",
+    "title": "X-Men: First Class",
+    "year": 2011,
+    "type": "Fox",
+    "phase": "X-Men Timeline",
+    "director": "Matthew Vaughn",
+    "image": "images/xmenfirstclassmovie.jpg",
+    "description": "A young Charles Xavier and Erik Lehnsherr form the first generation of the X-Men.",
+    "plot": "Charles Xavier and Erik Lehnsherr become allies while recruiting young mutants to stop Sebastian Shaw from triggering a nuclear war. Their friendship ultimately fractures over their different visions for mutantkind.",
+    "mainCharacters": [
+      "Charles Xavier",
+      "Erik Lehnsherr",
+      "Mystique",
+      "Beast",
+      "Sebastian Shaw",
+      "Emma Frost"
+    ],
+    "relatedMovies": [
+      "X-Men: Days of Future Past",
+      "X-Men: Apocalypse"
+    ]
+  },
+  {
+    "id": "the-wolverine-2013",
+    "title": "The Wolverine",
+    "year": 2013,
+    "type": "Fox",
+    "phase": "X-Men Timeline",
+    "director": "James Mangold",
+    "image": "images/thewolverinemovie.jpg",
+    "description": "Wolverine travels to Japan and confronts enemies while struggling with his past.",
+    "plot": "Logan travels to Japan at the request of an old acquaintance and becomes involved in a conflict surrounding a powerful family. He must face deadly enemies while confronting his own immortality and guilt.",
+    "mainCharacters": [
+      "Wolverine",
+      "Yukio",
+      "Mariko Yashida",
+      "Viper",
+      "Silver Samurai"
+    ],
+    "relatedMovies": [
+      "X-Men Origins: Wolverine",
+      "Logan"
+    ]
+  },
+  {
+    "id": "x-men-days-of-future-past-2014",
+    "title": "X-Men: Days of Future Past",
+    "year": 2014,
+    "type": "Fox",
+    "phase": "X-Men Timeline",
+    "director": "Bryan Singer",
+    "image": "images/xmendaysoffuturepastmovie.jpg",
+    "description": "The X-Men travel through time to prevent a future where mutants and humans are hunted by Sentinels.",
+    "plot": "In a devastated future, Wolverine's consciousness is sent into the past to stop an event that will lead to the rise of the Sentinels. He must unite younger versions of Charles Xavier and Magneto to change history.",
+    "mainCharacters": [
+      "Wolverine",
+      "Professor X",
+      "Magneto",
+      "Mystique",
+      "Beast",
+      "Quicksilver"
+    ],
+    "relatedMovies": [
+      "X-Men: First Class",
+      "X-Men: Apocalypse"
+    ]
+  },
+  {
+    "id": "deadpool-2016",
+    "title": "Deadpool",
+    "year": 2016,
+    "type": "Fox",
+    "phase": "X-Men Timeline",
+    "director": "Tim Miller",
+    "image": "images/deadpoolmovie.jpg",
+    "description": "A wisecracking mutant mercenary seeks revenge after an experiment changes his life.",
+    "plot": "Wade Wilson undergoes an experimental treatment after being diagnosed with a serious illness. The procedure gives him accelerated healing but leaves him scarred, leading him to become Deadpool and hunt down the people responsible.",
+    "mainCharacters": [
+      "Deadpool",
+      "Vanessa",
+      "Colossus",
+      "Negasonic Teenage Warhead",
+      "Ajax"
+    ],
+    "relatedMovies": [
+      "Deadpool 2",
+      "Deadpool & Wolverine"
+    ]
+  },
+  {
+    "id": "x-men-apocalypse-2016",
+    "title": "X-Men: Apocalypse",
+    "year": 2016,
+    "type": "Fox",
+    "phase": "X-Men Timeline",
+    "director": "Bryan Singer",
+    "image": "images/xmenapocalypsemovie.jpg",
+    "description": "The X-Men face Apocalypse, an ancient mutant determined to reshape civilization.",
+    "plot": "An ancient and extremely powerful mutant known as Apocalypse awakens after thousands of years. He recruits powerful mutants and attempts to destroy the existing world order, forcing the young X-Men to unite against him.",
+    "mainCharacters": [
+      "Professor X",
+      "Magneto",
+      "Mystique",
+      "Beast",
+      "Jean Grey",
+      "Cyclops",
+      "Apocalypse"
+    ],
+    "relatedMovies": [
+      "X-Men: Days of Future Past",
+      "Dark Phoenix"
+    ]
+  },
+  {
+    "id": "logan-2017",
+    "title": "Logan",
+    "year": 2017,
+    "type": "Fox",
+    "phase": "X-Men Timeline",
+    "director": "James Mangold",
+    "image": "images/loganmovie.jpg",
+    "description": "An aging Wolverine protects a young mutant while trying to escape his violent past.",
+    "plot": "In a bleak future, Logan lives in isolation while caring for an aging Professor X. His life changes when he encounters Laura, a young mutant with a mysterious connection to him, forcing him back into a dangerous fight.",
+    "mainCharacters": [
+      "Wolverine",
+      "Professor X",
+      "Laura",
+      "Donald Pierce",
+      "Caliban"
+    ],
+    "relatedMovies": [
+      "The Wolverine",
+      "Deadpool & Wolverine"
+    ]
+  },
+  {
+    "id": "deadpool-2-2018",
+    "title": "Deadpool 2",
+    "year": 2018,
+    "type": "Fox",
+    "phase": "X-Men Timeline",
+    "director": "David Leitch",
+    "image": "images/deadpool2movie.jpg",
+    "description": "Deadpool forms a team to protect a young mutant from a time-traveling soldier.",
+    "plot": "Deadpool becomes determined to protect a young mutant named Russell from Cable, a soldier from the future. He assembles a group of unusual heroes and becomes involved in a dangerous conflict involving time travel.",
+    "mainCharacters": [
+      "Deadpool",
+      "Cable",
+      "Domino",
+      "Russell Collins",
+      "Colossus"
+    ],
+    "relatedMovies": [
+      "Deadpool",
+      "Deadpool & Wolverine"
+    ]
+  },
+  {
+    "id": "dark-phoenix-2019",
+    "title": "Dark Phoenix",
+    "year": 2019,
+    "type": "Fox",
+    "phase": "X-Men Timeline",
+    "director": "Simon Kinberg",
+    "image": "images/darkphoenixmovie.jpg",
+    "description": "Jean Grey struggles to control an immense cosmic power that threatens the X-Men.",
+    "plot": "During a rescue mission in space, Jean Grey is exposed to a powerful cosmic force that dramatically increases her abilities. As Jean struggles with her growing power, the X-Men attempt to save her while facing an extraterrestrial threat.",
+    "mainCharacters": [
+      "Jean Grey",
+      "Professor X",
+      "Magneto",
+      "Mystique",
+      "Beast",
+      "Cyclops"
+    ],
+    "relatedMovies": [
+      "X-Men: Apocalypse",
+      "X-Men: Days of Future Past"
+    ]
+  },
+
+  {
+    "id": "the-amazing-spider-man-2012",
+    "title": "The Amazing Spider-Man",
+    "year": 2012,
+    "type": "Sony",
+    "phase": "Spider-Man Timeline",
+    "director": "Marc Webb",
+    "image": "images/theamazingspidermanmovie.jpg",
+    "description": "Peter Parker discovers his powers and uncovers secrets surrounding his parents.",
+    "plot": "Peter Parker is bitten by a genetically altered spider and develops extraordinary abilities. While learning to become Spider-Man, he investigates his parents' disappearance and faces the scientist Curt Connors, who becomes the Lizard.",
+    "mainCharacters": [
+      "Peter Parker",
+      "Gwen Stacy",
+      "Curt Connors",
+      "Aunt May",
+      "Uncle Ben"
+    ],
+    "relatedMovies": [
+      "The Amazing Spider-Man 2"
+    ]
+  },
+  {
+    "id": "the-amazing-spider-man-2-2014",
+    "title": "The Amazing Spider-Man 2",
+    "year": 2014,
+    "type": "Sony",
+    "phase": "Spider-Man Timeline",
+    "director": "Marc Webb",
+    "image": "images/theamazingspiderman2movie.jpg",
+    "description": "Spider-Man faces Electro and Harry Osborn while struggling to protect the people he loves.",
+    "plot": "Peter Parker continues protecting New York as Spider-Man while maintaining his relationship with Gwen Stacy. He faces the powerful Electro and his childhood friend Harry Osborn, whose actions lead to a devastating confrontation.",
+    "mainCharacters": [
+      "Peter Parker",
+      "Gwen Stacy",
+      "Harry Osborn",
+      "Electro",
+      "Aunt May"
+    ],
+    "relatedMovies": [
+      "The Amazing Spider-Man",
+      "Spider-Man: No Way Home"
+    ]
+  },
+  {
+    "id": "spider-man-2002",
+    "title": "Spider-Man",
+    "year": 2002,
+    "type": "Sony",
+    "phase": "Spider-Man Timeline",
+    "director": "Sam Raimi",
+    "image": "images/spidermanmovie.jpg",
+    "description": "Peter Parker gains spider-like abilities and learns that great power comes with great responsibility.",
+    "plot": "After being bitten by a genetically engineered spider, Peter Parker develops extraordinary abilities. Following a personal tragedy, he embraces his responsibility as Spider-Man and faces the villainous Green Goblin.",
+    "mainCharacters": [
+      "Peter Parker",
+      "Mary Jane Watson",
+      "Norman Osborn",
+      "Harry Osborn",
+      "Uncle Ben"
+    ],
+    "relatedMovies": [
+      "Spider-Man 2",
+      "Spider-Man 3"
+    ]
+  },
+  {
+    "id": "spider-man-2-2004",
+    "title": "Spider-Man 2",
+    "year": 2004,
+    "type": "Sony",
+    "phase": "Spider-Man Timeline",
+    "director": "Sam Raimi",
+    "image": "images/spiderman2movie.jpg",
+    "description": "Peter Parker struggles to balance his personal life with his responsibilities as Spider-Man.",
+    "plot": "Peter Parker begins losing control of his powers while struggling with his relationships and responsibilities. He faces Doctor Octopus, a scientist whose experiment transforms him into a dangerous supervillain.",
+    "mainCharacters": [
+      "Peter Parker",
+      "Mary Jane Watson",
+      "Doctor Octopus",
+      "Harry Osborn",
+      "Aunt May"
+    ],
+    "relatedMovies": [
+      "Spider-Man",
+      "Spider-Man 3"
+    ]
+  },
+  {
+    "id": "spider-man-3-2007",
+    "title": "Spider-Man 3",
+    "year": 2007,
+    "type": "Sony",
+    "phase": "Spider-Man Timeline",
+    "director": "Sam Raimi",
+    "image": "images/spiderman3movie.jpg",
+    "description": "Peter Parker faces multiple enemies while a mysterious alien substance begins affecting him.",
+    "plot": "Peter Parker's life becomes increasingly complicated when a mysterious alien substance bonds with him and amplifies his darker emotions. He must face Sandman, Venom and Harry Osborn while trying to regain control of himself.",
+    "mainCharacters": [
+      "Peter Parker",
+      "Mary Jane Watson",
+      "Harry Osborn",
+      "Sandman",
+      "Venom"
+    ],
+    "relatedMovies": [
+      "Spider-Man",
+      "Spider-Man 2",
+      "Spider-Man: No Way Home"
+    ]
+  },
+
+  {
+    "id": "daredevil-2015",
+    "title": "Daredevil",
+    "year": 2015,
+    "type": "Marvel Television",
+    "phase": "Netflix Era",
+    "director": "Drew Goddard",
+    "image": "images/daredevilshow.jpg",
+    "description": "A blind lawyer becomes a masked vigilante protecting Hell's Kitchen.",
+    "plot": "Matt Murdock is a blind lawyer who uses his heightened senses to fight criminals as Daredevil while balancing his dangerous vigilante life with his work defending people in court.",
+    "mainCharacters": [
+      "Matt Murdock",
+      "Foggy Nelson",
+      "Karen Page",
+      "Wilson Fisk"
+    ],
+    "relatedMovies": [
+      "Spider-Man: No Way Home"
+    ]
+  },
+  {
+    "id": "jessica-jones-2015",
+    "title": "Jessica Jones",
+    "year": 2015,
+    "type": "Marvel Television",
+    "phase": "Netflix Era",
+    "director": "Melissa Rosenberg",
+    "image": "images/jessicajonesshow.jpg",
+    "description": "A private investigator with superhuman strength confronts a dark enemy from her past.",
+    "plot": "Jessica Jones uses her extraordinary strength and investigative skills to run a private detective agency in New York while struggling with the consequences of her traumatic past.",
+    "mainCharacters": [
+      "Jessica Jones",
+      "Trish Walker",
+      "Luke Cage",
+      "Kilgrave"
+    ],
+    "relatedMovies": [
+      "The Defenders"
+    ]
+  },
+  {
+    "id": "luke-cage-2016",
+    "title": "Luke Cage",
+    "year": 2016,
+    "type": "Marvel Television",
+    "phase": "Netflix Era",
+    "director": "Cheo Hodari Coker",
+    "image": "images/lukecageshow.jpg",
+    "description": "A nearly indestructible man becomes a protector of Harlem.",
+    "plot": "Luke Cage possesses superhuman strength and unbreakable skin after a failed experiment. Seeking a quiet life in Harlem, he is forced to confront criminals threatening his community.",
+    "mainCharacters": [
+      "Luke Cage",
+      "Misty Knight",
+      "Claire Temple",
+      "Cottonmouth"
+    ],
+    "relatedMovies": [
+      "The Defenders"
+    ]
+  },
+  {
+    "id": "iron-fist-2017",
+    "title": "Iron Fist",
+    "year": 2017,
+    "type": "Marvel Television",
+    "phase": "Netflix Era",
+    "director": "Scott Buck",
+    "image": "images/ironfistshow.jpg",
+    "description": "A martial artist returns to New York after years of training to protect the city.",
+    "plot": "Danny Rand returns to New York after being presumed dead and claims the power of the Iron Fist. He must confront his family's enemies while mastering his abilities.",
+    "mainCharacters": [
+      "Danny Rand",
+      "Colleen Wing",
+      "Ward Meachum",
+      "Joy Meachum"
+    ],
+    "relatedMovies": [
+      "The Defenders"
+    ]
+  },
+  {
+    "id": "the-defenders-2017",
+    "title": "The Defenders",
+    "year": 2017,
+    "type": "Marvel Television",
+    "phase": "Netflix Era",
+    "director": "Douglas Petrie and Marco Ramirez",
+    "image": "images/thedefendersshow.jpg",
+    "description": "Four street-level heroes unite to protect New York from a mysterious organization.",
+    "plot": "Daredevil, Jessica Jones, Luke Cage and Iron Fist are drawn together when the Hand threatens New York City, forcing four very different heroes to work together.",
+    "mainCharacters": [
+      "Daredevil",
+      "Jessica Jones",
+      "Luke Cage",
+      "Iron Fist"
+    ],
+    "relatedMovies": [
+      "Daredevil",
+      "Jessica Jones",
+      "Luke Cage",
+      "Iron Fist"
+    ]
+  },
+  {
+    "id": "the-punisher-2017",
+    "title": "The Punisher",
+    "year": 2017,
+    "type": "Marvel Television",
+    "phase": "Netflix Era",
+    "director": "Steve Lightfoot",
+    "image": "images/thepunishershow.jpg",
+    "description": "Frank Castle wages a relentless war against criminals after uncovering a conspiracy.",
+    "plot": "Frank Castle discovers that the conspiracy responsible for destroying his life reaches deeper than he imagined. Taking on the identity of the Punisher, he hunts those responsible while uncovering a larger military conspiracy.",
+    "mainCharacters": [
+      "Frank Castle",
+      "Billy Russo",
+      "Karen Page",
+      "Micro"
+    ],
+    "relatedMovies": [
+      "Daredevil"
+    ]
+  },
+  {
+    "id": "agents-of-shield-2013",
+    "title": "Agents of S.H.I.E.L.D.",
+    "year": 2013,
+    "type": "Marvel Television",
+    "phase": "MCU",
+    "director": "Joss Whedon, Jed Whedon and Maurissa Tancharoen",
+    "image": "images/agentsofshieldshow.jpg",
+    "description": "A team of S.H.I.E.L.D. agents investigates extraordinary threats around the world.",
+    "plot": "Agent Phil Coulson assembles a specialized team of agents to investigate unusual cases involving superhuman individuals, alien technology and global threats while navigating the changing world created by the Avengers.",
+    "mainCharacters": [
+      "Phil Coulson",
+      "Daisy Johnson",
+      "Melinda May",
+      "Leo Fitz"
+    ],
+    "relatedMovies": [
+      "The Avengers",
+      "Captain America: The Winter Soldier"
+    ]
+  },
+  {
+    "id": "agent-carter-2015",
+    "title": "Agent Carter",
+    "year": 2015,
+    "type": "Marvel Television",
+    "phase": "MCU",
+    "director": "Christopher Markus and Stephen McFeely",
+    "image": "images/agentcartershow.jpg",
+    "description": "Peggy Carter secretly works for the Strategic Scientific Reserve after World War II.",
+    "plot": "Peggy Carter balances her secret missions for the Strategic Scientific Reserve with the expectations placed on women in postwar America while investigating dangerous technology and international threats.",
+    "mainCharacters": [
+      "Peggy Carter",
+      "Edwin Jarvis",
+      "Howard Stark",
+      "Daniel Sousa"
+    ],
+    "relatedMovies": [
+      "Captain America: The First Avenger",
+      "Avengers: Endgame"
+    ]
+  },
+
+  {
+    "id": "wandavision-2021",
+    "title": "WandaVision",
+    "year": 2021,
+    "type": "MCU Show",
+    "phase": "Phase 4",
+    "director": "Matt Shakman",
+    "image": "images/wandavisionshow.jpg",
+    "description": "Wanda Maximoff and Vision live an unusual suburban life hiding a much larger mystery.",
+    "plot": "Wanda Maximoff creates a seemingly perfect suburban reality where she and Vision live an idealized life. As the illusion begins to unravel, Wanda is forced to confront the truth behind her extraordinary powers and grief.",
+    "mainCharacters": [
+      "Wanda Maximoff",
+      "Vision",
+      "Agatha Harkness",
+      "Monica Rambeau"
+    ],
+    "relatedMovies": [
+      "Avengers: Endgame",
+      "Doctor Strange in the Multiverse of Madness"
+    ]
+  },
+  {
+    "id": "falcon-winter-soldier-2021",
+    "title": "The Falcon and the Winter Soldier",
+    "year": 2021,
+    "type": "MCU Show",
+    "phase": "Phase 4",
+    "director": "Kari Skogland",
+    "image": "images/falconwintersoldiershow.jpg",
+    "description": "Sam Wilson and Bucky Barnes team up to confront a new global threat.",
+    "plot": "Following the events of Avengers: Endgame, Sam Wilson and Bucky Barnes struggle with the legacy of Captain America while confronting a dangerous group seeking to reshape the world.",
+    "mainCharacters": [
+      "Sam Wilson",
+      "Bucky Barnes",
+      "John Walker",
+      "Helmut Zemo"
+    ],
+    "relatedMovies": [
+      "Avengers: Endgame",
+      "Captain America: Brave New World"
+    ]
+  },
+  {
+    "id": "loki-2021",
+    "title": "Loki",
+    "year": 2021,
+    "type": "MCU Show",
+    "phase": "Phase 4",
+    "director": "Michael Waldron",
+    "image": "images/lokishow.jpg",
+    "description": "An alternate version of Loki becomes involved with the mysterious Time Variance Authority.",
+    "plot": "After escaping with the Tesseract during the events of Avengers: Endgame, an alternate Loki is captured by the Time Variance Authority and drawn into a conflict involving time, alternate realities and the fate of the multiverse.",
+    "mainCharacters": [
+      "Loki",
+      "Sylvie",
+      "Mobius M. Mobius",
+      "He Who Remains"
+    ],
+    "relatedMovies": [
+      "Avengers: Endgame",
+      "Doctor Strange in the Multiverse of Madness"
+    ]
+  },
+  {
+    "id": "what-if-2021",
+    "title": "What If...?",
+    "year": 2021,
+    "type": "MCU Show",
+    "phase": "Phase 4",
+    "director": "A.C. Bradley",
+    "image": "images/whatifshow.jpg",
+    "description": "The Watcher explores alternate realities where familiar Marvel events unfold differently.",
+    "plot": "Uatu the Watcher observes countless alternate universes where major events from the Marvel Cinematic Universe happen differently, creating entirely new heroes, villains and outcomes.",
+    "mainCharacters": [
+      "The Watcher",
+      "Captain Carter",
+      "Doctor Strange",
+      "T'Challa"
+    ],
+    "relatedMovies": [
+      "Doctor Strange in the Multiverse of Madness",
+      "Avengers: Endgame"
+    ]
+  },
+  {
+    "id": "hawkeye-2021",
+    "title": "Hawkeye",
+    "year": 2021,
+    "type": "MCU Show",
+    "phase": "Phase 4",
+    "director": "Jonathan Igla",
+    "image": "images/hawkeyeshow.jpg",
+    "description": "Clint Barton teams up with a young archer while dealing with threats from his past.",
+    "plot": "Clint Barton wants to return home for Christmas but is pulled into a dangerous conspiracy after meeting young archer Kate Bishop, forcing the two to confront criminals connected to his past.",
+    "mainCharacters": [
+      "Clint Barton",
+      "Kate Bishop",
+      "Yelena Belova",
+      "Wilson Fisk"
+    ],
+    "relatedMovies": [
+      "Avengers: Endgame",
+      "Black Widow"
+    ]
+  },
+  {
+    "id": "moon-knight-2022",
+    "title": "Moon Knight",
+    "year": 2022,
+    "type": "MCU Show",
+    "phase": "Phase 4",
+    "director": "Jeremy Slater",
+    "image": "images/moonknightshow.jpg",
+    "description": "A mysterious man becomes caught between ancient Egyptian gods and a dangerous cult leader.",
+    "plot": "Steven Grant discovers that his life is connected to another identity and becomes involved in a supernatural conflict involving the Egyptian god Khonshu and a man seeking to unleash a powerful judgment.",
+    "mainCharacters": [
+      "Marc Spector",
+      "Layla El-Faouly",
+      "Arthur Harrow"
+    ],
+    "relatedMovies": [
+      "The Avengers"
+    ]
+  },
+  {
+    "id": "ms-marvel-2022",
+    "title": "Ms. Marvel",
+    "year": 2022,
+    "type": "MCU Show",
+    "phase": "Phase 4",
+    "director": "Bisha K. Ali",
+    "image": "images/msmarvelshow.jpg",
+    "description": "A teenage superhero fan discovers extraordinary powers of her own.",
+    "plot": "Kamala Khan is a teenager and devoted fan of superheroes who gains mysterious powers and must learn how to become a hero while discovering more about her family's history.",
+    "mainCharacters": [
+      "Kamala Khan",
+      "Bruno Carrelli",
+      "Nakia Bahadir",
+      "Kamran"
+    ],
+    "relatedMovies": [
+      "Captain Marvel",
+      "The Marvels"
+    ]
+  },
+  {
+    "id": "she-hulk-2022",
+    "title": "She-Hulk: Attorney at Law",
+    "year": 2022,
+    "type": "MCU Show",
+    "phase": "Phase 4",
+    "director": "Jessica Gao",
+    "image": "images/shehulkshow.jpg",
+    "description": "A lawyer gains Hulk-like powers while trying to balance superhero life with her career.",
+    "plot": "Jennifer Walters becomes a seven-foot-tall green superhero after receiving a blood transfusion from her cousin Bruce Banner. She must balance her legal career with the strange demands of being a superhero.",
+    "mainCharacters": [
+      "Jennifer Walters",
+      "Bruce Banner",
+      "Emil Blonsky",
+      "Matt Murdock"
+    ],
+    "relatedMovies": [
+      "The Incredible Hulk",
+      "Avengers: Endgame"
+    ]
+  },
+  {
+    "id": "werewolf-by-night-2022",
+    "title": "Werewolf by Night",
+    "year": 2022,
+    "type": "MCU Show",
+    "phase": "Phase 4",
+    "director": "Michael Giacchino",
+    "image": "images/werewolfbynightshow.jpg",
+    "description": "A group of monster hunters enters a deadly supernatural competition.",
+    "plot": "After the death of a powerful monster hunter, a group of hunters gathers at a mysterious estate and becomes involved in a dangerous hunt for a supernatural creature.",
+    "mainCharacters": [
+      "Jack Russell",
+      "Elsa Bloodstone",
+      "Ted",
+      "Verussa Bloodstone"
+    ],
+    "relatedMovies": [
+      "Thor: Love and Thunder"
+    ]
+  },
+  {
+    "id": "secret-invasion-2023",
+    "title": "Secret Invasion",
+    "year": 2023,
+    "type": "MCU Show",
+    "phase": "Phase 5",
+    "director": "Kyle Bradstreet",
+    "image": "images/secretinvasionshow.jpg",
+    "description": "Nick Fury uncovers a secret Skrull infiltration of Earth.",
+    "plot": "Nick Fury returns to Earth after learning that a group of Skrulls has infiltrated positions of power around the world, forcing him into a dangerous fight to prevent a global crisis.",
+    "mainCharacters": [
+      "Nick Fury",
+      "Talos",
+      "Gravik",
+      "Maria Hill"
+    ],
+    "relatedMovies": [
+      "Captain Marvel",
+      "The Marvels"
+    ]
+  },
+  {
+    "id": "echo-2024",
+    "title": "Echo",
+    "year": 2024,
+    "type": "MCU Show",
+    "phase": "Phase 5",
+    "director": "Marion Dayre",
+    "image": "images/echoshow.jpg",
+    "description": "Maya Lopez returns to her hometown while confronting the criminal legacy of Wilson Fisk.",
+    "plot": "After the events of Hawkeye, Maya Lopez returns to her Oklahoma roots and confronts her past, her family and the criminal organization connected to Wilson Fisk.",
+    "mainCharacters": [
+      "Maya Lopez",
+      "Wilson Fisk",
+      "Bonnie Lopez",
+      "Chula"
+    ],
+    "relatedMovies": [
+      "Hawkeye"
+    ]
+  },
+  {
+    "id": "agatha-all-along-2024",
+    "title": "Agatha All Along",
+    "year": 2024,
+    "type": "MCU Show",
+    "phase": "Phase 5",
+    "director": "Jac Schaeffer",
+    "image": "images/agathaallalongshow.jpg",
+    "description": "Agatha Harkness attempts to regain her powers by journeying down a dangerous magical road.",
+    "plot": "After being trapped in a powerless state, Agatha Harkness is freed by a mysterious teenager and sets out with a coven of witches to travel the legendary Witches' Road in search of power.",
+    "mainCharacters": [
+      "Agatha Harkness",
+      "Billy Maximoff",
+      "Rio Vidal",
+      "Alice Wu-Gulliver"
+    ],
+    "relatedMovies": [
+      "Doctor Strange in the Multiverse of Madness"
+    ]
+  },
+  {
+    "id": "daredevil-born-again-2025",
+    "title": "Daredevil: Born Again",
+    "year": 2025,
+    "type": "MCU Show",
+    "phase": "Phase 5",
+    "director": "Matt Corman and Chris Ord",
+    "image": "images/daredevilbornagainshow.jpg",
+    "description": "Matt Murdock returns as Daredevil to protect New York from Wilson Fisk's criminal ambitions.",
+    "plot": "Matt Murdock continues his fight for justice as Daredevil while Wilson Fisk pursues his own vision for New York, bringing their long-running conflict into a new chapter.",
+    "mainCharacters": [
+      "Matt Murdock",
+      "Wilson Fisk",
+      "Frank Castle",
+      "Karen Page"
+    ],
+    "relatedMovies": [
+      "Daredevil",
+      "Spider-Man: No Way Home"
+    ]
+  },
+  {
+    "id": "ironheart-2025",
+    "title": "Ironheart",
+    "year": 2025,
+    "type": "MCU Show",
+    "phase": "Phase 5",
+    "director": "Chinaka Hodge",
+    "image": "images/ironheartshow.jpg",
+    "description": "Riri Williams returns home and finds herself caught between technology and magic.",
+    "plot": "Brilliant inventor Riri Williams returns to Chicago after the events of Black Panther: Wakanda Forever and becomes caught between her advanced technology and the mysterious forces of magic.",
+    "mainCharacters": [
+      "Riri Williams",
+      "Parker Robbins",
+      "Natalie Washington",
+      "Zelma Stanton"
+    ],
+    "relatedMovies": [
+      "Black Panther: Wakanda Forever"
+    ]
+  },
+  {
+    "id": "wonder-man-2025",
+    "title": "Wonder Man",
+    "year": 2025,
+    "type": "MCU Show",
+    "phase": "Phase 5",
+    "director": "Destin Daniel Cretton and Andrew Guest",
+    "image": "images/wondermanshow.jpg",
+    "description": "An actor discovers that his career may lead him into the world of superheroes.",
+    "plot": "Simon Williams, an aspiring actor with a complicated career, becomes connected to the superhero world and discovers that his ambitions may lead to something far more extraordinary.",
+    "mainCharacters": [
+      "Simon Williams",
+      "Trevor Slattery",
+      "Nicholas Scratch"
+    ],
+    "relatedMovies": [
+      "Iron Man 3",
+      "Guardians of the Galaxy Vol. 2"
+    ]
+  },
+
+  {
+    "id": "legion-2017",
+    "title": "Legion",
+    "year": 2017,
+    "type": "Fox X-Men Show",
+    "phase": "Fox Era",
+    "director": "Noah Hawley",
+    "image": "images/legionshow.jpg",
+    "description": "A troubled mutant discovers that the voices and visions in his mind may be real.",
+    "plot": "David Haller has spent years believing that his strange experiences are symptoms of mental illness. He eventually discovers that he possesses extraordinary mutant abilities and becomes involved in a battle over the future of mutants.",
+    "mainCharacters": [
+      "David Haller",
+      "Syd Barrett",
+      "Lenny Busker",
+      "Amahl Farouk"
+    ],
+    "relatedMovies": [
+      "X-Men: Days of Future Past"
+    ]
+  },
+  {
+    "id": "the-gifted-2017",
+    "title": "The Gifted",
+    "year": 2017,
+    "type": "Fox X-Men Show",
+    "phase": "Fox Era",
+    "director": "Matt Nix",
+    "image": "images/thegiftedshow.jpg",
+    "description": "A family goes on the run after discovering that their children possess mutant abilities.",
+    "plot": "A suburban family discovers that their children have mutant powers and is forced to flee after the government begins hunting mutants. They find refuge with an underground mutant resistance.",
+    "mainCharacters": [
+      "Reed Strucker",
+      "Caitlin Strucker",
+      "Lauren Strucker",
+      "Andy Strucker"
+    ],
+    "relatedMovies": [
+      "X-Men: Days of Future Past"
+    ]
+  },
+  {
+    "id": "runaways-2017",
+    "title": "Runaways",
+    "year": 2017,
+    "type": "Marvel Television",
+    "phase": "Marvel Television",
+    "director": "Josh Schwartz and Stephanie Savage",
+    "image": "images/runawaysshow.jpg",
+    "description": "A group of teenagers discovers that their parents are secretly part of a criminal organization.",
+    "plot": "Six teenagers discover that their seemingly perfect parents are members of a secret criminal organization. The group runs away from home and begins developing their own extraordinary abilities.",
+    "mainCharacters": [
+      "Alex Wilder",
+      "Nico Minoru",
+      "Karolina Dean",
+      "Chase Stein"
+    ],
+    "relatedMovies": [
+      "The Avengers"
+    ]
+  },
+  {
+    "id": "cloak-and-dagger-2018",
+    "title": "Cloak & Dagger",
+    "year": 2018,
+    "type": "Marvel Television",
+    "phase": "Marvel Television",
+    "director": "Joe Pokaski",
+    "image": "images/cloakanddaggershow.jpg",
+    "description": "Two teenagers from very different backgrounds discover that their powers are connected.",
+    "plot": "Tandy Bowen and Tyrone Johnson come from completely different worlds but develop extraordinary abilities after a traumatic event. Their powers bring them together as they uncover a conspiracy threatening their city.",
+    "mainCharacters": [
+      "Tandy Bowen",
+      "Tyrone Johnson",
+      "Brigid O'Reilly",
+      "Adina Johnson"
+    ],
+    "relatedMovies": [
+      "The Avengers"
+    ]
+  },
+  {
+    "id": "inhumans-2017",
+    "title": "Inhumans",
+    "year": 2017,
+    "type": "Marvel Television",
+    "phase": "Marvel Television",
+    "director": "Scott Buck",
+    "image": "images/inhumansshow.jpg",
+    "description": "The royal family of the Inhumans struggles to survive after a political coup.",
+    "plot": "After the Inhuman royal family is separated by a military coup, they must find one another and protect their people while confronting a growing threat to their kingdom.",
+    "mainCharacters": [
+      "Black Bolt",
+      "Medusa",
+      "Maximus",
+      "Lockjaw"
+    ],
+    "relatedMovies": [
+      "The Avengers"
+    ]
+  },
+  {
+    "id": "helstrom-2020",
+    "title": "Helstrom",
+    "year": 2020,
+    "type": "Marvel Television",
+    "phase": "Marvel Television",
+    "director": "Paul Zbyszewski",
+    "image": "images/helstromshow.jpg",
+    "description": "Two siblings with supernatural abilities investigate their family's dark legacy.",
+    "plot": "Daimon and Ana Helstrom use their supernatural abilities to investigate their troubled family history while confronting dangerous forces connected to their father.",
+    "mainCharacters": [
+      "Daimon Helstrom",
+      "Ana Helstrom",
+      "Victoria Helstrom",
+      "Gabriel"
+    ],
+    "relatedMovies": [
+      "The Avengers"
+    ]
+  }
+]
