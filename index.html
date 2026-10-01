@@ -9,7 +9,7 @@
     <title>The 616 Marvelbase</title>
 
     <link rel="stylesheet" href="style.css">
-
+     <link rel="stylesheet" href="theme.css">
     <style>
 
         /* =========================================
@@ -358,49 +358,132 @@
              DATABASE STATS
              ====================================== -->
 
+
+             <section class="database-explorer">
+
+    <div class="database-explorer-heading">
+        <p>EXPLORE THE DATABASE</p>
+        <h2>THE 616 ARCHIVE</h2>
+        <span>
+            Explore characters, stories, teams, locations, events, and universes.
+        </span>
+    </div>
+
+
+    <div class="database-explorer-grid">
+
+        <a href="characters.html" class="database-explorer-card">
+            <span class="database-explorer-number">01</span>
+            <div>
+                <h3>CHARACTERS</h3>
+                <p>Heroes, villains, anti-heroes, and cosmic beings.</p>
+            </div>
+            <span class="database-explorer-arrow">→</span>
+        </a>
+
+
+        <a href="movies.html" class="database-explorer-card">
+            <span class="database-explorer-number">02</span>
+            <div>
+                <h3>MOVIES & SHOWS</h3>
+                <p>Marvel stories across films and television.</p>
+            </div>
+            <span class="database-explorer-arrow">→</span>
+        </a>
+
+
+        <a href="teams.html" class="database-explorer-card">
+            <span class="database-explorer-number">03</span>
+            <div>
+                <h3>TEAMS</h3>
+                <p>Alliances, organizations, and legendary groups.</p>
+            </div>
+            <span class="database-explorer-arrow">→</span>
+        </a>
+
+
+        <a href="locations.html" class="database-explorer-card">
+            <span class="database-explorer-number">04</span>
+            <div>
+                <h3>LOCATIONS</h3>
+                <p>Places and worlds connected to Marvel stories.</p>
+            </div>
+            <span class="database-explorer-arrow">→</span>
+        </a>
+
+
+        <a href="events.html" class="database-explorer-card">
+            <span class="database-explorer-number">05</span>
+            <div>
+                <h3>EVENTS</h3>
+                <p>Major events that shaped Marvel history.</p>
+            </div>
+            <span class="database-explorer-arrow">→</span>
+        </a>
+
+
+        <a href="timeline.html" class="database-explorer-card">
+            <span class="database-explorer-number">06</span>
+            <div>
+                <h3>TIMELINE</h3>
+                <p>Explore Marvel stories in chronological order.</p>
+            </div>
+            <span class="database-explorer-arrow">→</span>
+        </a>
+
+
+        <a href="universes.html" class="database-explorer-card">
+            <span class="database-explorer-number">07</span>
+            <div>
+                <h3>UNIVERSES</h3>
+                <p>Explore realities across the Marvel multiverse.</p>
+            </div>
+            <span class="database-explorer-arrow">→</span>
+        </a>
+
+    </div>
+
+</section>
         <section class="database-stats">
 
+            
 
-            <div class="stat">
+    <div class="stat-card" onclick="window.location.href='characters.html'">
+        <span id="character-count">0</span>
+        <p>CHARACTERS</p>
+    </div>
 
-                <span id="character-count">
-                    —
-                </span>
+    <div class="stat-card" onclick="window.location.href='movies.html'">
+        <span id="movie-count">0</span>
+        <p>MOVIES</p>
+    </div>
 
-                <p>
-                    CHARACTERS
-                </p>
+    <div class="stat-card" onclick="window.location.href='movies.html'">
+        <span id="show-count">0</span>
+        <p>SHOWS</p>
+    </div>
 
-            </div>
+    <div class="stat-card" onclick="window.location.href='teams.html'">
+        <span id="team-count">0</span>
+        <p>TEAMS</p>
+    </div>
 
+    <div class="stat-card" onclick="window.location.href='locations.html'">
+        <span id="location-count">0</span>
+        <p>LOCATIONS</p>
+    </div>
 
-            <div class="stat">
+    <div class="stat-card" onclick="window.location.href='events.html'">
+        <span id="event-count">0</span>
+        <p>EVENTS</p>
+    </div>
 
-                <span id="movie-count">
-                    —
-                </span>
+    <div class="stat-card" onclick="window.location.href='universes.html'">
+        <span id="universe-count">0</span>
+        <p>UNIVERSES</p>
+    </div>
 
-                <p>
-                    MOVIES
-                </p>
-
-            </div>
-
-
-            <div class="stat">
-
-                <span id="universe-count">
-                    —
-                </span>
-
-                <p>
-                    UNIVERSES
-                </p>
-
-            </div>
-
-
-        </section>
+</section>
 
 
         <!-- =====================================
@@ -545,6 +628,97 @@
 
         </section>
 
+
+        <section class="doomsday-clock-section">
+
+    <div class="doomsday-clock">
+
+        <p class="doomsday-kicker">MARVEL STUDIOS</p>
+
+        <h2>AVENGERS: DOOMSDAY</h2>
+
+        <p class="doomsday-label">DOOMSDAY CLOCK</p>
+
+        <div class="doomsday-countdown">
+
+            <div class="doomsday-unit">
+                <span id="doom-months">00</span>
+                <small>MONTHS</small>
+            </div>
+
+            <div class="doom-separator">:</div>
+
+            <div class="doomsday-unit">
+                <span id="doom-days">00</span>
+                <small>DAYS</small>
+            </div>
+
+            <div class="doom-separator">:</div>
+
+            <div class="doomsday-unit">
+                <span id="doom-hours">00</span>
+                <small>HOURS</small>
+            </div>
+
+            <div class="doom-separator">:</div>
+
+            <div class="doomsday-unit">
+                <span id="doom-minutes">00</span>
+                <small>MINUTES</small>
+            </div>
+
+            <div class="doom-separator">:</div>
+
+            <div class="doomsday-unit">
+                <span id="doom-seconds">00</span>
+                <small>SECONDS</small>
+            </div>
+
+        </div>
+
+        <p class="doomsday-date">
+            DECEMBER 18, 2026 · 10:30 AM IST
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<section class="random-discovery">
+    <div class="discovery-header">
+        <p>THE 616 DATABASE</p>
+        <h2>RANDOM DISCOVERY</h2>
+        <span>Let the database choose your next discovery.</span>
+    </div>
+
+    <div class="discovery-card">
+        <div>
+            <p class="discovery-type" id="discovery-type">
+                DATABASE READY
+            </p>
+
+            <h3 id="discovery-name">
+                ??? 
+            </h3>
+
+            <p id="discovery-description">
+                Access a random entry from the 616 database.
+            </p>
+        </div>
+
+        <div class="discovery-actions">
+    <button id="discover-button" class="discovery-button">
+        DISCOVER AGAIN
+    </button>
+
+    <button id="open-discovery-button" class="discovery-button">
+        OPEN PROFILE
+    </button>
+</div>
+    </div>
+</section>
     </main>
 
 
@@ -552,7 +726,7 @@
          MOUSE GLOW
          ========================================== -->
 
-    <div class="mouse-glow"></div>
+    <canvas id="neon-trail-canvas"></canvas>
 
 
     <!-- =========================================
@@ -565,33 +739,15 @@
 
     <script src="global-search.js"></script>
 
+<script src="neon-trail.js"></script>
 
-    <script>
+    <script src="theme.js"></script>
 
-        const mouseGlow =
-            document.querySelector(".mouse-glow");
+    <script src="doomsday-clock.js"></script>
 
+    <script src="system-clock.js"></script>
 
-        document.addEventListener(
-            "mousemove",
-            function(event) {
-
-                if (!mouseGlow) return;
-
-                mouseGlow.style.left =
-                    event.clientX + "px";
-
-                mouseGlow.style.top =
-                    event.clientY + "px";
-
-                mouseGlow.style.opacity =
-                    "1";
-
-            }
-        );
-
-    </script>
-
+    <script src="random-discovery.js"></script>
 
 </body>
 

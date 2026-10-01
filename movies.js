@@ -1,6 +1,11 @@
 window.scrollTo(0, 0);
+
 let movies = [];
 let characters = [];
+let teams = [];
+let locations = [];
+let events = [];
+let universes = [];
 
 
 // ========================================
@@ -13,27 +18,74 @@ Promise.all([
         .then(response => {
 
             if (!response.ok) {
-
                 throw new Error(
                     "Could not load movies.json"
                 );
-
             }
 
             return response.json();
 
         }),
 
-
     fetch("data/characters.json")
         .then(response => {
 
             if (!response.ok) {
-
                 throw new Error(
                     "Could not load characters.json"
                 );
+            }
 
+            return response.json();
+
+        }),
+
+    fetch("data/teams.json")
+        .then(response => {
+
+            if (!response.ok) {
+                throw new Error(
+                    "Could not load teams.json"
+                );
+            }
+
+            return response.json();
+
+        }),
+
+    fetch("data/locations.json")
+        .then(response => {
+
+            if (!response.ok) {
+                throw new Error(
+                    "Could not load locations.json"
+                );
+            }
+
+            return response.json();
+
+        }),
+
+    fetch("data/events.json")
+        .then(response => {
+
+            if (!response.ok) {
+                throw new Error(
+                    "Could not load events.json"
+                );
+            }
+
+            return response.json();
+
+        }),
+
+    fetch("data/universes.json")
+        .then(response => {
+
+            if (!response.ok) {
+                throw new Error(
+                    "Could not load universes.json"
+                );
             }
 
             return response.json();
@@ -42,25 +94,18 @@ Promise.all([
 
 ])
 
-.then(([movieData, characterData]) => {
+.then(([
+    movieData,
+    characterData,
+    teamData,
+    locationData,
+    eventData,
+    universeData
+]) => {
 
-    /*
-        Supports the normal format:
-
-        [
-            movie,
-            movie,
-            show,
-            show
-        ]
-
-        It also safely supports:
-
-        {
-            "movies": [],
-            "shows": []
-        }
-    */
+    // ========================================
+    // MOVIES
+    // ========================================
 
     if (Array.isArray(movieData)) {
 
@@ -90,44 +135,111 @@ Promise.all([
     }
 
 
-    characters = Array.isArray(characterData)
-        ? characterData
-        : characterData.characters || [];
+    // ========================================
+    // CHARACTERS
+    // ========================================
 
+    characters =
+        Array.isArray(characterData)
+            ? characterData
+            : characterData.characters || [];
+
+
+    // ========================================
+    // TEAMS
+    // ========================================
+
+    teams =
+        Array.isArray(teamData)
+            ? teamData
+            : teamData.teams || [];
+
+
+    // ========================================
+    // LOCATIONS
+    // ========================================
+
+    locations =
+        Array.isArray(locationData)
+            ? locationData
+            : locationData.locations || [];
+
+
+    // ========================================
+    // EVENTS
+    // ========================================
+
+    events =
+        Array.isArray(eventData)
+            ? eventData
+            : eventData.events || [];
+
+
+    // ========================================
+    // UNIVERSES
+    // ========================================
+
+    universes =
+        Array.isArray(universeData)
+            ? universeData
+            : universeData.universes || [];
+
+
+    // ========================================
+    // DISPLAY DATABASE
+    // ========================================
 
     displayDatabase(movies);
 
 
     // ========================================
     // OPEN MOVIE FROM URL
-    // Example:
-    // movies.html?id=iron-man-2008
     // ========================================
 
-   const urlParams = new URLSearchParams(window.location.search);
-const movieId = urlParams.get("id");
+    const urlParams =
+        new URLSearchParams(
+            window.location.search
+        );
 
-if (movieId) {
-    const movie = movies.find(item => item.id === movieId);
+    const movieId =
+        urlParams.get("id");
 
-    if (movie) {
-        openProfile(movie);
+
+    if (movieId) {
+
+        const movie =
+            movies.find(
+                item =>
+                    String(item.id) ===
+                    String(movieId)
+            );
+
+
+        if (movie) {
+            openProfile(movie);
+        }
+
     }
-}
-
 
 })
 
 .catch(error => {
 
-    console.error(error);
+    console.error(
+        "Error loading movie database:",
+        error
+    );
 
 
     const movieGrid =
-        document.getElementById("movie-grid");
+        document.getElementById(
+            "movie-grid"
+        );
 
     const showGrid =
-        document.getElementById("show-grid");
+        document.getElementById(
+            "show-grid"
+        );
 
 
     if (movieGrid) {
@@ -142,13 +254,10 @@ if (movieId) {
 
 
     if (showGrid) {
-
         showGrid.innerHTML = "";
-
     }
 
 });
-
 
 
 // ========================================
@@ -158,10 +267,14 @@ if (movieId) {
 function displayDatabase(database) {
 
     const movieGrid =
-        document.getElementById("movie-grid");
+        document.getElementById(
+            "movie-grid"
+        );
 
     const showGrid =
-        document.getElementById("show-grid");
+        document.getElementById(
+            "show-grid"
+        );
 
 
     if (!movieGrid || !showGrid) {
@@ -176,7 +289,6 @@ function displayDatabase(database) {
 
 
     movieGrid.innerHTML = "";
-
     showGrid.innerHTML = "";
 
 
@@ -185,12 +297,14 @@ function displayDatabase(database) {
     // ========================================
 
     const movieList =
-        database.filter(item => !isShow(item));
-
+        database.filter(
+            item => !isShow(item)
+        );
 
     const showList =
-        database.filter(item => isShow(item));
-
+        database.filter(
+            item => isShow(item)
+        );
 
 
     // ========================================
@@ -198,27 +312,26 @@ function displayDatabase(database) {
     // ========================================
 
     const movieCount =
-        document.getElementById("movie-count");
+        document.getElementById(
+            "movie-count"
+        );
 
     const showCount =
-        document.getElementById("show-count");
+        document.getElementById(
+            "show-count"
+        );
 
 
     if (movieCount) {
-
         movieCount.textContent =
             movieList.length;
-
     }
 
 
     if (showCount) {
-
         showCount.textContent =
             showList.length;
-
     }
-
 
 
     // ========================================
@@ -232,7 +345,6 @@ function displayDatabase(database) {
         );
 
     });
-
 
 
     // ========================================
@@ -250,7 +362,6 @@ function displayDatabase(database) {
 }
 
 
-
 // ========================================
 // DETERMINE IF ENTRY IS A SHOW
 // ========================================
@@ -258,9 +369,7 @@ function displayDatabase(database) {
 function isShow(item) {
 
     if (!item || !item.type) {
-
         return false;
-
     }
 
 
@@ -279,7 +388,6 @@ function isShow(item) {
     );
 
 }
-
 
 
 // ========================================
@@ -313,23 +421,19 @@ function createMovieCard(item) {
 
         </div>
 
-
         <div class="movie-info">
 
             <p class="movie-type">
                 ${formatText(item.type || "")}
             </p>
 
-
             <h2>
                 ${item.title || "Untitled"}
             </h2>
 
-
             <p class="movie-year">
                 ${item.year || ""}
             </p>
-
 
             <button
                 class="view-profile"
@@ -343,13 +447,14 @@ function createMovieCard(item) {
     `;
 
 
-
     // ========================================
     // PROFILE BUTTON
     // ========================================
 
     const button =
-        card.querySelector(".view-profile");
+        card.querySelector(
+            ".view-profile"
+        );
 
 
     if (button) {
@@ -358,6 +463,7 @@ function createMovieCard(item) {
             "click",
             function(event) {
 
+                event.preventDefault();
                 event.stopPropagation();
 
                 openProfile(item);
@@ -368,14 +474,21 @@ function createMovieCard(item) {
     }
 
 
-
     // ========================================
-    // CLICKING CARD ALSO OPENS PROFILE
+    // CARD CLICK
     // ========================================
 
     card.addEventListener(
         "click",
-        function() {
+        function(event) {
+
+            if (
+                event.target.closest(
+                    ".view-profile"
+                )
+            ) {
+                return;
+            }
 
             openProfile(item);
 
@@ -383,11 +496,9 @@ function createMovieCard(item) {
     );
 
 
-
     return card;
 
 }
-
 
 
 // ========================================
@@ -434,7 +545,9 @@ if (search) {
 
 
                     const charactersText =
-                        Array.isArray(item.mainCharacters)
+                        Array.isArray(
+                            item.mainCharacters
+                        )
                             ? item.mainCharacters
                                 .join(" ")
                                 .toLowerCase()
@@ -459,7 +572,6 @@ if (search) {
 }
 
 
-
 // ========================================
 // OPEN PROFILE
 // ========================================
@@ -467,9 +579,22 @@ if (search) {
 function openProfile(item) {
 
     if (!item) {
-
         return;
+    }
 
+
+    // ========================================
+    // RESET PROFILE SCROLL
+    // ========================================
+
+    const profileBox =
+        document.querySelector(
+            "#profile-modal .profile-box"
+        );
+
+
+    if (profileBox) {
+        profileBox.scrollTop = 0;
     }
 
 
@@ -521,7 +646,9 @@ function openProfile(item) {
     if (profileType) {
 
         profileType.textContent =
-            formatText(item.type || "");
+            formatText(
+                item.type || ""
+            );
 
     }
 
@@ -529,7 +656,8 @@ function openProfile(item) {
     if (profileName) {
 
         profileName.textContent =
-            item.title || "Untitled";
+            item.title ||
+            "Untitled";
 
     }
 
@@ -537,7 +665,8 @@ function openProfile(item) {
     if (profileYear) {
 
         profileYear.textContent =
-            item.year || "";
+            item.year ||
+            "";
 
     }
 
@@ -545,7 +674,8 @@ function openProfile(item) {
     if (profileYearStat) {
 
         profileYearStat.textContent =
-            item.year || "";
+            item.year ||
+            "";
 
     }
 
@@ -553,7 +683,8 @@ function openProfile(item) {
     if (profileDirector) {
 
         profileDirector.textContent =
-            item.director || "Unknown";
+            item.director ||
+            "Unknown";
 
     }
 
@@ -561,7 +692,8 @@ function openProfile(item) {
     if (profilePhase) {
 
         profilePhase.textContent =
-            item.phase || "Unknown";
+            item.phase ||
+            "Unknown";
 
     }
 
@@ -584,7 +716,6 @@ function openProfile(item) {
     }
 
 
-
     // ========================================
     // MAIN CHARACTERS
     // ========================================
@@ -592,12 +723,32 @@ function openProfile(item) {
     displayMainCharacters(
         item.mainCharacters
     );
-    // ========================================
-// RELATED MOVIES
-// ========================================
 
-displayRelatedMovies(
-    item.relatedMovies
+
+    // ========================================
+    // RELATED MOVIES
+    // ========================================
+
+    displayRelatedMovies(
+        item.relatedMovies
+    );
+
+
+    // ========================================
+    // NEW DATABASE CONNECTIONS
+    // ========================================
+
+    displayMovieTeams(item);
+
+    displayMovieLocations(item);
+
+    displayMovieEvents(item);
+
+    displayMovieUniverse(item);
+
+activateSpecialEffect(
+    "movie",
+    item.id
 );
     // ========================================
     // SHOW PROFILE
@@ -610,9 +761,7 @@ displayRelatedMovies(
 
 
     if (modal) {
-
         modal.classList.add("active");
-
     }
 
 
@@ -637,12 +786,536 @@ displayRelatedMovies(
 }
 
 
+// ========================================
+// NORMALIZE VALUE
+// ========================================
+
+function normalizeValue(value) {
+
+    return String(value || "")
+        .trim()
+        .toLowerCase();
+
+}
+
+
+// ========================================
+// GET ALL POSSIBLE MOVIE VALUES
+// ========================================
+
+function getMovieValues(item) {
+
+    return [
+
+        item.id,
+        item.title,
+
+        item.universe,
+        item.universeId,
+        item.reality,
+        item.designation,
+
+        item.location,
+        item.setting,
+
+        item.event,
+        item.eventId
+
+    ]
+        .filter(Boolean)
+        .map(normalizeValue);
+
+}
+
+
+// ========================================
+// CHECK WHETHER A VALUE REFERENCES MOVIE
+// ========================================
+
+function valueContainsMovie(
+    value,
+    movie
+) {
+
+    if (!value) {
+        return false;
+    }
+
+
+    const movieValues =
+        getMovieValues(movie);
+
+
+    if (Array.isArray(value)) {
+
+        return value.some(
+            entry =>
+                valueContainsMovie(
+                    entry,
+                    movie
+                )
+        );
+
+    }
+
+
+    if (typeof value === "object") {
+
+        return Object.values(value).some(
+            entry =>
+                valueContainsMovie(
+                    entry,
+                    movie
+                )
+        );
+
+    }
+
+
+    const normalized =
+        normalizeValue(value);
+
+
+    return movieValues.some(
+        movieValue =>
+            normalized === movieValue ||
+            normalized.includes(movieValue) ||
+            movieValue.includes(normalized)
+    );
+
+}
+
+
+// ========================================
+// CHECK OBJECT FIELDS
+// ========================================
+
+function objectContainsMovie(
+    object,
+    movie,
+    fields
+) {
+
+    if (!object) {
+        return false;
+    }
+
+
+    for (const field of fields) {
+
+        if (
+            Object.prototype.hasOwnProperty.call(
+                object,
+                field
+            )
+        ) {
+
+            if (
+                valueContainsMovie(
+                    object[field],
+                    movie
+                )
+            ) {
+                return true;
+            }
+
+        }
+
+    }
+
+
+    return false;
+
+}
+
+
+// ========================================
+// GENERIC CONNECTION SECTION
+// ========================================
+
+function createMovieConnectionSection(
+    id,
+    title,
+    items,
+    linkBuilder
+) {
+
+    const profileBox =
+        document.querySelector(
+            "#profile-modal .profile-box"
+        );
+
+
+    if (!profileBox) {
+        return;
+    }
+
+
+    let section =
+        document.getElementById(id);
+
+
+    if (!section) {
+
+        section =
+            document.createElement("div");
+
+        section.id =
+            id;
+
+        section.className =
+            "profile-section";
+
+
+        /*
+            Put database connections before
+            the existing RELATED MOVIES section.
+        */
+
+        const related =
+            document.getElementById(
+                "profile-related"
+            );
+
+
+        if (
+            related &&
+            related.parentElement &&
+            related.parentElement.parentNode
+        ) {
+
+            related.parentElement.parentNode.insertBefore(
+                section,
+                related.parentElement
+            );
+
+        }
+
+        else {
+
+            profileBox.appendChild(
+                section
+            );
+
+        }
+
+    }
+
+
+    section.innerHTML = "";
+
+
+    const heading =
+        document.createElement("h3");
+
+
+    heading.textContent =
+        title;
+
+
+    section.appendChild(
+        heading
+    );
+
+
+    if (
+        !items ||
+        items.length === 0
+    ) {
+
+        const empty =
+            document.createElement("p");
+
+
+        empty.textContent =
+            `No ${title.toLowerCase()} currently linked.`;
+
+
+        section.appendChild(
+            empty
+        );
+
+
+        return;
+
+    }
+
+
+    const wrapper =
+        document.createElement("div");
+
+
+    wrapper.className =
+        "profile-connections";
+
+
+    items.forEach(item => {
+
+        const button =
+            document.createElement("button");
+
+
+        button.type =
+            "button";
+
+
+        button.className =
+            "profile-button";
+
+
+        button.textContent =
+            item.name ||
+            item.title ||
+            item.id ||
+            "Unknown";
+
+
+        button.addEventListener(
+            "click",
+            function(event) {
+
+                event.preventDefault();
+                event.stopPropagation();
+
+                linkBuilder(item);
+
+            }
+        );
+
+
+        wrapper.appendChild(
+            button
+        );
+
+    });
+
+
+    section.appendChild(
+        wrapper
+    );
+
+}
+
+
+// ========================================
+// MOVIE → TEAMS
+// ========================================
+
+function getMovieTeams(movie) {
+
+    return teams.filter(team => {
+
+        return objectContainsMovie(
+            team,
+            movie,
+            [
+                "movies",
+                "movie",
+                "films",
+                "shows",
+                "media",
+                "appearances"
+            ]
+        );
+
+    });
+
+}
+
+
+function displayMovieTeams(movie) {
+
+    const linkedTeams =
+        getMovieTeams(movie);
+
+
+    createMovieConnectionSection(
+        "movie-teams-section",
+        "TEAMS",
+        linkedTeams,
+        team => {
+
+            window.location.href =
+                `teams.html?id=${encodeURIComponent(team.id)}`;
+
+        }
+    );
+
+}
+
+
+// ========================================
+// MOVIE → LOCATIONS
+// ========================================
+
+function getMovieLocations(movie) {
+
+    return locations.filter(location => {
+
+        return objectContainsMovie(
+            location,
+            movie,
+            [
+                "movies",
+                "movie",
+                "shows",
+                "media",
+                "appearances",
+                "featuredMovies",
+                "relatedMovies"
+            ]
+        );
+
+    });
+
+}
+
+
+function displayMovieLocations(movie) {
+
+    const linkedLocations =
+        getMovieLocations(movie);
+
+
+    createMovieConnectionSection(
+        "movie-locations-section",
+        "LOCATIONS",
+        linkedLocations,
+        location => {
+
+            window.location.href =
+                `locations.html?id=${encodeURIComponent(location.id)}`;
+
+        }
+    );
+
+}
+
+
+// ========================================
+// MOVIE → EVENTS
+// ========================================
+
+function getMovieEvents(movie) {
+
+    return events.filter(event => {
+
+        return objectContainsMovie(
+            event,
+            movie,
+            [
+                "movies",
+                "movie",
+                "shows",
+                "media",
+                "appearances",
+                "relatedMovies"
+            ]
+        );
+
+    });
+
+}
+
+
+function displayMovieEvents(movie) {
+
+    const linkedEvents =
+        getMovieEvents(movie);
+
+
+    createMovieConnectionSection(
+        "movie-events-section",
+        "EVENTS",
+        linkedEvents,
+        event => {
+
+            window.location.href =
+                `events.html?id=${encodeURIComponent(event.id)}`;
+
+        }
+    );
+
+}
+
+
+// ========================================
+// MOVIE → UNIVERSE
+// ========================================
+
+function getMovieUniverse(movie) {
+
+    const possibleUniverse =
+        movie.universe ||
+        movie.universeId ||
+        movie.reality ||
+        movie.designation;
+
+
+    if (!possibleUniverse) {
+        return null;
+    }
+
+
+    const target =
+        normalizeValue(
+            possibleUniverse
+        );
+
+
+    return universes.find(universe => {
+
+        const values = [
+
+            universe.id,
+            universe.name,
+            universe.title,
+            universe.designation,
+            universe.realName,
+            universe.universe
+
+        ]
+            .filter(Boolean)
+            .map(normalizeValue);
+
+
+        return values.includes(target);
+
+    }) || null;
+
+}
+
+
+function displayMovieUniverse(movie) {
+
+    const universe =
+        getMovieUniverse(movie);
+
+
+    createMovieConnectionSection(
+        "movie-universe-section",
+        "UNIVERSE",
+        universe
+            ? [universe]
+            : [],
+        selectedUniverse => {
+
+            window.location.href =
+                `universes.html?id=${encodeURIComponent(selectedUniverse.id)}`;
+
+        }
+    );
+
+}
+
 
 // ========================================
 // DISPLAY MAIN CHARACTERS
 // ========================================
 
-function displayMainCharacters(characterNames) {
+function displayMainCharacters(
+    characterNames
+) {
 
     const container =
         document.getElementById(
@@ -651,9 +1324,7 @@ function displayMainCharacters(characterNames) {
 
 
     if (!container) {
-
         return;
-
     }
 
 
@@ -676,17 +1347,17 @@ function displayMainCharacters(characterNames) {
     characterNames.forEach(name => {
 
         const character =
-            findCharacterByMovieName(name);
+            findCharacterByMovieName(
+                name
+            );
 
-
-        // ========================================
-        // CHARACTER FOUND
-        // ========================================
 
         if (character) {
 
             const button =
-                document.createElement("button");
+                document.createElement(
+                    "button"
+                );
 
 
             button.type =
@@ -703,7 +1374,10 @@ function displayMainCharacters(characterNames) {
 
             button.addEventListener(
                 "click",
-                function() {
+                function(event) {
+
+                    event.preventDefault();
+                    event.stopPropagation();
 
                     window.location.href =
                         `characters.html?id=${encodeURIComponent(character.id)}`;
@@ -712,102 +1386,148 @@ function displayMainCharacters(characterNames) {
             );
 
 
-            container.appendChild(button);
+            container.appendChild(
+                button
+            );
 
         }
-
-
-        // ========================================
-        // CHARACTER NOT FOUND
-        // ========================================
 
         else {
 
             const text =
-                document.createElement("span");
+                document.createElement(
+                    "span"
+                );
 
 
             text.textContent =
                 name;
 
 
-            container.appendChild(text);
+            container.appendChild(
+                text
+            );
 
         }
 
 
-        // ========================================
-        // SPACE BETWEEN ITEMS
-        // ========================================
-
-        const spacer =
-            document.createTextNode(" ");
-
-
-        container.appendChild(spacer);
+        container.appendChild(
+            document.createTextNode(" ")
+        );
 
     });
 
 }
 
 
-
 // ========================================
 // FIND CHARACTER FROM MOVIE NAME
 // ========================================
 
-function findCharacterByMovieName(name) {
+function findCharacterByMovieName(
+    name
+) {
 
     if (!name) {
-
         return null;
-
     }
 
 
     const normalized =
-        name
-            .toLowerCase()
-            .trim();
+        normalizeValue(name);
 
 
-    return characters.find(character => {
+    return characters.find(
+        character => {
 
-        if (!character) {
-
-            return false;
-
-        }
+            if (!character) {
+                return false;
+            }
 
 
-        const names = [
+            const names = [
 
-            character.name,
+                character.id,
+                character.name,
+                character.realName
 
-            character.realName
+            ]
+                .filter(Boolean)
+                .map(normalizeValue);
 
-        ]
-            .filter(Boolean)
-            .map(value =>
-                value
-                    .toLowerCase()
-                    .trim()
+
+            /*
+                Also check common character aliases
+                stored directly in the character object.
+            */
+
+            const aliases = [
+
+                character.alias,
+                character.aliases,
+                character.codeName,
+                character.codename
+
+            ];
+
+
+            const allNames = [
+
+                ...names
+
+            ];
+
+
+            aliases.forEach(alias => {
+
+                if (Array.isArray(alias)) {
+
+                    alias.forEach(
+                        value => {
+
+                            if (value) {
+                                allNames.push(
+                                    normalizeValue(
+                                        value
+                                    )
+                                );
+                            }
+
+                        }
+                    );
+
+                }
+
+                else if (alias) {
+
+                    allNames.push(
+                        normalizeValue(
+                            alias
+                        )
+                    );
+
+                }
+
+            });
+
+
+            return allNames.includes(
+                normalized
             );
 
-
-        return names.includes(normalized);
-
-    }) || null;
+        }
+    ) || null;
 
 }
-
 
 
 // ========================================
 // DISPLAY RELATED MOVIES
 // ========================================
 
-function displayRelatedMovies(relatedMovies) {
+function displayRelatedMovies(
+    relatedMovies
+) {
 
     const container =
         document.getElementById(
@@ -816,9 +1536,7 @@ function displayRelatedMovies(relatedMovies) {
 
 
     if (!container) {
-
         return;
-
     }
 
 
@@ -838,83 +1556,100 @@ function displayRelatedMovies(relatedMovies) {
     }
 
 
-    relatedMovies.forEach(relatedMovieValue => {
+    relatedMovies.forEach(
+        relatedMovieValue => {
 
-        const target =
-            String(relatedMovieValue || "")
-                .trim()
-                .toLowerCase();
-
-
-        const relatedMovie =
-            movies.find(movie => {
-
-                const movieID =
-                    String(movie.id || "")
-                        .trim()
-                        .toLowerCase();
+            const target =
+                String(
+                    relatedMovieValue || ""
+                )
+                    .trim()
+                    .toLowerCase();
 
 
-                const movieTitle =
-                    String(movie.title || "")
-                        .trim()
-                        .toLowerCase();
+            const relatedMovie =
+                movies.find(
+                    movie => {
+
+                        const movieID =
+                            String(
+                                movie.id || ""
+                            )
+                                .trim()
+                                .toLowerCase();
 
 
-                return (
-                    movieID === target ||
-                    movieTitle === target
+                        const movieTitle =
+                            String(
+                                movie.title || ""
+                            )
+                                .trim()
+                                .toLowerCase();
+
+
+                        return (
+                            movieID === target ||
+                            movieTitle === target
+                        );
+
+                    }
                 );
 
-            });
+
+            if (!relatedMovie) {
+                return;
+            }
 
 
-        if (!relatedMovie) {
+            const button =
+                document.createElement(
+                    "button"
+                );
 
-            return;
+
+            button.type =
+                "button";
+
+
+            button.className =
+                "profile-button";
+
+
+            button.textContent =
+                relatedMovie.title;
+
+
+            button.addEventListener(
+                "click",
+                function(event) {
+
+                    event.preventDefault();
+                    event.stopPropagation();
+
+                    openProfile(
+                        relatedMovie
+                    );
+
+                }
+            );
+
+
+            container.appendChild(
+                button
+            );
+
+
+            container.appendChild(
+                document.createTextNode(" ")
+            );
 
         }
+    );
 
 
-        const button =
-            document.createElement("button");
-
-
-        button.type =
-            "button";
-
-
-        button.className =
-            "profile-button";
-
-
-        button.textContent =
-            relatedMovie.title;
-
-
-        button.addEventListener(
-            "click",
-            function() {
-
-                openProfile(relatedMovie);
-
-            }
-        );
-
-
-        container.appendChild(button);
-
-
-        const spacer =
-            document.createTextNode(" ");
-
-
-        container.appendChild(spacer);
-
-    });
-
-
-    if (container.children.length === 0) {
+    if (
+        container.children.length === 0
+    ) {
 
         container.textContent =
             "No related movies found.";
@@ -924,13 +1659,15 @@ function displayRelatedMovies(relatedMovies) {
 }
 
 
-
 // ========================================
 // CLOSE PROFILE
 // ========================================
 
 function closeProfile() {
 
+
+    clearSpecialEffect();
+    
     const modal =
         document.getElementById(
             "profile-modal"
@@ -939,14 +1676,12 @@ function closeProfile() {
 
     if (modal) {
 
-        modal.classList.remove("active");
+        modal.classList.remove(
+            "active"
+        );
 
     }
 
-
-    // ========================================
-    // REMOVE MOVIE ID FROM URL
-    // ========================================
 
     window.history.replaceState(
         {},
@@ -955,7 +1690,6 @@ function closeProfile() {
     );
 
 }
-
 
 
 // ========================================
@@ -988,7 +1722,6 @@ if (profileModal) {
 }
 
 
-
 // ========================================
 // ESC KEY CLOSES PROFILE
 // ========================================
@@ -1009,7 +1742,6 @@ document.addEventListener(
 );
 
 
-
 // ========================================
 // FORMAT TEXT
 // ========================================
@@ -1017,21 +1749,17 @@ document.addEventListener(
 function formatText(text) {
 
     if (!text) {
-
         return "";
-
     }
 
 
-    return text
+    return String(text)
         .replace(/-/g, " ")
         .split(" ")
         .map(word => {
 
             if (!word) {
-
                 return "";
-
             }
 
 

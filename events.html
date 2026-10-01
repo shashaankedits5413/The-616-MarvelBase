@@ -16,6 +16,7 @@
         rel="stylesheet"
         href="style.css"
     >
+    <link rel="stylesheet" href="theme.css">
 
     <!-- EVENT PROFILE MODAL OVERRIDE -->
 
@@ -500,8 +501,8 @@
 
     <!-- MOUSE GLOW -->
 
-    <div class="mouse-glow"></div>
-
+    
+<canvas id="neon-trail-canvas"></canvas>
 
     <!-- HEADER -->
 
@@ -790,38 +791,11 @@
 
     <script src="global-search.js"></script>
 
+<script src="neon-trail.js"></script>
+ <script src="theme.js"></script>
 
-    <!-- MOUSE GLOW SCRIPT -->
-
-    <script>
-
-        const mouseGlow =
-            document.querySelector(".mouse-glow");
-
-
-        document.addEventListener(
-            "mousemove",
-            function(event) {
-
-                if (!mouseGlow) return;
-
-
-                mouseGlow.style.left =
-                    event.clientX + "px";
-
-
-                mouseGlow.style.top =
-                    event.clientY + "px";
-
-
-                mouseGlow.style.opacity =
-                    "1";
-
-            }
-        );
-
-    </script>
-
+ <script src="system-clock.js"></script>
+ 
 </body>
 
 </html>

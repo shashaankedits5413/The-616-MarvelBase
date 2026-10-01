@@ -10,7 +10,7 @@
 
     <link rel="stylesheet" href="style.css">
 
-
+     <link rel="stylesheet" href="theme.css">
     <style>
 
         /* =========================================
@@ -677,7 +677,7 @@
          MOUSE GLOW
     ========================================= -->
 
-    <div class="mouse-glow"></div>
+    <canvas id="neon-trail-canvas"></canvas>
 
 
 
@@ -689,37 +689,13 @@
 
     <script src="global-search.js"></script>
 
+    <script src="neon-trail.js"></script>
 
-    <script>
+    <script src="system-clock.js"></script>    
+    
+    <script src="theme.js"></script>
 
-        const mouseGlow =
-            document.querySelector(".mouse-glow");
-
-
-        document.addEventListener(
-            "mousemove",
-            function(event) {
-
-                if (!mouseGlow) return;
-
-
-                mouseGlow.style.left =
-                    event.clientX + "px";
-
-
-                mouseGlow.style.top =
-                    event.clientY + "px";
-
-
-                mouseGlow.style.opacity =
-                    "1";
-
-            }
-        );
-
-    </script>
-
-
+        
 </body>
 
 </html>

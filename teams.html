@@ -8,7 +8,7 @@
     <title>Teams | The 616 Marvelbase</title>
 
     <link rel="stylesheet" href="style.css">
-
+     <link rel="stylesheet" href="theme.css">
     <!-- TEAM PROFILE MODAL OVERRIDE -->
     <style>
         #profile-modal {
@@ -377,7 +377,7 @@
 <body>
 
     <!-- MOUSE GLOW -->
-    <div class="mouse-glow"></div>
+    <canvas id="neon-trail-canvas"></canvas>
 
     <!-- HEADER -->
     <header>
@@ -637,29 +637,9 @@
     <!-- JAVASCRIPT -->
     <script src="teams.js"></script>
     <script src="global-search.js"></script>
-
-    <!-- MOUSE GLOW SCRIPT -->
-    <script>
-        const mouseGlow =
-            document.querySelector(".mouse-glow");
-
-        document.addEventListener(
-            "mousemove",
-            function(event) {
-
-                if (!mouseGlow) return;
-
-                mouseGlow.style.left =
-                    event.clientX + "px";
-
-                mouseGlow.style.top =
-                    event.clientY + "px";
-
-                mouseGlow.style.opacity =
-                    "1";
-            }
-        );
-    </script>
+<script src="neon-trail.js"></script>
+    <script src="theme.js"></script>
+    <script src="system-clock.js"></script>
 
 </body>
 

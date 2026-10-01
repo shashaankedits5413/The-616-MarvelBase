@@ -2,12 +2,15 @@ window.scrollTo(0, 0);
 
 
 let events = [];
-
 let characters = [];
+let movies = [];
+let teams = [];
+let locations = [];
+let universes = [];
 
 
 // ========================================
-// LOAD DATABASE
+// LOAD DATABASES
 // ========================================
 
 Promise.all([
@@ -16,27 +19,62 @@ Promise.all([
         .then(response => {
 
             if (!response.ok) {
-
-                throw new Error(
-                    "Could not load events.json"
-                );
-
+                throw new Error("Could not load events.json");
             }
 
             return response.json();
 
         }),
 
-
     fetch("data/characters.json")
         .then(response => {
 
             if (!response.ok) {
+                throw new Error("Could not load characters.json");
+            }
 
-                throw new Error(
-                    "Could not load characters.json"
-                );
+            return response.json();
 
+        }),
+
+    fetch("data/movies.json")
+        .then(response => {
+
+            if (!response.ok) {
+                throw new Error("Could not load movies.json");
+            }
+
+            return response.json();
+
+        }),
+
+    fetch("data/teams.json")
+        .then(response => {
+
+            if (!response.ok) {
+                throw new Error("Could not load teams.json");
+            }
+
+            return response.json();
+
+        }),
+
+    fetch("data/locations.json")
+        .then(response => {
+
+            if (!response.ok) {
+                throw new Error("Could not load locations.json");
+            }
+
+            return response.json();
+
+        }),
+
+    fetch("data/universes.json")
+        .then(response => {
+
+            if (!response.ok) {
+                throw new Error("Could not load universes.json");
             }
 
             return response.json();
@@ -45,34 +83,81 @@ Promise.all([
 
 ])
 
-
-.then(([eventData, characterData]) => {
-
+.then(([
+    eventData,
+    characterData,
+    movieData,
+    teamData,
+    locationData,
+    universeData
+]) => {
 
     // ========================================
-    // EVENTS DATABASE
+    // EVENTS
     // ========================================
 
     events =
         Array.isArray(eventData)
-
             ? eventData
-
             : eventData.events || [];
 
 
-
     // ========================================
-    // CHARACTERS DATABASE
+    // CHARACTERS
     // ========================================
 
     characters =
         Array.isArray(characterData)
-
             ? characterData
-
             : characterData.characters || [];
 
+
+    // ========================================
+    // MOVIES & SHOWS
+    // ========================================
+
+    if (Array.isArray(movieData)) {
+
+        movies = movieData;
+
+    } else {
+
+        movies = [
+            ...(movieData.movies || []),
+            ...(movieData.shows || [])
+        ];
+
+    }
+
+
+    // ========================================
+    // TEAMS
+    // ========================================
+
+    teams =
+        Array.isArray(teamData)
+            ? teamData
+            : teamData.teams || [];
+
+
+    // ========================================
+    // LOCATIONS
+    // ========================================
+
+    locations =
+        Array.isArray(locationData)
+            ? locationData
+            : locationData.locations || [];
+
+
+    // ========================================
+    // UNIVERSES
+    // ========================================
+
+    universes =
+        Array.isArray(universeData)
+            ? universeData
+            : universeData.universes || [];
 
 
     // ========================================
@@ -82,19 +167,14 @@ Promise.all([
     displayEvents(events);
 
 
-
     // ========================================
-    // OPEN EVENT FROM URL
-    //
-    // Example:
-    // events.html?id=house-of-m
+    // DEEP LINK
     // ========================================
 
     const urlParams =
         new URLSearchParams(
             window.location.search
         );
-
 
     const eventId =
         urlParams.get("id");
@@ -104,32 +184,24 @@ Promise.all([
 
         const event =
             events.find(item =>
-
-                String(item.id)
+                String(item.id || "")
                     .toLowerCase()
                     .trim() ===
-
                 eventId
                     .toLowerCase()
                     .trim()
-
             );
 
 
         if (event) {
-
-            openProfile(event);
-
+            openProfile(event, false);
         }
 
     }
 
-
 })
 
-
 .catch(error => {
-
 
     console.error(error);
 
@@ -143,13 +215,9 @@ Promise.all([
     if (eventGrid) {
 
         eventGrid.innerHTML = `
-
             <p class="error-message">
-
                 Unable to load event database.
-
             </p>
-
         `;
 
     }
@@ -157,13 +225,11 @@ Promise.all([
 });
 
 
-
 // ========================================
 // DISPLAY EVENTS
 // ========================================
 
 function displayEvents(database) {
-
 
     const eventGrid =
         document.getElementById(
@@ -185,7 +251,6 @@ function displayEvents(database) {
     eventGrid.innerHTML = "";
 
 
-
     // ========================================
     // UPDATE COUNT
     // ========================================
@@ -204,9 +269,8 @@ function displayEvents(database) {
     }
 
 
-
     // ========================================
-    // DISPLAY EVENT CARDS
+    // EVENT CARDS
     // ========================================
 
     database.forEach(event => {
@@ -218,7 +282,6 @@ function displayEvents(database) {
     });
 
 
-
     // ========================================
     // NO RESULTS
     // ========================================
@@ -226,13 +289,9 @@ function displayEvents(database) {
     if (database.length === 0) {
 
         eventGrid.innerHTML = `
-
             <p class="error-message">
-
                 No events found.
-
             </p>
-
         `;
 
     }
@@ -240,13 +299,11 @@ function displayEvents(database) {
 }
 
 
-
 // ========================================
 // CREATE EVENT CARD
 // ========================================
 
 function createEventCard(event) {
-
 
     const card =
         document.createElement("div");
@@ -271,25 +328,19 @@ function createEventCard(event) {
         <div class="movie-info">
 
             <p class="movie-type">
-
                 ${formatText(
                     event.type || "EVENT"
                 )}
-
             </p>
 
 
             <h2>
-
                 ${event.name || "Unknown Event"}
-
             </h2>
 
 
             <p class="movie-year">
-
                 ${event.year || ""}
-
             </p>
 
 
@@ -297,20 +348,13 @@ function createEventCard(event) {
                 class="view-profile"
                 type="button"
             >
-
                 VIEW EVENT
-
             </button>
 
         </div>
 
     `;
 
-
-
-    // ========================================
-    // PROFILE BUTTON
-    // ========================================
 
     const button =
         card.querySelector(
@@ -334,11 +378,6 @@ function createEventCard(event) {
     }
 
 
-
-    // ========================================
-    // CLICKING CARD
-    // ========================================
-
     card.addEventListener(
         "click",
         function() {
@@ -352,7 +391,6 @@ function createEventCard(event) {
     return card;
 
 }
-
 
 
 // ========================================
@@ -371,102 +409,65 @@ if (search) {
         "input",
         function() {
 
-
             const searchText =
                 search.value
                     .toLowerCase()
                     .trim();
 
 
-
             const results =
                 events.filter(event => {
 
-
                     const name =
-                        event.name
-
-                            ? event.name
-                                .toLowerCase()
-
-                            : "";
-
+                        String(
+                            event.name || ""
+                        ).toLowerCase();
 
 
                     const type =
-                        event.type
-
-                            ? event.type
-                                .toLowerCase()
-
-                            : "";
-
+                        String(
+                            event.type || ""
+                        ).toLowerCase();
 
 
                     const universe =
-                        event.universe
-
-                            ? event.universe
-                                .toLowerCase()
-
-                            : "";
-
+                        String(
+                            event.universe || ""
+                        ).toLowerCase();
 
 
                     const location =
-                        event.location
-
-                            ? event.location
-                                .toLowerCase()
-
-                            : "";
-
+                        String(
+                            event.location || ""
+                        ).toLowerCase();
 
 
                     const description =
-                        event.description
-
-                            ? event.description
-                                .toLowerCase()
-
-                            : "";
-
+                        String(
+                            event.description || ""
+                        ).toLowerCase();
 
 
                     const year =
-                        event.year
-
-                            ? String(event.year)
-                                .toLowerCase()
-
-                            : "";
-
+                        String(
+                            event.year || ""
+                        ).toLowerCase();
 
 
                     const participants =
-                        Array.isArray(
-                            event.participants
-                        )
-
+                        Array.isArray(event.participants)
                             ? event.participants
                                 .join(" ")
                                 .toLowerCase()
-
                             : "";
-
 
 
                     const comics =
-                        Array.isArray(
-                            event.comics
-                        )
-
+                        Array.isArray(event.comics)
                             ? event.comics
                                 .join(" ")
                                 .toLowerCase()
-
                             : "";
-
 
 
                     return (
@@ -492,30 +493,23 @@ if (search) {
                 });
 
 
-
             displayEvents(results);
 
         }
-
     );
 
 }
-
 
 
 // ========================================
 // OPEN PROFILE
 // ========================================
 
-function openProfile(event) {
-
+function openProfile(event, updateURL = true) {
 
     if (!event) {
-
         return;
-
     }
-
 
 
     // ========================================
@@ -562,7 +556,6 @@ function openProfile(event) {
         document.getElementById(
             "profile-description"
         );
-
 
 
     // ========================================
@@ -632,9 +625,8 @@ function openProfile(event) {
     }
 
 
-
     // ========================================
-    // PARTICIPANTS
+    // EXISTING CONNECTIONS
     // ========================================
 
     displayParticipants(
@@ -642,32 +634,31 @@ function openProfile(event) {
     );
 
 
-
-    // ========================================
-    // COMICS
-    // ========================================
-
     displayComics(
         event.comics
     );
 
-
-
-    // ========================================
-    // RELATED EVENTS
-    // ========================================
 
     displayRelatedEvents(
         event.relatedEvents
     );
 
 
+    // ========================================
+    // NEW DATABASE CONNECTIONS
+    // ========================================
+
+    displayEventMovies(event);
+
+    displayEventTeams(event);
+
+    displayEventLocations(event);
+
+    displayEventUniverse(event);
+
 
     // ========================================
     // RESET PROFILE SCROLL
-    //
-    // Important when jumping from:
-    // Event A → Event B
     // ========================================
 
     const profileBox =
@@ -677,11 +668,8 @@ function openProfile(event) {
 
 
     if (profileBox) {
-
         profileBox.scrollTop = 0;
-
     }
-
 
 
     // ========================================
@@ -703,12 +691,14 @@ function openProfile(event) {
     }
 
 
-
     // ========================================
     // UPDATE URL
     // ========================================
 
-    if (event.id) {
+    if (
+        updateURL &&
+        event.id
+    ) {
 
         const newURL =
             `events.html?id=${encodeURIComponent(
@@ -727,6 +717,817 @@ function openProfile(event) {
 }
 
 
+// ========================================
+// NORMALIZE VALUE
+// ========================================
+
+function normalizeValue(value) {
+
+    return String(value || "")
+        .toLowerCase()
+        .replace(/[^a-z0-9]/g, "");
+
+}
+
+
+// ========================================
+// GET EVENT IDENTIFIERS
+// ========================================
+
+function getEventIdentifiers(event) {
+
+    return [
+        event.id,
+        event.name,
+        event.title
+    ]
+        .filter(Boolean)
+        .map(normalizeValue);
+
+}
+
+
+// ========================================
+// CHECK IF VALUE REFERENCES EVENT
+// ========================================
+
+function valueContainsEvent(
+    value,
+    event
+) {
+
+    if (
+        value === null ||
+        value === undefined
+    ) {
+        return false;
+    }
+
+
+    const normalizedValue =
+        normalizeValue(value);
+
+
+    if (!normalizedValue) {
+        return false;
+    }
+
+
+    return getEventIdentifiers(event)
+        .some(identifier =>
+            normalizedValue === identifier ||
+            normalizedValue.includes(identifier) ||
+            identifier.includes(normalizedValue)
+        );
+
+}
+
+
+// ========================================
+// CHECK OBJECT FOR EVENT
+// ========================================
+
+function objectContainsEvent(
+    object,
+    event
+) {
+
+    if (!object) {
+        return false;
+    }
+
+
+    for (const key of Object.keys(object)) {
+
+        const value =
+            object[key];
+
+
+        if (
+            typeof value === "string" ||
+            typeof value === "number"
+        ) {
+
+            if (
+                valueContainsEvent(
+                    value,
+                    event
+                )
+            ) {
+                return true;
+            }
+
+        }
+
+
+        if (Array.isArray(value)) {
+
+            if (
+                value.some(item =>
+                    valueContainsEvent(
+                        item,
+                        event
+                    )
+                )
+            ) {
+                return true;
+            }
+
+        }
+
+    }
+
+
+    return false;
+
+}
+
+
+// ========================================
+// GET CHARACTER BY VALUE
+// ========================================
+
+function findCharacter(value) {
+
+    const target =
+        normalizeValue(value);
+
+
+    return characters.find(character => {
+
+        return (
+
+            normalizeValue(character.id) === target ||
+
+            normalizeValue(character.name) === target ||
+
+            normalizeValue(character.realName) === target
+
+        );
+
+    });
+
+}
+
+
+// ========================================
+// GET MOVIE BY VALUE
+// ========================================
+
+function findMovie(value) {
+
+    const target =
+        normalizeValue(value);
+
+
+    return movies.find(movie => {
+
+        return (
+
+            normalizeValue(movie.id) === target ||
+
+            normalizeValue(movie.title) === target ||
+
+            normalizeValue(movie.name) === target
+
+        );
+
+    });
+
+}
+
+
+// ========================================
+// GET TEAM BY VALUE
+// ========================================
+
+function findTeam(value) {
+
+    const target =
+        normalizeValue(value);
+
+
+    return teams.find(team => {
+
+        return (
+
+            normalizeValue(team.id) === target ||
+
+            normalizeValue(team.name) === target
+
+        );
+
+    });
+
+}
+
+
+// ========================================
+// GET LOCATION BY VALUE
+// ========================================
+
+function findLocation(value) {
+
+    const target =
+        normalizeValue(value);
+
+
+    return locations.find(location => {
+
+        return (
+
+            normalizeValue(location.id) === target ||
+
+            normalizeValue(location.name) === target
+
+        );
+
+    });
+
+}
+
+
+// ========================================
+// GET UNIVERSE BY VALUE
+// ========================================
+
+function findUniverse(value) {
+
+    const target =
+        normalizeValue(value);
+
+
+    return universes.find(universe => {
+
+        return (
+
+            normalizeValue(universe.id) === target ||
+
+            normalizeValue(universe.name) === target ||
+
+            normalizeValue(universe.designation) === target ||
+
+            normalizeValue(universe.realName) === target
+
+        );
+
+    });
+
+}
+
+
+// ========================================
+// MERGE UNIQUE
+// ========================================
+
+function mergeUnique(
+    existing,
+    additions
+) {
+
+    additions.forEach(item => {
+
+        if (!item) {
+            return;
+        }
+
+
+        const exists =
+            existing.some(existingItem =>
+                existingItem.id &&
+                item.id &&
+                existingItem.id === item.id
+            );
+
+
+        if (!exists) {
+            existing.push(item);
+        }
+
+    });
+
+
+    return existing;
+
+}
+
+
+// ========================================
+// EVENT MOVIES
+// ========================================
+
+function getEventMovies(event) {
+
+    const results = [];
+
+
+    // Direct event fields
+
+    const directFields = [
+        "movies",
+        "movie",
+        "films",
+        "shows",
+        "media",
+        "appearances",
+        "relatedMovies"
+    ];
+
+
+    directFields.forEach(field => {
+
+        const value =
+            event[field];
+
+
+        if (Array.isArray(value)) {
+
+            value.forEach(item => {
+
+                const movie =
+                    findMovie(item);
+
+                if (movie) {
+                    results.push(movie);
+                }
+
+            });
+
+        } else if (value) {
+
+            const movie =
+                findMovie(value);
+
+            if (movie) {
+                results.push(movie);
+            }
+
+        }
+
+    });
+
+
+    // Reverse search through movies
+
+    movies.forEach(movie => {
+
+        if (
+            objectContainsEvent(
+                movie,
+                event
+            )
+        ) {
+
+            results.push(movie);
+
+        }
+
+    });
+
+
+    return mergeUnique([], results);
+
+}
+
+
+// ========================================
+// DISPLAY EVENT MOVIES
+// ========================================
+
+function displayEventMovies(event) {
+
+    createConnectionSection(
+        "Movies & Shows",
+        getEventMovies(event),
+        "movies.html?id="
+    );
+
+}
+
+
+// ========================================
+// EVENT TEAMS
+// ========================================
+
+function getEventTeams(event) {
+
+    const results = [];
+
+
+    const directFields = [
+        "teams",
+        "team",
+        "organizations",
+        "groups",
+        "affiliations",
+        "relatedTeams"
+    ];
+
+
+    directFields.forEach(field => {
+
+        const value =
+            event[field];
+
+
+        if (Array.isArray(value)) {
+
+            value.forEach(item => {
+
+                const team =
+                    findTeam(item);
+
+                if (team) {
+                    results.push(team);
+                }
+
+            });
+
+        } else if (value) {
+
+            const team =
+                findTeam(value);
+
+            if (team) {
+                results.push(team);
+            }
+
+        }
+
+    });
+
+
+    teams.forEach(team => {
+
+        if (
+            objectContainsEvent(
+                team,
+                event
+            )
+        ) {
+
+            results.push(team);
+
+        }
+
+    });
+
+
+    return mergeUnique([], results);
+
+}
+
+
+// ========================================
+// DISPLAY EVENT TEAMS
+// ========================================
+
+function displayEventTeams(event) {
+
+    createConnectionSection(
+        "Teams",
+        getEventTeams(event),
+        "teams.html?id="
+    );
+
+}
+
+
+// ========================================
+// EVENT LOCATIONS
+// ========================================
+
+function getEventLocations(event) {
+
+    const results = [];
+
+
+    const directFields = [
+        "locations",
+        "location",
+        "places",
+        "featuredLocations",
+        "relatedLocations"
+    ];
+
+
+    directFields.forEach(field => {
+
+        const value =
+            event[field];
+
+
+        if (Array.isArray(value)) {
+
+            value.forEach(item => {
+
+                const location =
+                    findLocation(item);
+
+                if (location) {
+                    results.push(location);
+                }
+
+            });
+
+        } else if (value) {
+
+            const location =
+                findLocation(value);
+
+            if (location) {
+                results.push(location);
+            }
+
+        }
+
+    });
+
+
+    locations.forEach(location => {
+
+        if (
+            objectContainsEvent(
+                location,
+                event
+            )
+        ) {
+
+            results.push(location);
+
+        }
+
+    });
+
+
+    // Event's existing location field
+
+    if (event.location) {
+
+        const directLocation =
+            findLocation(
+                event.location
+            );
+
+
+        if (directLocation) {
+
+            results.push(
+                directLocation
+            );
+
+        }
+
+    }
+
+
+    return mergeUnique([], results);
+
+}
+
+
+// ========================================
+// DISPLAY EVENT LOCATIONS
+// ========================================
+
+function displayEventLocations(event) {
+
+    createConnectionSection(
+        "Locations",
+        getEventLocations(event),
+        "locations.html?id="
+    );
+
+}
+
+
+// ========================================
+// EVENT UNIVERSE
+// ========================================
+
+function getEventUniverse(event) {
+
+    // Direct universe
+
+    if (event.universe) {
+
+        const directUniverse =
+            findUniverse(
+                event.universe
+            );
+
+
+        if (directUniverse) {
+            return directUniverse;
+        }
+
+    }
+
+
+    // Search all universe records
+
+    const universe =
+        universes.find(item =>
+            objectContainsEvent(
+                item,
+                event
+            )
+        );
+
+
+    return universe || null;
+
+}
+
+
+// ========================================
+// DISPLAY EVENT UNIVERSE
+// ========================================
+
+function displayEventUniverse(event) {
+
+    const universe =
+        getEventUniverse(event);
+
+
+    if (!universe) {
+        return;
+    }
+
+
+    createConnectionSection(
+        "Universe",
+        [universe],
+        "universes.html?id="
+    );
+
+}
+
+
+// ========================================
+// CREATE CONNECTION SECTION
+// ========================================
+
+function createConnectionSection(
+    title,
+    items,
+    baseURL
+) {
+
+    const modalBody =
+        document.getElementById(
+            "profile-modal"
+        );
+
+
+    if (!modalBody) {
+        return;
+    }
+
+
+    const existingContainer =
+        document.getElementById(
+            "profile-modal"
+        );
+
+
+    if (!existingContainer) {
+        return;
+    }
+
+
+    // Find the actual profile content area
+
+    const profileContent =
+        existingContainer.querySelector(
+            ".profile-box"
+        );
+
+
+    if (!profileContent) {
+        return;
+    }
+
+
+    if (
+        !items ||
+        items.length === 0
+    ) {
+        return;
+    }
+
+
+    const section =
+        document.createElement(
+            "div"
+        );
+
+
+    section.className =
+        "profile-section";
+
+
+    const heading =
+        document.createElement(
+            "h3"
+        );
+
+
+    heading.textContent =
+        title;
+
+
+    const connections =
+        document.createElement(
+            "div"
+        );
+
+
+    connections.className =
+        "profile-connections";
+
+
+    items.forEach(item => {
+
+        const button =
+            document.createElement(
+                "button"
+            );
+
+
+        button.type =
+            "button";
+
+
+        button.className =
+            "profile-button";
+
+
+        button.textContent =
+            item.name ||
+            item.title ||
+            item.designation ||
+            "Unknown";
+
+
+        button.addEventListener(
+            "click",
+            function() {
+
+                window.location.href =
+                    `${baseURL}${encodeURIComponent(
+                        item.id
+                    )}`;
+
+            }
+        );
+
+
+        connections.appendChild(
+            button
+        );
+
+    });
+
+
+    section.appendChild(
+        heading
+    );
+
+
+    section.appendChild(
+        connections
+    );
+
+
+    // Insert before Related Events
+
+    const relatedSection =
+        document.getElementById(
+            "profile-related"
+        );
+
+
+    if (
+        relatedSection &&
+        relatedSection.parentElement
+    ) {
+
+        relatedSection.parentElement.parentNode.insertBefore(
+            section,
+            relatedSection.parentElement
+        );
+
+    } else {
+
+        profileContent.appendChild(
+            section
+        );
+
+    }
+
+}
+
 
 // ========================================
 // DISPLAY PARTICIPANTS
@@ -736,7 +1537,6 @@ function displayParticipants(
     participantValues
 ) {
 
-
     const container =
         document.getElementById(
             "profile-participants"
@@ -744,21 +1544,15 @@ function displayParticipants(
 
 
     if (!container) {
-
         return;
-
     }
 
 
     container.innerHTML = "";
 
 
-
     if (
-        !Array.isArray(
-            participantValues
-        ) ||
-
+        !Array.isArray(participantValues) ||
         participantValues.length === 0
     ) {
 
@@ -770,79 +1564,16 @@ function displayParticipants(
     }
 
 
-
     participantValues.forEach(
         participantValue => {
 
-
-            const target =
-                String(
-                    participantValue || ""
-                )
-                    .trim()
-                    .toLowerCase();
-
-
-
             const character =
-                characters.find(character => {
+                findCharacter(
+                    participantValue
+                );
 
-
-                    if (!character) {
-
-                        return false;
-
-                    }
-
-
-
-                    const characterID =
-                        String(
-                            character.id || ""
-                        )
-                            .trim()
-                            .toLowerCase();
-
-
-
-                    const characterName =
-                        String(
-                            character.name || ""
-                        )
-                            .trim()
-                            .toLowerCase();
-
-
-
-                    const realName =
-                        String(
-                            character.realName || ""
-                        )
-                            .trim()
-                            .toLowerCase();
-
-
-
-                    return (
-
-                        characterID === target ||
-
-                        characterName === target ||
-
-                        realName === target
-
-                    );
-
-                });
-
-
-
-            // ========================================
-            // CHARACTER FOUND
-            // ========================================
 
             if (character) {
-
 
                 const button =
                     document.createElement(
@@ -866,7 +1597,6 @@ function displayParticipants(
                     "click",
                     function() {
 
-
                         window.location.href =
                             `characters.html?id=${encodeURIComponent(
                                 character.id
@@ -880,16 +1610,7 @@ function displayParticipants(
                     button
                 );
 
-            }
-
-
-
-            // ========================================
-            // CHARACTER NOT FOUND
-            // ========================================
-
-            else {
-
+            } else {
 
                 const text =
                     document.createElement(
@@ -908,11 +1629,6 @@ function displayParticipants(
             }
 
 
-
-            // ========================================
-            // SPACE
-            // ========================================
-
             container.appendChild(
                 document.createTextNode(" ")
             );
@@ -923,7 +1639,6 @@ function displayParticipants(
 }
 
 
-
 // ========================================
 // DISPLAY COMICS
 // ========================================
@@ -932,7 +1647,6 @@ function displayComics(
     comicValues
 ) {
 
-
     const container =
         document.getElementById(
             "profile-comics"
@@ -940,21 +1654,15 @@ function displayComics(
 
 
     if (!container) {
-
         return;
-
     }
 
 
     container.innerHTML = "";
 
 
-
     if (
-        !Array.isArray(
-            comicValues
-        ) ||
-
+        !Array.isArray(comicValues) ||
         comicValues.length === 0
     ) {
 
@@ -966,10 +1674,8 @@ function displayComics(
     }
 
 
-
     comicValues.forEach(
         comicValue => {
-
 
             const button =
                 document.createElement(
@@ -1000,7 +1706,6 @@ function displayComics(
 }
 
 
-
 // ========================================
 // DISPLAY RELATED EVENTS
 // ========================================
@@ -1009,7 +1714,6 @@ function displayRelatedEvents(
     relatedEventValues
 ) {
 
-
     const container =
         document.getElementById(
             "profile-related"
@@ -1017,21 +1721,15 @@ function displayRelatedEvents(
 
 
     if (!container) {
-
         return;
-
     }
 
 
     container.innerHTML = "";
 
 
-
     if (
-        !Array.isArray(
-            relatedEventValues
-        ) ||
-
+        !Array.isArray(relatedEventValues) ||
         relatedEventValues.length === 0
     ) {
 
@@ -1043,68 +1741,30 @@ function displayRelatedEvents(
     }
 
 
-
     relatedEventValues.forEach(
         relatedEventValue => {
 
-
             const target =
-                String(
-                    relatedEventValue || ""
-                )
-                    .trim()
-                    .toLowerCase();
-
+                normalizeValue(
+                    relatedEventValue
+                );
 
 
             const relatedEvent =
                 events.find(event => {
 
-
-                    if (!event) {
-
-                        return false;
-
-                    }
-
-
-
-                    const eventID =
-                        String(
-                            event.id || ""
-                        )
-                            .trim()
-                            .toLowerCase();
-
-
-
-                    const eventName =
-                        String(
-                            event.name || ""
-                        )
-                            .trim()
-                            .toLowerCase();
-
-
-
                     return (
 
-                        eventID === target ||
+                        normalizeValue(event.id) === target ||
 
-                        eventName === target
+                        normalizeValue(event.name) === target
 
                     );
 
                 });
 
 
-
-            // ========================================
-            // EVENT FOUND
-            // ========================================
-
             if (relatedEvent) {
-
 
                 const button =
                     document.createElement(
@@ -1140,16 +1800,7 @@ function displayRelatedEvents(
                     button
                 );
 
-            }
-
-
-
-            // ========================================
-            // EVENT NOT FOUND
-            // ========================================
-
-            else {
-
+            } else {
 
                 const text =
                     document.createElement(
@@ -1168,11 +1819,6 @@ function displayRelatedEvents(
             }
 
 
-
-            // ========================================
-            // SPACE
-            // ========================================
-
             container.appendChild(
                 document.createTextNode(" ")
             );
@@ -1183,13 +1829,11 @@ function displayRelatedEvents(
 }
 
 
-
 // ========================================
 // CLOSE PROFILE
 // ========================================
 
 function closeProfile() {
-
 
     const modal =
         document.getElementById(
@@ -1206,11 +1850,6 @@ function closeProfile() {
     }
 
 
-
-    // ========================================
-    // REMOVE EVENT ID FROM URL
-    // ========================================
-
     window.history.replaceState(
         {},
         "",
@@ -1218,7 +1857,6 @@ function closeProfile() {
     );
 
 }
-
 
 
 // ========================================
@@ -1237,7 +1875,6 @@ if (profileModal) {
         "click",
         function(event) {
 
-
             if (
                 event.target === this
             ) {
@@ -1252,27 +1889,37 @@ if (profileModal) {
 }
 
 
-
 // ========================================
-// ESC KEY CLOSES PROFILE
+// ESC KEY
 // ========================================
 
 document.addEventListener(
     "keydown",
     function(event) {
 
-
         if (
             event.key === "Escape"
         ) {
 
-            closeProfile();
+            const modal =
+                document.getElementById(
+                    "profile-modal"
+                );
+
+
+            if (
+                modal &&
+                modal.classList.contains("active")
+            ) {
+
+                closeProfile();
+
+            }
 
         }
 
     }
 );
-
 
 
 // ========================================
@@ -1281,11 +1928,8 @@ document.addEventListener(
 
 function formatText(text) {
 
-
     if (!text) {
-
         return "";
-
     }
 
 
@@ -1297,20 +1941,14 @@ function formatText(text) {
 
         .map(word => {
 
-
             if (!word) {
-
                 return "";
-
             }
 
 
             return (
-
                 word.charAt(0).toUpperCase() +
-
                 word.slice(1)
-
             );
 
         })

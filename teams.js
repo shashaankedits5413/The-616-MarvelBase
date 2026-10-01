@@ -3,6 +3,9 @@ window.scrollTo(0, 0);
 let teams = [];
 let characters = [];
 let movies = [];
+let locations = [];
+let events = [];
+let universes = [];
 
 
 // ========================================
@@ -13,55 +16,68 @@ Promise.all([
 
     fetch("data/teams.json")
         .then(response => {
-
             if (!response.ok) {
-
-                throw new Error(
-                    "Could not load teams.json"
-                );
-
+                throw new Error("Could not load teams.json");
             }
 
             return response.json();
-
         }),
-
 
     fetch("data/characters.json")
         .then(response => {
-
             if (!response.ok) {
-
-                throw new Error(
-                    "Could not load characters.json"
-                );
-
+                throw new Error("Could not load characters.json");
             }
 
             return response.json();
-
         }),
-
 
     fetch("data/movies.json")
         .then(response => {
-
             if (!response.ok) {
-
-                throw new Error(
-                    "Could not load movies.json"
-                );
-
+                throw new Error("Could not load movies.json");
             }
 
             return response.json();
+        }),
 
+    fetch("data/locations.json")
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Could not load locations.json");
+            }
+
+            return response.json();
+        }),
+
+    fetch("data/events.json")
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Could not load events.json");
+            }
+
+            return response.json();
+        }),
+
+    fetch("data/universes.json")
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Could not load universes.json");
+            }
+
+            return response.json();
         })
 
 ])
 
-.then(([teamData, characterData, movieData]) => {
-
+.then(([
+    teamData,
+    characterData,
+    movieData,
+    locationData,
+    eventData,
+    universeData
+]) => {
 
     // ========================================
     // TEAMS DATABASE
@@ -89,28 +105,41 @@ Promise.all([
 
         movies = movieData;
 
-    }
-
-    else if (
-        movieData &&
-        Array.isArray(movieData.movies) &&
-        Array.isArray(movieData.shows)
-    ) {
+    } else {
 
         movies = [
-            ...movieData.movies,
-            ...movieData.shows
+            ...(movieData.movies || []),
+            ...(movieData.shows || [])
         ];
 
     }
 
-    else {
 
-        throw new Error(
-            "movies.json does not contain a valid database."
-        );
+    // ========================================
+    // LOCATIONS DATABASE
+    // ========================================
 
-    }
+    locations = Array.isArray(locationData)
+        ? locationData
+        : locationData.locations || [];
+
+
+    // ========================================
+    // EVENTS DATABASE
+    // ========================================
+
+    events = Array.isArray(eventData)
+        ? eventData
+        : eventData.events || [];
+
+
+    // ========================================
+    // UNIVERSES DATABASE
+    // ========================================
+
+    universes = Array.isArray(universeData)
+        ? universeData
+        : universeData.universes || [];
 
 
     // ========================================
@@ -132,23 +161,20 @@ Promise.all([
             window.location.search
         );
 
-
     const teamId =
         urlParams.get("id");
-
 
     if (teamId) {
 
         const team =
             teams.find(item =>
-                String(item.id)
+                String(item.id || "")
                     .toLowerCase()
                     .trim() ===
                 teamId
                     .toLowerCase()
                     .trim()
             );
-
 
         if (team) {
 
@@ -162,14 +188,15 @@ Promise.all([
 
 .catch(error => {
 
-    console.error(error);
-
+    console.error(
+        "Team database failed to load:",
+        error
+    );
 
     const teamGrid =
         document.getElementById(
             "team-grid"
         );
-
 
     if (teamGrid) {
 
@@ -196,7 +223,6 @@ function displayTeams(database) {
             "team-grid"
         );
 
-
     if (!teamGrid) {
 
         console.error(
@@ -206,7 +232,6 @@ function displayTeams(database) {
         return;
 
     }
-
 
     teamGrid.innerHTML = "";
 
@@ -219,7 +244,6 @@ function displayTeams(database) {
         document.getElementById(
             "team-count"
         );
-
 
     if (teamCount) {
 
@@ -269,19 +293,18 @@ function createTeamCard(team) {
     const card =
         document.createElement("div");
 
-
     card.className =
         "movie-card";
 
-        card.setAttribute("role", "button");
-card.setAttribute("tabindex", "0");
+    card.setAttribute(
+        "role",
+        "button"
+    );
 
-card.addEventListener("keydown", function(event) {
-    if (event.key === "Enter" || event.key === " ") {
-        event.preventDefault();
-        openProfile(team);
-    }
-});
+    card.setAttribute(
+        "tabindex",
+        "0"
+    );
 
 
     card.innerHTML = `
@@ -289,8 +312,9 @@ card.addEventListener("keydown", function(event) {
         <div class="movie-poster">
 
             <img
-                src="${team.image || ""}"
+                src="${team.image || "images/team-default.jpg"}"
                 alt="${team.name || "Marvel team"}"
+                onerror="this.src='images/team-default.jpg'"
             >
 
         </div>
@@ -334,13 +358,13 @@ card.addEventListener("keydown", function(event) {
             ".view-profile"
         );
 
-
     if (button) {
 
         button.addEventListener(
             "click",
             function(event) {
 
+                event.preventDefault();
                 event.stopPropagation();
 
                 openProfile(team);
@@ -357,9 +381,42 @@ card.addEventListener("keydown", function(event) {
 
     card.addEventListener(
         "click",
-        function() {
+        function(event) {
+
+            if (
+                event.target.closest(
+                    ".view-profile"
+                )
+            ) {
+
+                return;
+
+            }
 
             openProfile(team);
+
+        }
+    );
+
+
+    // ========================================
+    // KEYBOARD ACCESSIBILITY
+    // ========================================
+
+    card.addEventListener(
+        "keydown",
+        function(event) {
+
+            if (
+                event.key === "Enter" ||
+                event.key === " "
+            ) {
+
+                event.preventDefault();
+
+                openProfile(team);
+
+            }
 
         }
     );
@@ -380,7 +437,6 @@ const search =
         "team-search"
     );
 
-
 if (search) {
 
     search.addEventListener(
@@ -396,41 +452,30 @@ if (search) {
             const results =
                 teams.filter(team => {
 
-
                     const name =
-                        team.name
-                            ? team.name
-                                .toLowerCase()
-                            : "";
-
+                        String(
+                            team.name || ""
+                        ).toLowerCase();
 
                     const type =
-                        team.type
-                            ? team.type
-                                .toLowerCase()
-                            : "";
-
+                        String(
+                            team.type || ""
+                        ).toLowerCase();
 
                     const status =
-                        team.status
-                            ? team.status
-                                .toLowerCase()
-                            : "";
-
+                        String(
+                            team.status || ""
+                        ).toLowerCase();
 
                     const universe =
-                        team.universe
-                            ? team.universe
-                                .toLowerCase()
-                            : "";
-
+                        String(
+                            team.universe || ""
+                        ).toLowerCase();
 
                     const description =
-                        team.description
-                            ? team.description
-                                .toLowerCase()
-                            : "";
-
+                        String(
+                            team.description || ""
+                        ).toLowerCase();
 
                     const members =
                         Array.isArray(team.members)
@@ -441,19 +486,12 @@ if (search) {
 
 
                     return (
-
                         name.includes(searchText) ||
-
                         type.includes(searchText) ||
-
                         status.includes(searchText) ||
-
                         universe.includes(searchText) ||
-
                         description.includes(searchText) ||
-
                         members.includes(searchText)
-
                     );
 
                 });
@@ -475,14 +513,12 @@ if (search) {
 function openProfile(team) {
 
     if (!team) {
-
         return;
-
     }
 
 
     // ========================================
-    // PROFILE ELEMENTS
+    // BASIC PROFILE ELEMENTS
     // ========================================
 
     const profileType =
@@ -490,42 +526,35 @@ function openProfile(team) {
             "profile-type"
         );
 
-
     const profileName =
         document.getElementById(
             "profile-name"
         );
-
 
     const profileFounded =
         document.getElementById(
             "profile-founded"
         );
 
-
     const profileStatus =
         document.getElementById(
             "profile-status"
         );
-
 
     const profileUniverse =
         document.getElementById(
             "profile-universe"
         );
 
-
     const profileFoundedStat =
         document.getElementById(
             "profile-founded-stat"
         );
 
-
     const profileDescription =
         document.getElementById(
             "profile-description"
         );
-
 
 
     // ========================================
@@ -541,7 +570,6 @@ function openProfile(team) {
 
     }
 
-
     if (profileName) {
 
         profileName.textContent =
@@ -549,7 +577,6 @@ function openProfile(team) {
             "Unknown Team";
 
     }
-
 
     if (profileFounded) {
 
@@ -559,7 +586,6 @@ function openProfile(team) {
 
     }
 
-
     if (profileStatus) {
 
         profileStatus.textContent =
@@ -567,7 +593,6 @@ function openProfile(team) {
             "Unknown";
 
     }
-
 
     if (profileUniverse) {
 
@@ -577,7 +602,6 @@ function openProfile(team) {
 
     }
 
-
     if (profileFoundedStat) {
 
         profileFoundedStat.textContent =
@@ -586,7 +610,6 @@ function openProfile(team) {
 
     }
 
-
     if (profileDescription) {
 
         profileDescription.textContent =
@@ -594,7 +617,6 @@ function openProfile(team) {
             "No description available.";
 
     }
-
 
 
     // ========================================
@@ -606,7 +628,6 @@ function openProfile(team) {
     );
 
 
-
     // ========================================
     // MOVIES & SHOWS
     // ========================================
@@ -615,6 +636,32 @@ function openProfile(team) {
         team.movies
     );
 
+
+    // ========================================
+    // LOCATIONS
+    // ========================================
+
+    displayTeamLocations(
+        team
+    );
+
+
+    // ========================================
+    // EVENTS
+    // ========================================
+
+    displayTeamEvents(
+        team
+    );
+
+
+    // ========================================
+    // UNIVERSE
+    // ========================================
+
+    displayTeamUniverse(
+        team
+    );
 
 
     // ========================================
@@ -626,12 +673,8 @@ function openProfile(team) {
     );
 
 
-
     // ========================================
     // RESET PROFILE SCROLL
-    //
-    // Important when jumping from:
-    // Team A → Team B
     // ========================================
 
     const profileBox =
@@ -639,13 +682,11 @@ function openProfile(team) {
             "#profile-modal .profile-box"
         );
 
-
     if (profileBox) {
 
         profileBox.scrollTop = 0;
 
     }
-
 
 
     // ========================================
@@ -657,7 +698,6 @@ function openProfile(team) {
             "profile-modal"
         );
 
-
     if (modal) {
 
         modal.classList.add(
@@ -665,7 +705,6 @@ function openProfile(team) {
         );
 
     }
-
 
 
     // ========================================
@@ -678,7 +717,6 @@ function openProfile(team) {
             `teams.html?id=${encodeURIComponent(
                 team.id
             )}`;
-
 
         window.history.replaceState(
             {},
@@ -699,7 +737,9 @@ function openProfile(team) {
 function displayMembers(memberValues) {
 
     const container =
-        document.getElementById("profile-members");
+        document.getElementById(
+            "profile-members"
+        );
 
     if (!container) {
         return;
@@ -707,13 +747,19 @@ function displayMembers(memberValues) {
 
     container.innerHTML = "";
 
+
     if (
         !Array.isArray(memberValues) ||
         memberValues.length === 0
     ) {
-        container.textContent = "None listed.";
+
+        container.textContent =
+            "None listed.";
+
         return;
+
     }
+
 
     memberValues.forEach(memberValue => {
 
@@ -721,6 +767,7 @@ function displayMembers(memberValues) {
             String(memberValue || "")
                 .trim()
                 .toLowerCase();
+
 
         const character =
             characters.find(character => {
@@ -752,55 +799,6 @@ function displayMembers(memberValues) {
 
             });
 
-        if (character) {
-
-            const button =
-                document.createElement("button");
-
-            button.type = "button";
-            button.className = "profile-button";
-            button.textContent = character.name;
-
-            button.addEventListener(
-                "click",
-                function() {
-
-                    window.location.href =
-                        `characters.html?id=${encodeURIComponent(
-                            character.id
-                        )}`;
-
-                }
-            );
-
-            container.appendChild(button);
-
-        } else {
-
-            const text =
-                document.createElement("span");
-
-            text.textContent =
-                formatText(memberValue);
-
-            text.style.opacity = "0.55";
-
-            container.appendChild(text);
-
-        }
-
-        container.appendChild(
-            document.createTextNode(" ")
-        );
-
-    });
-
-}
-
-
-        // ========================================
-        // CHARACTER FOUND
-        // ========================================
 
         if (character) {
 
@@ -809,14 +807,11 @@ function displayMembers(memberValues) {
                     "button"
                 );
 
-
             button.type =
                 "button";
 
-
             button.className =
                 "profile-button";
-
 
             button.textContent =
                 character.name;
@@ -841,12 +836,6 @@ function displayMembers(memberValues) {
 
         }
 
-
-
-        // ========================================
-        // CHARACTER NOT FOUND
-        // ========================================
-
         else {
 
             const text =
@@ -854,10 +843,13 @@ function displayMembers(memberValues) {
                     "span"
                 );
 
-
             text.textContent =
-                memberValue;
+                formatText(
+                    memberValue
+                );
 
+            text.style.opacity =
+                "0.55";
 
             container.appendChild(
                 text
@@ -866,16 +858,13 @@ function displayMembers(memberValues) {
         }
 
 
-
-        // ========================================
-        // SPACE
-        // ========================================
-
         container.appendChild(
             document.createTextNode(" ")
         );
 
+    });
 
+}
 
 
 
@@ -886,7 +875,9 @@ function displayMembers(memberValues) {
 function displayTeamMovies(movieValues) {
 
     const container =
-        document.getElementById("profile-movies");
+        document.getElementById(
+            "profile-movies"
+        );
 
     if (!container) {
         return;
@@ -894,13 +885,19 @@ function displayTeamMovies(movieValues) {
 
     container.innerHTML = "";
 
+
     if (
         !Array.isArray(movieValues) ||
         movieValues.length === 0
     ) {
-        container.textContent = "None listed.";
+
+        container.textContent =
+            "None listed.";
+
         return;
+
     }
+
 
     movieValues.forEach(movieValue => {
 
@@ -908,6 +905,7 @@ function displayTeamMovies(movieValues) {
             String(movieValue || "")
                 .trim()
                 .toLowerCase();
+
 
         const movie =
             movies.find(item => {
@@ -933,14 +931,23 @@ function displayTeamMovies(movieValues) {
 
             });
 
+
         if (movie) {
 
             const button =
-                document.createElement("button");
+                document.createElement(
+                    "button"
+                );
 
-            button.type = "button";
-            button.className = "profile-button";
-            button.textContent = movie.title;
+            button.type =
+                "button";
+
+            button.className =
+                "profile-button";
+
+            button.textContent =
+                movie.title;
+
 
             button.addEventListener(
                 "click",
@@ -954,21 +961,32 @@ function displayTeamMovies(movieValues) {
                 }
             );
 
-            container.appendChild(button);
 
-        } else {
+            container.appendChild(
+                button
+            );
+
+        }
+
+        else {
 
             const text =
-                document.createElement("span");
+                document.createElement(
+                    "span"
+                );
 
             text.textContent =
                 movieValue;
 
-            text.style.opacity = "0.55";
+            text.style.opacity =
+                "0.55";
 
-            container.appendChild(text);
+            container.appendChild(
+                text
+            );
 
         }
+
 
         container.appendChild(
             document.createTextNode(" ")
@@ -981,13 +999,470 @@ function displayTeamMovies(movieValues) {
 
 
 // ========================================
+// GENERIC TEAM CONNECTION HELPERS
+// ========================================
+
+function normalizeValue(value) {
+
+    return String(value || "")
+        .trim()
+        .toLowerCase();
+
+}
+
+
+function getTeamValues(team) {
+
+    if (!team) {
+        return [];
+    }
+
+    return [
+        team.id,
+        team.name
+    ]
+        .filter(Boolean)
+        .map(normalizeValue);
+
+}
+
+
+function valueContainsTeam(value, team) {
+
+    if (!value) {
+        return false;
+    }
+
+
+    const teamValues =
+        getTeamValues(team);
+
+
+    if (Array.isArray(value)) {
+
+        return value.some(item =>
+            valueContainsTeam(
+                item,
+                team
+            )
+        );
+
+    }
+
+
+    const normalized =
+        normalizeValue(value);
+
+
+    return teamValues.some(
+        teamValue =>
+            normalized === teamValue
+    );
+
+}
+
+
+function objectContainsTeam(
+    object,
+    team,
+    fields
+) {
+
+    if (!object || !team) {
+        return false;
+    }
+
+
+    return fields.some(field => {
+
+        const value =
+            object[field];
+
+        return valueContainsTeam(
+            value,
+            team
+        );
+
+    });
+
+}
+
+
+
+// ========================================
+// CREATE CONNECTION SECTION
+// ========================================
+
+function createConnectionSection(
+    id,
+    title,
+    items,
+    onClick,
+    emptyText = "None listed."
+) {
+
+    const section =
+        document.createElement(
+            "section"
+        );
+
+    section.className =
+        "profile-section";
+
+    section.id =
+        id;
+
+
+    const heading =
+        document.createElement(
+            "h3"
+        );
+
+    heading.textContent =
+        title;
+
+
+    const connections =
+        document.createElement(
+            "div"
+        );
+
+    connections.className =
+        "profile-connections";
+
+
+    section.appendChild(
+        heading
+    );
+
+    section.appendChild(
+        connections
+    );
+
+
+    if (
+        !items ||
+        items.length === 0
+    ) {
+
+        const empty =
+            document.createElement(
+                "p"
+            );
+
+        empty.textContent =
+            emptyText;
+
+        connections.appendChild(
+            empty
+        );
+
+    }
+
+    else {
+
+        items.forEach(item => {
+
+            const button =
+                document.createElement(
+                    "button"
+                );
+
+            button.type =
+                "button";
+
+            button.className =
+                "profile-button";
+
+            button.textContent =
+                item.name ||
+                "Unknown";
+
+
+            button.addEventListener(
+                "click",
+                function() {
+
+                    onClick(item);
+
+                }
+            );
+
+
+            connections.appendChild(
+                button
+            );
+
+        });
+
+    }
+
+
+    return section;
+
+}
+
+
+
+// ========================================
+// DISPLAY TEAM LOCATIONS
+// ========================================
+
+function displayTeamLocations(team) {
+
+    const existing =
+        document.getElementById(
+            "team-locations-section"
+        );
+
+    if (existing) {
+        existing.remove();
+    }
+
+
+    const matches =
+        locations.filter(location =>
+            objectContainsTeam(
+                location,
+                team,
+                [
+                    "teams",
+                    "team",
+                    "featuredTeams",
+                    "relatedTeams",
+                    "organizations",
+                    "affiliations"
+                ]
+            )
+        );
+
+
+    const section =
+        createConnectionSection(
+            "team-locations-section",
+            "LOCATIONS",
+            matches,
+            function(location) {
+
+                window.location.href =
+                    `locations.html?id=${encodeURIComponent(
+                        location.id
+                    )}`;
+
+            }
+        );
+
+
+    insertConnectionSection(
+        section
+    );
+
+}
+
+
+
+// ========================================
+// DISPLAY TEAM EVENTS
+// ========================================
+
+function displayTeamEvents(team) {
+
+    const existing =
+        document.getElementById(
+            "team-events-section"
+        );
+
+    if (existing) {
+        existing.remove();
+    }
+
+
+    const matches =
+        events.filter(event =>
+            objectContainsTeam(
+                event,
+                team,
+                [
+                    "teams",
+                    "team",
+                    "featuredTeams",
+                    "relatedTeams",
+                    "participants",
+                    "involvedTeams",
+                    "organizations"
+                ]
+            )
+        );
+
+
+    const section =
+        createConnectionSection(
+            "team-events-section",
+            "EVENTS",
+            matches,
+            function(event) {
+
+                window.location.href =
+                    `events.html?id=${encodeURIComponent(
+                        event.id
+                    )}`;
+
+            }
+        );
+
+
+    insertConnectionSection(
+        section
+    );
+
+}
+
+
+
+// ========================================
+// DISPLAY TEAM UNIVERSE
+// ========================================
+
+function displayTeamUniverse(team) {
+
+    const existing =
+        document.getElementById(
+            "team-universe-section"
+        );
+
+    if (existing) {
+        existing.remove();
+    }
+
+
+    const teamUniverse =
+        normalizeValue(
+            team.universe
+        );
+
+
+    if (!teamUniverse) {
+        return;
+    }
+
+
+    const universe =
+        universes.find(item => {
+
+            if (!item) {
+                return false;
+            }
+
+
+            const values = [
+                item.id,
+                item.name,
+                item.title,
+                item.designation,
+                item.realName,
+                item.universe
+            ]
+                .filter(Boolean)
+                .map(normalizeValue);
+
+
+            return values.includes(
+                teamUniverse
+            );
+
+        });
+
+
+    if (!universe) {
+        return;
+    }
+
+
+    const section =
+        createConnectionSection(
+            "team-universe-section",
+            "UNIVERSE",
+            [universe],
+            function() {
+
+                window.location.href =
+                    `universes.html?id=${encodeURIComponent(
+                        universe.id
+                    )}`;
+
+            }
+        );
+
+
+    insertConnectionSection(
+        section
+    );
+
+}
+
+
+
+// ========================================
+// INSERT CONNECTION SECTION
+// ========================================
+
+function insertConnectionSection(
+    section
+) {
+
+    const profileBox =
+        document.querySelector(
+            "#profile-modal .profile-box"
+        );
+
+
+    if (!profileBox) {
+        return;
+    }
+
+
+    const related =
+        document.getElementById(
+            "profile-related"
+        );
+
+
+    if (
+        related &&
+        related.parentElement
+    ) {
+
+        related.parentElement.parentNode.insertBefore(
+            section,
+            related.parentElement
+        );
+
+    }
+
+    else {
+
+        profileBox.appendChild(
+            section
+        );
+
+    }
+
+}
+
+
+
+// ========================================
 // DISPLAY RELATED TEAMS
 // ========================================
 
-function displayRelatedTeams(relatedTeamValues) {
+function displayRelatedTeams(
+    relatedTeamValues
+) {
 
     const container =
-        document.getElementById("profile-related");
+        document.getElementById(
+            "profile-related"
+        );
 
     if (!container) {
         return;
@@ -995,84 +1470,129 @@ function displayRelatedTeams(relatedTeamValues) {
 
     container.innerHTML = "";
 
+
     if (
-        !Array.isArray(relatedTeamValues) ||
+        !Array.isArray(
+            relatedTeamValues
+        ) ||
         relatedTeamValues.length === 0
     ) {
-        container.textContent = "None listed.";
+
+        container.textContent =
+            "None listed.";
+
         return;
+
     }
 
-    relatedTeamValues.forEach(relatedTeamValue => {
 
-        const target =
-            String(relatedTeamValue || "")
-                .trim()
-                .toLowerCase();
+    relatedTeamValues.forEach(
+        relatedTeamValue => {
 
-        const relatedTeam =
-            teams.find(team => {
+            const target =
+                String(
+                    relatedTeamValue || ""
+                )
+                    .trim()
+                    .toLowerCase();
 
-                if (!team) {
-                    return false;
-                }
 
-                const teamID =
-                    String(team.id || "")
-                        .trim()
-                        .toLowerCase();
+            const relatedTeam =
+                teams.find(team => {
 
-                const teamName =
-                    String(team.name || "")
-                        .trim()
-                        .toLowerCase();
+                    if (!team) {
+                        return false;
+                    }
 
-                return (
-                    teamID === target ||
-                    teamName === target
+
+                    const teamID =
+                        String(
+                            team.id || ""
+                        )
+                            .trim()
+                            .toLowerCase();
+
+
+                    const teamName =
+                        String(
+                            team.name || ""
+                        )
+                            .trim()
+                            .toLowerCase();
+
+
+                    return (
+                        teamID === target ||
+                        teamName === target
+                    );
+
+                });
+
+
+            if (relatedTeam) {
+
+                const button =
+                    document.createElement(
+                        "button"
+                    );
+
+                button.type =
+                    "button";
+
+                button.className =
+                    "profile-button";
+
+                button.textContent =
+                    relatedTeam.name;
+
+
+                button.addEventListener(
+                    "click",
+                    function() {
+
+                        openProfile(
+                            relatedTeam
+                        );
+
+                    }
                 );
 
-            });
 
-        if (relatedTeam) {
+                container.appendChild(
+                    button
+                );
 
-            const button =
-                document.createElement("button");
+            }
 
-            button.type = "button";
-            button.className = "profile-button";
-            button.textContent = relatedTeam.name;
+            else {
 
-            button.addEventListener(
-                "click",
-                function() {
+                const text =
+                    document.createElement(
+                        "span"
+                    );
 
-                    openProfile(relatedTeam);
+                text.textContent =
+                    formatText(
+                        relatedTeamValue
+                    );
 
-                }
+                text.style.opacity =
+                    "0.55";
+
+
+                container.appendChild(
+                    text
+                );
+
+            }
+
+
+            container.appendChild(
+                document.createTextNode(" ")
             );
 
-            container.appendChild(button);
-
-        } else {
-
-            const text =
-                document.createElement("span");
-
-            text.textContent =
-                formatText(relatedTeamValue);
-
-            text.style.opacity = "0.55";
-
-            container.appendChild(text);
-
         }
-
-        container.appendChild(
-            document.createTextNode(" ")
-        );
-
-    });
+    );
 
 }
 
@@ -1098,10 +1618,6 @@ function closeProfile() {
 
     }
 
-
-    // ========================================
-    // REMOVE TEAM ID FROM URL
-    // ========================================
 
     window.history.replaceState(
         {},
@@ -1172,9 +1688,7 @@ document.addEventListener(
 function formatText(text) {
 
     if (!text) {
-
         return "";
-
     }
 
 
@@ -1183,11 +1697,8 @@ function formatText(text) {
         .split(" ")
         .map(word => {
 
-
             if (!word) {
-
                 return "";
-
             }
 
 

@@ -1,5 +1,9 @@
 let characters = [];
 let movies = [];
+let teams = [];
+let locations = [];
+let events = [];
+let universes = [];
 
 let currentFilter = "all";
 
@@ -495,46 +499,98 @@ const characterAliases = {
 };
 
 
-
 // ========================================
 // LOAD DATABASES
 // ========================================
 
 Promise.all([
     fetch("data/characters.json").then(res => res.json()),
-    fetch("data/movies.json").then(res => res.json())
+    fetch("data/movies.json").then(res => res.json()),
+    fetch("data/teams.json").then(res => res.json()),
+    fetch("data/locations.json").then(res => res.json()),
+    fetch("data/events.json").then(res => res.json()),
+    fetch("data/universes.json").then(res => res.json())
 ])
-.then(([characterData, movieData]) => {
+.then(([
+    characterData,
+    movieData,
+    teamData,
+    locationData,
+    eventData,
+    universeData
+]) => {
 
-    characters = characterData;
-    movies = movieData;
+    characters = Array.isArray(characterData)
+        ? characterData
+        : characterData.characters || [];
+
+    if (Array.isArray(movieData)) {
+        movies = movieData;
+    } else {
+        movies = [
+            ...(movieData.movies || []),
+            ...(movieData.shows || [])
+        ];
+    }
+
+    teams = Array.isArray(teamData)
+        ? teamData
+        : teamData.teams || [];
+
+    locations = Array.isArray(locationData)
+        ? locationData
+        : locationData.locations || [];
+
+    events = Array.isArray(eventData)
+        ? eventData
+        : eventData.events || [];
+
+    universes = Array.isArray(universeData)
+        ? universeData
+        : universeData.universes || [];
+
 
     displayCharacters(characters);
 
-    const urlParams = new URLSearchParams(window.location.search);
-    const characterId = urlParams.get("id");
+
+    const urlParams =
+        new URLSearchParams(window.location.search);
+
+    const characterId =
+        urlParams.get("id");
+
 
     if (characterId) {
-        const character = characters.find(
-            character => character.id === characterId
-        );
+
+        const character =
+            characters.find(
+                character =>
+                    character.id === characterId
+            );
 
         if (character) {
             openProfile(character);
         }
+
     }
 
 })
 .catch(error => {
-    console.error("Error loading database:", error);
-});                      
 
+    console.error(
+        "Error loading database:",
+        error
+    );
+
+});
 
 
 // ========================================
 // DISPLAY CHARACTERS
 // ========================================
+
 function displayCharacters(characterslist) {
+
     const grid = document.getElementById("character-grid");
 
     if (!grid) return;
@@ -542,46 +598,72 @@ function displayCharacters(characterslist) {
     grid.innerHTML = "";
 
     characterslist.forEach(character => {
+
         const card = document.createElement("div");
         card.className = "character-card";
 
         card.innerHTML = `
             <div class="character-image">
-                <img src="${character.image || ""}" alt="${character.name || "Marvel character"}">
+                <img
+                    src="${character.image || ""}"
+                    alt="${character.name || "Marvel character"}"
+                >
             </div>
 
             <div class="character-info">
-                <p class="character-type">${formatText(character.type || "")}</p>
 
-                <h2>${character.name || "Unknown Character"}</h2>
+                <p class="character-type">
+                    ${formatText(character.type || "")}
+                </p>
+
+                <h2>
+                    ${character.name || "Unknown Character"}
+                </h2>
 
                 <p class="character-description">
                     ${character.description || ""}
                 </p>
 
-                <button type="button" class="profile-button">
+                <button
+                    type="button"
+                    class="profile-button"
+                    aria-label="View ${character.name || "character"} profile">
                     VIEW PROFILE
                 </button>
+
             </div>
         `;
 
         const button = card.querySelector(".profile-button");
 
         if (button) {
-            button.addEventListener("click", event => {
+
+            button.addEventListener("click", function(event) {
+
+                event.preventDefault();
                 event.stopPropagation();
+
                 openProfile(character);
+
             });
+
         }
 
-        card.addEventListener("click", () => {
+        card.addEventListener("click", function(event) {
+
+            if (event.target.closest(".profile-button")) {
+                return;
+            }
+
             openProfile(character);
+
         });
 
         grid.appendChild(card);
-    });
-}
 
+    });
+
+}
 
 
 // ========================================
@@ -589,23 +671,33 @@ function displayCharacters(characterslist) {
 // ========================================
 
 function openProfile(character) {
+
     const modal =
-            document.getElementById("profile-modal");
+        document.getElementById(
+            "profile-modal"
+        );
 
-        const profileBox =
-            document.querySelector("#profile-modal .profile-box");
 
-        if (profileBox) {
-            profileBox.scrollTop = 0;
-        }
+    const profileBox =
+        document.querySelector(
+            "#profile-modal .profile-box"
+        );
+
+
+    if (profileBox) {
+        profileBox.scrollTop = 0;
+    }
+
+
     function capitalizeWords(text) {
 
         if (!text) return "";
 
-        return text
+        return String(text)
             .split(" ")
             .map(word =>
-                word.charAt(0).toUpperCase() + word.slice(1)
+                word.charAt(0).toUpperCase() +
+                word.slice(1)
             )
             .join(" ");
 
@@ -615,49 +707,57 @@ function openProfile(character) {
     document.getElementById(
         "profile-name"
     ).textContent =
-        character.name;
+        character.name || "";
 
 
     document.getElementById(
         "profile-real-name"
     ).textContent =
-        character.realName;
+        character.realName || "";
 
 
     document.getElementById(
         "profile-type"
     ).textContent =
-        character.type.toUpperCase();
+        String(
+            character.type || ""
+        ).toUpperCase();
 
 
     document.getElementById(
         "profile-status"
     ).textContent =
-        capitalizeWords(character.status);
+        capitalizeWords(
+            character.status
+        );
 
 
     document.getElementById(
         "profile-species"
     ).textContent =
-        capitalizeWords(character.species);
+        capitalizeWords(
+            character.species
+        );
 
 
     document.getElementById(
         "profile-alignment"
     ).textContent =
-        capitalizeWords(character.alignment);
+        capitalizeWords(
+            character.alignment
+        );
 
 
     document.getElementById(
         "profile-description"
     ).textContent =
-        character.description;
+        character.description || "";
 
 
     document.getElementById(
         "profile-abilities"
     ).textContent =
-        character.abilities;
+        character.abilities || "";
 
 
     document.getElementById(
@@ -671,36 +771,55 @@ function openProfile(character) {
     document.getElementById(
         "profile-first-appearance"
     ).textContent =
-        character.firstAppearance;
-
+        character.firstAppearance || "";
 
 
     // ========================================
-    // MOVIES & SHOWS
+    // EXISTING CONNECTIONS
     // ========================================
 
     displayCharacterMovies(character);
 
-
-
-    // ========================================
-    // RELATED CHARACTERS
-    // ========================================
-
     displayRelatedCharacters(character);
 
+
+    // ========================================
+    // NEW DATABASE CONNECTIONS
+    // ========================================
+
+    displayCharacterTeams(character);
+
+    displayCharacterLocations(character);
+
+    displayCharacterEvents(character);
+
+    displayCharacterUniverse(character);
+
+    
+
+    // ========================================
+    // UPDATE URL
+    // ========================================
+
+    const newUrl =
+        `characters.html?id=${encodeURIComponent(character.id)}`;
+
+    history.replaceState(
+        null,
+        "",
+        newUrl
+    );
 
 
     // ========================================
     // SHOW PROFILE
     // ========================================
 
-    document.getElementById(
-        "profile-modal"
-    ).classList.add("active");
+    if (modal) {
+        modal.classList.add("active");
+    }
 
 }
-
 
 
 // ========================================
@@ -709,43 +828,59 @@ function openProfile(character) {
 
 function getCharacterMovies(character) {
 
-    const aliases = characterAliases[character.id] || [];
+    const aliases =
+        characterAliases[
+            character.id
+        ] || [];
 
 
     const possibleNames = [
 
         character.realName,
 
+        character.name,
+
         ...aliases
 
     ]
         .filter(Boolean)
         .map(name =>
-            name.toLowerCase().trim()
+            String(name)
+                .toLowerCase()
+                .trim()
         );
 
 
     return movies.filter(movie => {
 
-        if (!Array.isArray(movie.mainCharacters)) {
+        if (
+            !Array.isArray(
+                movie.mainCharacters
+            )
+        ) {
             return false;
         }
 
 
-        return movie.mainCharacters.some(movieCharacter => {
+        return movie.mainCharacters.some(
+            movieCharacter => {
 
-            const movieName =
-                movieCharacter.toLowerCase().trim();
+                const movieName =
+                    String(movieCharacter)
+                        .toLowerCase()
+                        .trim();
 
 
-            return possibleNames.includes(movieName);
+                return possibleNames.includes(
+                    movieName
+                );
 
-        });
+            }
+        );
 
     });
 
 }
-
 
 
 // ========================================
@@ -755,7 +890,9 @@ function getCharacterMovies(character) {
 function displayCharacterMovies(character) {
 
     const container =
-        document.getElementById("profile-movies");
+        document.getElementById(
+            "profile-movies"
+        );
 
 
     if (!container) return;
@@ -794,8 +931,8 @@ function displayCharacterMovies(character) {
             <div class="movie-image">
 
                 <img
-                    src="${movie.image}"
-                    alt="${movie.title}"
+                    src="${movie.image || ""}"
+                    alt="${movie.title || "Marvel movie"}"
                 >
 
             </div>
@@ -808,7 +945,7 @@ function displayCharacterMovies(character) {
                 </p>
 
                 <h2>
-                    ${movie.title}
+                    ${movie.title || "Unknown"}
                 </h2>
 
                 <p>
@@ -838,6 +975,470 @@ function displayCharacterMovies(character) {
 }
 
 
+// ========================================
+// GENERIC CONNECTION HELPERS
+// ========================================
+
+function normalizeValue(value) {
+
+    return String(value || "")
+        .trim()
+        .toLowerCase();
+
+}
+
+
+function getCharacterNames(character) {
+
+    return [
+
+        character.id,
+
+        character.name,
+
+        character.realName,
+
+        ...(characterAliases[
+            character.id
+        ] || [])
+
+    ]
+        .filter(Boolean)
+        .map(normalizeValue);
+
+}
+
+
+function valueContainsCharacter(value, characterNames) {
+
+    if (!value) return false;
+
+
+    if (Array.isArray(value)) {
+
+        return value.some(item =>
+            valueContainsCharacter(
+                item,
+                characterNames
+            )
+        );
+
+    }
+
+
+    if (typeof value === "object") {
+
+        return Object.values(value).some(item =>
+            valueContainsCharacter(
+                item,
+                characterNames
+            )
+        );
+
+    }
+
+
+    const normalized =
+        normalizeValue(value);
+
+
+    return characterNames.some(name =>
+        normalized === name ||
+        normalized.includes(name) ||
+        name.includes(normalized)
+    );
+
+}
+
+
+function objectContainsCharacter(
+    item,
+    character,
+    possibleFields
+) {
+
+    const characterNames =
+        getCharacterNames(character);
+
+
+    for (const field of possibleFields) {
+
+        if (
+            Object.prototype.hasOwnProperty.call(
+                item,
+                field
+            )
+        ) {
+
+            if (
+                valueContainsCharacter(
+                    item[field],
+                    characterNames
+                )
+            ) {
+                return true;
+            }
+
+        }
+
+    }
+
+
+    return false;
+
+}
+
+
+// ========================================
+// GENERIC CONNECTION SECTION
+// ========================================
+
+function createConnectionSection(
+    id,
+    title,
+    items,
+    linkBuilder
+) {
+
+    const profileBox =
+        document.querySelector(
+            "#profile-modal .profile-box"
+        );
+
+    if (!profileBox) return;
+
+
+    let section =
+        document.getElementById(id);
+
+
+    // Create the section if it does not already exist
+    if (!section) {
+
+        section =
+            document.createElement("div");
+
+        section.id = id;
+        section.className = "profile-section";
+
+
+        const related =
+            document.getElementById(
+                "related-characters"
+            );
+
+
+        if (related && related.parentElement) {
+
+            // Insert before the section containing
+            // Related Characters.
+            related.parentElement.parentNode.insertBefore(
+                section,
+                related.parentElement
+            );
+
+        } else {
+
+            // Fallback: put the section at the
+            // end of the profile box.
+            profileBox.appendChild(section);
+
+        }
+
+    }
+
+
+    // Clear old contents every time the profile changes
+    section.innerHTML = "";
+
+
+    const heading =
+        document.createElement("h3");
+
+    heading.textContent =
+        title;
+
+    section.appendChild(heading);
+
+
+    // No connected items
+    if (!items || items.length === 0) {
+
+        const empty =
+            document.createElement("p");
+
+        empty.textContent =
+            `No ${title.toLowerCase()} currently linked.`;
+
+        section.appendChild(empty);
+
+        return;
+
+    }
+
+
+    const wrapper =
+        document.createElement("div");
+
+    wrapper.className =
+        "profile-connections";
+
+
+    items.forEach(item => {
+
+        const button =
+            document.createElement("button");
+
+        button.type =
+            "button";
+
+        button.className =
+            "profile-button";
+
+
+        button.textContent =
+            item.name ||
+            item.title ||
+            item.id ||
+            "Unknown";
+
+
+        button.addEventListener(
+            "click",
+            function(event) {
+
+                event.preventDefault();
+                event.stopPropagation();
+
+                linkBuilder(item);
+
+            }
+        );
+
+
+        wrapper.appendChild(button);
+
+    });
+
+
+    section.appendChild(wrapper);
+
+}
+
+
+// ========================================
+// CHARACTER → TEAMS
+// ========================================
+
+function getCharacterTeams(character) {
+
+    return teams.filter(team => {
+
+        const members =
+            team.members ||
+            team.characters ||
+            team.roster ||
+            [];
+
+
+        return valueContainsCharacter(
+            members,
+            getCharacterNames(character)
+        );
+
+    });
+
+}
+
+
+function displayCharacterTeams(character) {
+
+    const linkedTeams =
+        getCharacterTeams(character);
+
+
+    createConnectionSection(
+        "character-teams-section",
+        "TEAMS",
+        linkedTeams,
+        team => {
+
+            window.location.href =
+                `teams.html?id=${encodeURIComponent(team.id)}`;
+
+        }
+    );
+
+}
+
+
+// ========================================
+// CHARACTER → LOCATIONS
+// ========================================
+
+function getCharacterLocations(character) {
+
+    return locations.filter(location => {
+
+        return objectContainsCharacter(
+            location,
+            character,
+            [
+                "characters",
+                "character",
+                "featuredCharacters",
+                "heroes",
+                "residents",
+                "inhabitants",
+                "relatedCharacters"
+            ]
+        );
+
+    });
+
+}
+
+
+function displayCharacterLocations(character) {
+
+    const linkedLocations =
+        getCharacterLocations(character);
+
+
+    createConnectionSection(
+        "character-locations-section",
+        "LOCATIONS",
+        linkedLocations,
+        location => {
+
+            window.location.href =
+                `locations.html?id=${encodeURIComponent(location.id)}`;
+
+        }
+    );
+
+}
+
+
+// ========================================
+// CHARACTER → EVENTS
+// ========================================
+
+function getCharacterEvents(character) {
+
+    return events.filter(event => {
+
+        return objectContainsCharacter(
+            event,
+            character,
+            [
+                "characters",
+                "character",
+                "participants",
+                "heroes",
+                "villains",
+                "relatedCharacters"
+            ]
+        );
+
+    });
+
+}
+
+
+function displayCharacterEvents(character) {
+
+    const linkedEvents =
+        getCharacterEvents(character);
+
+
+    createConnectionSection(
+        "character-events-section",
+        "EVENTS",
+        linkedEvents,
+        event => {
+
+            window.location.href =
+                `events.html?id=${encodeURIComponent(event.id)}`;
+
+        }
+    );
+
+}
+
+
+// ========================================
+// CHARACTER → UNIVERSE
+// ========================================
+
+function getCharacterUniverse(character) {
+
+    const possibleUniverse =
+        character.universe ||
+        character.universeId ||
+        character.reality ||
+        character.designation;
+
+
+    if (!possibleUniverse) {
+        return null;
+    }
+
+
+    const target =
+        normalizeValue(
+            possibleUniverse
+        );
+
+
+    return universes.find(universe => {
+
+        const values = [
+
+            universe.id,
+
+            universe.name,
+
+            universe.title,
+
+            universe.designation,
+
+            universe.realName,
+
+            universe.universe
+
+        ]
+            .filter(Boolean)
+            .map(normalizeValue);
+
+
+        return values.includes(target);
+
+    }) || null;
+
+}
+
+
+function displayCharacterUniverse(character) {
+
+    const universe =
+        getCharacterUniverse(character);
+
+
+    createConnectionSection(
+        "character-universe-section",
+        "UNIVERSE",
+        universe ? [universe] : [],
+        selectedUniverse => {
+
+            window.location.href =
+                `universes.html?id=${encodeURIComponent(selectedUniverse.id)}`;
+
+        }
+    );
+
+}
+
 
 // ========================================
 // DISPLAY RELATED CHARACTERS
@@ -846,7 +1447,9 @@ function displayCharacterMovies(character) {
 function displayRelatedCharacters(character) {
 
     const container =
-        document.getElementById("related-characters");
+        document.getElementById(
+            "related-characters"
+        );
 
 
     if (!container) return;
@@ -855,8 +1458,12 @@ function displayRelatedCharacters(character) {
     container.innerHTML = "";
 
 
-    if (!Array.isArray(character.relatedCharacters) ||
-        character.relatedCharacters.length === 0) {
+    if (
+        !Array.isArray(
+            character.relatedCharacters
+        ) ||
+        character.relatedCharacters.length === 0
+    ) {
 
         container.innerHTML = `
             <p>No related characters currently linked.</p>
@@ -867,104 +1474,115 @@ function displayRelatedCharacters(character) {
     }
 
 
-    character.relatedCharacters.forEach(relatedID => {
+    character.relatedCharacters.forEach(
+        relatedID => {
 
-        const relatedCharacter =
-            characters.find(
-                item => item.id === relatedID
+            const relatedCharacter =
+                characters.find(
+                    item =>
+                        item.id === relatedID
+                );
+
+
+            if (!relatedCharacter) {
+                return;
+            }
+
+
+            const card =
+                document.createElement("div");
+
+
+            card.className =
+                "character-card";
+
+
+            card.innerHTML = `
+
+                <div class="character-image">
+
+                    <img
+                        src="${relatedCharacter.image || ""}"
+                        alt="${relatedCharacter.name || "Marvel character"}"
+                    >
+
+                </div>
+
+
+                <div class="character-info">
+
+                    <p class="character-type">
+                        ${String(
+                            relatedCharacter.type || ""
+                        ).toUpperCase()}
+                    </p>
+
+
+                    <h2>
+                        ${relatedCharacter.name || ""}
+                    </h2>
+
+
+                    <p>
+                        ${relatedCharacter.description || ""}
+                    </p>
+
+
+                    <button
+                        type="button"
+                        class="profile-button">
+
+                        VIEW PROFILE
+
+                    </button>
+
+                </div>
+
+            `;
+
+
+            const button =
+                card.querySelector(
+                    ".profile-button"
+                );
+
+
+            if (button) {
+
+                button.addEventListener(
+                    "click",
+                    function(event) {
+
+                        event.stopPropagation();
+
+                        openProfile(
+                            relatedCharacter
+                        );
+
+                    }
+                );
+
+            }
+
+
+            card.addEventListener(
+                "click",
+                function() {
+
+                    openProfile(
+                        relatedCharacter
+                    );
+
+                }
             );
 
 
-        if (!relatedCharacter) {
-            return;
+            container.appendChild(card);
+
         }
-
-
-        const card =
-            document.createElement("div");
-
-
-        card.className =
-            "character-card";
-
-
-        card.innerHTML = `
-
-            <div class="character-image">
-
-                <img
-                    src="${relatedCharacter.image}"
-                    alt="${relatedCharacter.name}"
-                >
-
-            </div>
-
-
-            <div class="character-info">
-
-                <p class="character-type">
-                    ${relatedCharacter.type.toUpperCase()}
-                </p>
-
-
-                <h2>
-                    ${relatedCharacter.name}
-                </h2>
-
-
-                <p>
-                    ${relatedCharacter.description}
-                </p>
-
-
-                <button
-                    type="button"
-                    class="profile-button">
-
-                    VIEW PROFILE
-
-                </button>
-
-            </div>
-
-        `;
-
-
-        const button =
-            card.querySelector(".profile-button");
-
-
-        button.addEventListener(
-            "click",
-            function(event) {
-
-                event.stopPropagation();
-
-                window.scrollTo(0, 0);
-
-                openProfile(relatedCharacter);
-
-            }
-        );
-
-
-        card.addEventListener(
-            "click",
-            function() {
-
-                window.scrollTo(0, 0);
-                openProfile(relatedCharacter);
-
-            }
-        );
-
-
-        container.appendChild(card);
-
-    });
+    );
 
 }
-
 
 
 // ========================================
@@ -991,7 +1609,6 @@ if (search) {
 }
 
 
-
 // ========================================
 // FILTER + SEARCH COMBINED
 // ========================================
@@ -1015,7 +1632,10 @@ function displayFilteredCharacters() {
         results =
             results.filter(
                 character =>
-                    character.type.toLowerCase() === currentFilter
+                    String(
+                        character.type || ""
+                    ).toLowerCase() ===
+                    currentFilter
             );
 
     }
@@ -1026,12 +1646,27 @@ function displayFilteredCharacters() {
     if (searchText) {
 
         results =
-            results.filter(character =>
+            results.filter(
+                character => {
 
-                character.name
-                    .toLowerCase()
-                    .includes(searchText)
+                    const name =
+                        String(
+                            character.name || ""
+                        ).toLowerCase();
 
+
+                    const realName =
+                        String(
+                            character.realName || ""
+                        ).toLowerCase();
+
+
+                    return (
+                        name.includes(searchText) ||
+                        realName.includes(searchText)
+                    );
+
+                }
             );
 
     }
@@ -1042,19 +1677,18 @@ function displayFilteredCharacters() {
 }
 
 
-
 // ========================================
 // FILTERS
 // ========================================
 
 function filterCharacters(type) {
 
-    currentFilter = type;
+    currentFilter =
+        type;
 
     displayFilteredCharacters();
 
 }
-
 
 
 // ========================================
@@ -1063,14 +1697,19 @@ function filterCharacters(type) {
 
 function closeProfile() {
 
+    
+      
     const modal =
-        document.getElementById("profile-modal");
+        document.getElementById(
+            "profile-modal"
+        );
 
 
-    modal.classList.remove("active");
+    if (modal) {
+        modal.classList.remove("active");
+    }
 
 }
-
 
 
 // ========================================
@@ -1082,10 +1721,13 @@ document.addEventListener(
     function(event) {
 
         const modal =
-            document.getElementById("profile-modal");
+            document.getElementById(
+                "profile-modal"
+            );
 
 
         if (
+            modal &&
             event.target === modal &&
             modal.classList.contains("active")
         ) {
@@ -1096,7 +1738,6 @@ document.addEventListener(
 
     }
 );
-
 
 
 // ========================================
@@ -1117,12 +1758,14 @@ document.addEventListener(
 );
 
 
-
 // ========================================
 // MOUSE GLOW
 // ========================================
+
 const mouseGlow =
-    document.querySelector(".mouse-glow");
+    document.querySelector(
+        ".mouse-glow"
+    );
 
 
 if (mouseGlow) {
@@ -1142,6 +1785,7 @@ if (mouseGlow) {
 
         }
     );
+
 }
 
 
@@ -1150,18 +1794,38 @@ if (mouseGlow) {
 // ========================================
 
 function formatText(value) {
+
     return String(value || "")
         .replace(/-/g, " ")
-        .replace(/\b\w/g, char => char.toUpperCase());
+        .replace(
+            /\b\w/g,
+            char =>
+                char.toUpperCase()
+        );
+
 }
+
+
 // ========================================
 // ALWAYS START PAGE AT TOP
 // ========================================
 
 if ("scrollRestoration" in history) {
-    history.scrollRestoration = "manual";
+
+    history.scrollRestoration =
+        "manual";
+
 }
 
-window.addEventListener("pageshow", function () {
-    window.scrollTo(0, 0);
-});
+
+window.addEventListener(
+    "pageshow",
+    function() {
+
+        window.scrollTo(
+            0,
+            0
+        );
+
+    }
+);

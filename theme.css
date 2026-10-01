@@ -1,0 +1,759 @@
+```css
+/* =========================================================
+   THE 616 MARVELBASE
+   GLOBAL THEME SYSTEM
+   ========================================================= */
+
+:root {
+    --theme-bg: #071426;
+    --theme-card: #0B1A2E;
+    --theme-card-alt: #0E2037;
+    --theme-border: #1B2C45;
+
+    --theme-accent: #24D7E8;
+    --theme-accent-2: #5427A8;
+
+    /* THIRD ACCENT
+       Classic temporarily uses cyan */
+    --theme-accent-3: #24D7E8;
+    --theme-accent-3-soft: rgba(36, 215, 232, 0.16);
+
+    --theme-text: #FFFFFF;
+    --theme-muted: #8A98AA;
+
+    --theme-glow: rgba(36, 215, 232, 0.20);
+    --theme-glow-2: rgba(84, 39, 168, 0.20);
+
+    --theme-gradient:
+        linear-gradient(
+            135deg,
+            #24D7E8,
+            #5427A8
+        );
+}
+
+/* =========================================================
+   STARK PROTOCOL
+   ========================================================= */
+
+body[data-theme="stark"] {
+    --theme-bg: #08090B;
+    --theme-card: #121417;
+    --theme-card-alt: #181A1E;
+    --theme-border: #3A3030;
+
+    --theme-accent: #FF3B30;
+    --theme-accent-2: #D9A441;
+
+    /* SHINY GOLD */
+    --theme-accent-3: #FFD166;
+    --theme-accent-3-soft: rgba(255, 209, 102, 0.22);
+
+    --theme-text: #FFFFFF;
+    --theme-muted: #A8A8A8;
+
+    --theme-glow: rgba(255, 59, 48, 0.20);
+    --theme-glow-2: rgba(217, 164, 65, 0.20);
+
+    --theme-gradient:
+        linear-gradient(
+            135deg,
+            #FF3B30,
+            #D9A441
+        );
+}
+
+/* =========================================================
+   MULTIVERSE
+   ========================================================= */
+
+body[data-theme="multiverse"] {
+    --theme-bg: #09051A;
+    --theme-card: #140C2B;
+    --theme-card-alt: #1B1039;
+    --theme-border: #35215A;
+
+    --theme-accent: #B84DFF;
+    --theme-accent-2: #24BFFF;
+
+    /* THIRD PURPLE */
+    --theme-accent-3: #4338CA;
+    --theme-accent-3-soft: rgba(67, 56, 202, 0.20);
+
+    --theme-text: #FFFFFF;
+    --theme-muted: #A99DBB;
+
+    --theme-glow: rgba(184, 77, 255, 0.24);
+    --theme-glow-2: rgba(36, 191, 255, 0.20);
+
+    --theme-gradient:
+        linear-gradient(
+            135deg,
+            #B84DFF,
+            #24BFFF
+        );
+}
+
+/* =========================================================
+   DOOM
+   ========================================================= */
+
+body[data-theme="doom"] {
+    --theme-bg: #050908;
+    --theme-card: #0C1210;
+    --theme-card-alt: #111A16;
+    --theme-border: #263A30;
+
+    --theme-accent: #35D07F;
+    --theme-accent-2: #9CCB3B;
+
+    /* ANTIQUE GOLD */
+    --theme-accent-3: #C9A227;
+    --theme-accent-3-soft: rgba(201, 162, 39, 0.24);
+
+    --theme-text: #F2F7F3;
+    --theme-muted: #8C9C92;
+
+    --theme-glow: rgba(53, 208, 127, 0.18);
+    --theme-glow-2: rgba(156, 203, 59, 0.16);
+
+    --theme-gradient:
+        linear-gradient(
+            135deg,
+            #35D07F,
+            #9CCB3B
+        );
+}
+
+/* =========================================================
+   GLOBAL THEME OVERRIDES
+   ========================================================= */
+
+body {
+    background-color: var(--theme-bg);
+    color: var(--theme-text);
+}
+
+/* Header */
+
+header {
+    background:
+        linear-gradient(
+            180deg,
+            var(--theme-bg),
+            var(--theme-bg)
+        );
+    border-bottom-color: var(--theme-border);
+}
+
+/* Logo */
+
+.logo,
+.logo span,
+.logo-text {
+    color: var(--theme-accent);
+}
+
+/* Navigation */
+
+nav a {
+    color: var(--theme-muted);
+}
+
+nav a:hover,
+nav a.active {
+    color: var(--theme-accent);
+}
+
+nav a.active::after {
+    background: var(--theme-accent);
+    box-shadow: 0 0 10px var(--theme-glow);
+}
+
+/* =========================================================
+   SEARCH
+   ========================================================= */
+
+input,
+select,
+textarea {
+    background-color: var(--theme-card);
+    color: var(--theme-text);
+    border-color: var(--theme-border);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--theme-accent);
+    box-shadow: 0 0 0 2px var(--theme-glow);
+}
+
+input::placeholder {
+    color: var(--theme-muted);
+}
+
+/* =========================================================
+   DATABASE CARDS
+   ========================================================= */
+
+.character-card,
+.movie-card,
+.team-card,
+.location-card,
+.event-card,
+.universe-card,
+.timeline-card {
+    background: var(--theme-card);
+
+    border-color:
+        color-mix(
+            in srgb,
+            var(--theme-accent-3) 42%,
+            var(--theme-border)
+        );
+}
+
+.character-card:hover,
+.movie-card:hover,
+.team-card:hover,
+.location-card:hover,
+.event-card:hover,
+.universe-card:hover,
+.timeline-card:hover {
+    border-color: var(--theme-accent-3);
+
+    box-shadow:
+        0 10px 30px var(--theme-glow),
+        0 0 20px var(--theme-glow-2),
+        0 0 0 1px var(--theme-accent-3-soft);
+}
+
+/* =========================================================
+   GOLD CARD GLOW
+   ========================================================= */
+
+body[data-theme="stark"] .character-card:hover,
+body[data-theme="stark"] .movie-card:hover,
+body[data-theme="stark"] .team-card:hover,
+body[data-theme="stark"] .location-card:hover,
+body[data-theme="stark"] .event-card:hover,
+body[data-theme="stark"] .universe-card:hover,
+body[data-theme="stark"] .timeline-card:hover,
+
+body[data-theme="doom"] .character-card:hover,
+body[data-theme="doom"] .movie-card:hover,
+body[data-theme="doom"] .team-card:hover,
+body[data-theme="doom"] .location-card:hover,
+body[data-theme="doom"] .event-card:hover,
+body[data-theme="doom"] .universe-card:hover,
+body[data-theme="doom"] .timeline-card:hover {
+    border-color: var(--theme-accent-3);
+
+    box-shadow:
+        0 0 0 1px var(--theme-accent-3),
+        0 0 8px var(--theme-accent-3-soft),
+        0 0 22px var(--theme-accent-3-soft),
+        inset 0 0 12px
+            color-mix(
+                in srgb,
+                var(--theme-accent-3) 7%,
+                transparent
+            );
+}
+
+/* =========================================================
+   GENERIC CARD TEXT
+   ========================================================= */
+
+.movie-info h3,
+.character-info h3,
+.team-info h3,
+.location-info h3,
+.event-info h3,
+.universe-info h3 {
+    color: var(--theme-text);
+}
+
+.movie-type,
+.movie-year,
+.character-type,
+.team-type {
+    color: var(--theme-accent);
+}
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+button,
+.view-profile,
+.movie-button,
+.profile-button {
+    border-color:
+        color-mix(
+            in srgb,
+            var(--theme-accent-3) 35%,
+            var(--theme-border)
+        );
+}
+
+button:hover,
+.view-profile:hover,
+.movie-button:hover,
+.profile-button:hover {
+    border-color: var(--theme-accent-3);
+    color: var(--theme-accent);
+    box-shadow:
+        0 5px 18px var(--theme-glow),
+        0 0 10px var(--theme-accent-3-soft);
+}
+
+/* =========================================================
+   DATABASE HEADINGS
+   ========================================================= */
+
+.database-header p,
+.section-heading h2,
+.database-header h1 {
+    color: var(--theme-accent);
+}
+
+/* =========================================================
+   STAT CARDS
+   ========================================================= */
+
+.stat-card {
+    background: var(--theme-card);
+
+    border-color:
+        color-mix(
+            in srgb,
+            var(--theme-accent-3) 42%,
+            var(--theme-border)
+        );
+}
+
+.stat-card:hover {
+    border-color: var(--theme-accent-3);
+
+    box-shadow:
+        0 10px 30px var(--theme-glow),
+        0 0 18px var(--theme-accent-3-soft);
+}
+
+.stat-card .stat-number,
+.stat-card strong {
+    color: var(--theme-accent);
+}
+
+/* =========================================================
+   PROFILE SECTIONS
+   ========================================================= */
+
+.profile-section {
+    border-top-color:
+        color-mix(
+            in srgb,
+            var(--theme-accent-3) 35%,
+            var(--theme-border)
+        );
+}
+
+.profile-section h3 {
+    color: var(--theme-accent);
+}
+
+.profile-connections .profile-button {
+    background:
+        linear-gradient(
+            135deg,
+            var(--theme-glow),
+            var(--theme-glow-2)
+        );
+}
+
+/* =========================================================
+   MODAL
+   ========================================================= */
+
+#profile-modal .profile-box {
+    background: var(--theme-card);
+
+    border-color:
+        color-mix(
+            in srgb,
+            var(--theme-accent-3) 48%,
+            var(--theme-border)
+        );
+}
+
+#profile-modal .close-button:hover {
+    color: var(--theme-accent);
+    border-color: var(--theme-accent-3);
+}
+
+#profile-modal .profile-stats > div {
+    background: var(--theme-card-alt);
+
+    border-color:
+        color-mix(
+            in srgb,
+            var(--theme-accent-3) 35%,
+            var(--theme-border)
+        );
+}
+
+#profile-modal .profile-stats span {
+    color: var(--theme-accent);
+}
+
+/* =========================================================
+   GLOBAL SEARCH
+   ========================================================= */
+
+.global-search {
+    border-color:
+        color-mix(
+            in srgb,
+            var(--theme-accent-3) 38%,
+            var(--theme-border)
+        );
+}
+
+.global-search::before {
+    color: var(--theme-accent);
+    text-shadow: 0 0 10px var(--theme-glow);
+}
+
+#global-search-input:focus {
+    border-color: var(--theme-accent-3);
+
+    box-shadow:
+        0 0 0 2px var(--theme-accent-3-soft),
+        0 0 16px var(--theme-accent-3-soft);
+}
+
+/* =========================================================
+   TIMELINE
+   ========================================================= */
+
+.timeline-line {
+    background:
+        color-mix(
+            in srgb,
+            var(--theme-accent-3) 45%,
+            var(--theme-border)
+        );
+}
+
+.timeline-dot {
+    background: var(--theme-accent);
+
+    box-shadow:
+        0 0 12px var(--theme-glow),
+        0 0 8px var(--theme-accent-3-soft);
+}
+
+/* =========================================================
+   LINKS
+   ========================================================= */
+
+a {
+    color: var(--theme-accent);
+}
+
+/* =========================================================
+   STRUCTURAL BORDERS
+   ========================================================= */
+
+.section-heading,
+.database-header,
+.media-section,
+.character-tools {
+    border-color:
+        color-mix(
+            in srgb,
+            var(--theme-accent-3) 28%,
+            var(--theme-border)
+        );
+}
+
+/* =========================================================
+   DOOM SPECIAL DETAILS
+   ========================================================= */
+
+body[data-theme="doom"]::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+
+    background:
+        linear-gradient(
+            rgba(53, 208, 127, 0.025) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(53, 208, 127, 0.025) 1px,
+            transparent 1px
+        );
+
+    background-size: 42px 42px;
+
+    mask-image: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.8),
+        transparent 85%
+    );
+}
+
+/* =========================================================
+   STARK SPECIAL DETAILS
+   ========================================================= */
+
+body[data-theme="stark"] .database-header h1 {
+    text-shadow:
+        0 0 18px rgba(255, 59, 48, 0.25);
+}
+
+body[data-theme="stark"] .stat-card:hover {
+    box-shadow:
+        0 0 0 1px var(--theme-accent-3),
+        0 0 25px var(--theme-accent-3-soft),
+        0 12px 30px rgba(217, 164, 65, 0.10);
+}
+
+/* =========================================================
+   MULTIVERSE SPECIAL DETAILS
+   ========================================================= */
+
+body[data-theme="multiverse"]::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(184, 77, 255, 0.06),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 85% 75%,
+            rgba(36, 191, 255, 0.05),
+            transparent 30%
+        );
+}
+
+/* =========================================================
+   THEME SELECTOR
+   ========================================================= */
+
+#theme-selector {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    z-index: 100002;
+
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    padding: 7px;
+
+    background: rgba(7, 20, 38, 0.88);
+
+    border:
+        1px solid
+        color-mix(
+            in srgb,
+            var(--theme-accent-3) 42%,
+            var(--theme-border)
+        );
+
+    border-radius: 12px;
+
+    backdrop-filter: blur(14px);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.30);
+}
+
+.theme-option {
+    width: 34px;
+    height: 34px;
+
+    padding: 0;
+
+    border: 1px solid transparent;
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.theme-option:hover {
+    transform: translateY(-2px);
+}
+
+.theme-option.active {
+    border-color: #FFFFFF;
+
+    box-shadow:
+        0 0 12px var(--theme-glow),
+        0 0 8px var(--theme-accent-3-soft);
+}
+
+.theme-option[data-theme="classic"] {
+    background: linear-gradient(
+        135deg,
+        #24D7E8,
+        #5427A8
+    );
+}
+
+.theme-option[data-theme="stark"] {
+    background: linear-gradient(
+        135deg,
+        #FF3B30,
+        #FFD166
+    );
+}
+
+.theme-option[data-theme="multiverse"] {
+    background: linear-gradient(
+        135deg,
+        #B84DFF,
+        #24BFFF
+    );
+}
+
+.theme-option[data-theme="doom"] {
+    background: linear-gradient(
+        135deg,
+        #35D07F,
+        #C9A227
+    );
+}
+
+
+        /* Draggable header */
+        #system-clock .system-clock-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            cursor: grab;
+            touch-action: none;
+            user-select: none;
+        }
+
+        #system-clock .system-clock-header:active {
+            cursor: grabbing;
+        }
+
+        #system-clock .system-clock-label {
+            margin: 0;
+        }
+
+        /* Minimize button appears when hovering near the panel */
+        #system-clock .system-clock-minimize {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 25px;
+            height: 25px;
+            padding: 0;
+
+            border: 1px solid var(--theme-border, #1B2C45);
+            border-radius: 7px;
+
+            background: var(--theme-card-alt, #0E2037);
+            color: var(--theme-muted, #8A98AA);
+
+            font-size: 17px;
+            line-height: 1;
+            cursor: pointer;
+
+            opacity: 0;
+            pointer-events: none;
+            transition:
+                opacity 0.2s ease,
+                color 0.2s ease,
+                border-color 0.2s ease;
+        }
+
+        #system-clock:hover .system-clock-minimize,
+        #system-clock:focus-within .system-clock-minimize {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        #system-clock .system-clock-minimize:hover {
+            color: var(--theme-accent, #24D7E8);
+            border-color: var(--theme-accent, #24D7E8);
+        }
+
+        /* Minimized state */
+        #system-clock.is-minimized {
+            width: auto;
+            min-width: 165px;
+            padding: 12px 15px;
+            cursor: grab;
+        }
+
+        #system-clock.is-minimized .system-clock-header {
+            cursor: grab;
+        }
+
+        #system-clock.is-minimized .system-clock-content {
+            display: none;
+        }
+
+        #system-clock.is-minimized .system-clock-minimize {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        #system-clock.is-minimized .system-clock-minimize {
+            transform: rotate(180deg);
+        }
+
+        #system-clock.is-dragging {
+            opacity: 0.88;
+            transition: none;
+            cursor: grabbing;
+        }
+
+        
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+    #theme-selector {
+        right: 12px;
+        bottom: 12px;
+    }
+
+    .theme-option {
+        width: 30px;
+        height: 30px;
+    }
+}
+```

@@ -1,3 +1,8 @@
+/* ========================================
+   THE 616 MARVELBASE
+   ADVANCED GLOBAL SEARCH
+   ======================================== */
+
 let globalCharacters = [];
 let globalMovies = [];
 let globalTeams = [];
@@ -41,7 +46,6 @@ Promise.all([
     universeData
 ]) => {
 
-
     // ========================================
     // CHARACTERS
     // ========================================
@@ -58,17 +62,13 @@ Promise.all([
 
     if (Array.isArray(movieData)) {
 
-        globalMovies =
-            movieData;
+        globalMovies = movieData;
 
     } else {
 
         globalMovies = [
-
             ...(movieData.movies || []),
-
             ...(movieData.shows || [])
-
         ];
 
     }
@@ -122,7 +122,6 @@ Promise.all([
 
 })
 
-
 .catch(error => {
 
     console.error(
@@ -131,6 +130,125 @@ Promise.all([
     );
 
 });
+
+
+// ========================================
+// SEARCH SCORING
+// ========================================
+
+function getSearchScore(
+    query,
+    fields
+) {
+
+    let score = 0;
+
+    fields.forEach(field => {
+
+        const value =
+            String(field || "")
+                .toLowerCase()
+                .trim();
+
+        if (!value) return;
+
+
+        // Exact match
+        if (value === query) {
+
+            score += 100;
+
+        }
+
+        // Starts with query
+        else if (value.startsWith(query)) {
+
+            score += 60;
+
+        }
+
+        // Contains query
+        else if (value.includes(query)) {
+
+            score += 30;
+
+        }
+
+    });
+
+    return score;
+}
+
+
+// ========================================
+// CONVERT VALUE TO SEARCHABLE TEXT
+// ========================================
+
+function searchableValue(value) {
+
+    if (Array.isArray(value)) {
+
+        return value
+            .map(item => searchableValue(item))
+            .join(" ");
+
+    }
+
+
+    if (
+        value &&
+        typeof value === "object"
+    ) {
+
+        return Object.values(value)
+            .map(item => searchableValue(item))
+            .join(" ");
+
+    }
+
+
+    return String(value || "");
+
+}
+
+
+// ========================================
+// GET MULTIPLE POSSIBLE VALUES
+// ========================================
+
+function getValues(
+    item,
+    keys
+) {
+
+    return keys
+        .flatMap(key => {
+
+            const value =
+                item?.[key];
+
+            if (Array.isArray(value)) {
+                return value;
+            }
+
+            if (
+                value &&
+                typeof value === "object"
+            ) {
+                return Object.values(value);
+            }
+
+            return value !== undefined &&
+                value !== null
+                ? [value]
+                : [];
+
+        })
+        .map(value =>
+            searchableValue(value)
+        );
+
+}
 
 
 // ========================================
@@ -198,7 +316,108 @@ function setupGlobalSearch() {
 
 
     // ========================================
-    // CLOSE RESULTS WHEN CLICKING OUTSIDE
+    // KEYBOARD NAVIGATION
+    // ========================================
+
+    input.addEventListener(
+        "keydown",
+        function(event) {
+
+            const resultButtons =
+                results.querySelectorAll(
+                    ".global-search-result"
+                );
+
+
+            if (
+                event.key === "Escape"
+            ) {
+
+                results.classList.remove(
+                    "active"
+                );
+
+                input.blur();
+
+                return;
+
+            }
+
+
+            if (
+                !resultButtons.length
+            ) {
+
+                return;
+
+            }
+
+
+            const current =
+                Array.from(
+                    resultButtons
+                ).findIndex(
+                    button =>
+                        button ===
+                        document.activeElement
+                );
+
+
+            if (
+                event.key === "ArrowDown"
+            ) {
+
+                event.preventDefault();
+
+                const next =
+                    current + 1 <
+                    resultButtons.length
+                        ? current + 1
+                        : 0;
+
+                resultButtons[next].focus();
+
+            }
+
+
+            else if (
+                event.key === "ArrowUp"
+            ) {
+
+                event.preventDefault();
+
+                const previous =
+                    current - 1 >= 0
+                        ? current - 1
+                        : resultButtons.length - 1;
+
+                resultButtons[previous].focus();
+
+            }
+
+
+            else if (
+                event.key === "Enter"
+            ) {
+
+                if (
+                    current >= 0
+                ) {
+
+                    event.preventDefault();
+
+                    resultButtons[current].click();
+
+                }
+
+            }
+
+        }
+    );
+
+
+    // ========================================
+    // CLOSE RESULTS OUTSIDE SEARCH
     // ========================================
 
     document.addEventListener(
@@ -239,31 +458,51 @@ function searchAllDatabases(query) {
     globalCharacters.forEach(item => {
 
         const name =
-            String(item.name || "")
-                .toLowerCase();
-
+            String(item.name || "");
 
         const realName =
-            String(item.realName || "")
-                .toLowerCase();
-
+            String(item.realName || "");
 
         const type =
-            String(item.type || "")
-                .toLowerCase();
-
+            String(item.type || "");
 
         const species =
-            String(item.species || "")
-                .toLowerCase();
+            String(item.species || "");
+
+        const status =
+            String(item.status || "");
+
+        const alignment =
+            String(item.alignment || "");
+
+        const aliases =
+            getValues(
+                item,
+                [
+                    "alias",
+                    "aliases",
+                    "codeName",
+                    "codename"
+                ]
+            );
 
 
-        if (
-            name.includes(query) ||
-            realName.includes(query) ||
-            type.includes(query) ||
-            species.includes(query)
-        ) {
+        const score =
+            getSearchScore(
+                query,
+                [
+                    name,
+                    realName,
+                    ...aliases,
+                    type,
+                    species,
+                    status,
+                    alignment
+                ]
+            );
+
+
+        if (score > 0) {
 
             results.push({
 
@@ -275,9 +514,15 @@ function searchAllDatabases(query) {
                     "Unknown Character",
 
                 subtitle:
-                    item.realName ||
-                    item.type ||
+                    [
+                        item.realName,
+                        item.type
+                    ]
+                        .filter(Boolean)
+                        .join(" • ") ||
                     "Character",
+
+                score,
 
                 url:
                     `characters.html?id=${encodeURIComponent(
@@ -298,31 +543,38 @@ function searchAllDatabases(query) {
     globalMovies.forEach(item => {
 
         const title =
-            String(item.title || "")
-                .toLowerCase();
-
+            String(item.title || "");
 
         const type =
-            String(item.type || "")
-                .toLowerCase();
-
+            String(item.type || "");
 
         const universe =
-            String(item.universe || "")
-                .toLowerCase();
-
+            String(item.universe || "");
 
         const director =
-            String(item.director || "")
-                .toLowerCase();
+            String(item.director || "");
+
+        const phase =
+            String(item.phase || "");
+
+        const year =
+            String(item.year || "");
+
+        const score =
+            getSearchScore(
+                query,
+                [
+                    title,
+                    type,
+                    universe,
+                    director,
+                    phase,
+                    year
+                ]
+            );
 
 
-        if (
-            title.includes(query) ||
-            type.includes(query) ||
-            universe.includes(query) ||
-            director.includes(query)
-        ) {
+        if (score > 0) {
 
             results.push({
 
@@ -335,9 +587,15 @@ function searchAllDatabases(query) {
                     "Unknown Movie",
 
                 subtitle:
-                    `${item.year || ""} ${
-                        item.universe || ""
-                    }`.trim(),
+                    [
+                        item.year,
+                        item.universe,
+                        item.phase
+                    ]
+                        .filter(Boolean)
+                        .join(" • "),
+
+                score,
 
                 url:
                     `movies.html?id=${encodeURIComponent(
@@ -358,31 +616,48 @@ function searchAllDatabases(query) {
     globalTeams.forEach(item => {
 
         const name =
-            String(item.name || "")
-                .toLowerCase();
-
+            String(item.name || "");
 
         const type =
-            String(item.type || "")
-                .toLowerCase();
-
+            String(item.type || "");
 
         const universe =
-            String(item.universe || "")
-                .toLowerCase();
-
+            String(item.universe || "");
 
         const description =
-            String(item.description || "")
-                .toLowerCase();
+            String(item.description || "");
+
+        const status =
+            String(item.status || "");
+
+        const founded =
+            String(item.founded || "");
+
+        const members =
+            getValues(
+                item,
+                [
+                    "members"
+                ]
+            );
 
 
-        if (
-            name.includes(query) ||
-            type.includes(query) ||
-            universe.includes(query) ||
-            description.includes(query)
-        ) {
+        const score =
+            getSearchScore(
+                query,
+                [
+                    name,
+                    type,
+                    universe,
+                    description,
+                    status,
+                    founded,
+                    ...members
+                ]
+            );
+
+
+        if (score > 0) {
 
             results.push({
 
@@ -394,9 +669,14 @@ function searchAllDatabases(query) {
                     "Unknown Team",
 
                 subtitle:
-                    `${item.type || ""} ${
-                        item.universe || ""
-                    }`.trim(),
+                    [
+                        item.type,
+                        item.universe
+                    ]
+                        .filter(Boolean)
+                        .join(" • "),
+
+                score,
 
                 url:
                     `teams.html?id=${encodeURIComponent(
@@ -417,37 +697,47 @@ function searchAllDatabases(query) {
     globalLocations.forEach(item => {
 
         const name =
-            String(item.name || "")
-                .toLowerCase();
-
+            String(item.name || "");
 
         const type =
-            String(item.type || "")
-                .toLowerCase();
-
+            String(item.type || "");
 
         const universe =
-            String(item.universe || "")
-                .toLowerCase();
-
+            String(item.universe || "");
 
         const status =
-            String(item.status || "")
-                .toLowerCase();
-
+            String(item.status || "");
 
         const description =
-            String(item.description || "")
-                .toLowerCase();
+            String(item.description || "");
+
+        const location =
+            String(item.location || "");
+
+        const country =
+            String(item.country || "");
+
+        const city =
+            String(item.city || "");
 
 
-        if (
-            name.includes(query) ||
-            type.includes(query) ||
-            universe.includes(query) ||
-            status.includes(query) ||
-            description.includes(query)
-        ) {
+        const score =
+            getSearchScore(
+                query,
+                [
+                    name,
+                    type,
+                    universe,
+                    status,
+                    description,
+                    location,
+                    country,
+                    city
+                ]
+            );
+
+
+        if (score > 0) {
 
             results.push({
 
@@ -459,9 +749,14 @@ function searchAllDatabases(query) {
                     "Unknown Location",
 
                 subtitle:
-                    `${item.type || ""} ${
-                        item.universe || ""
-                    }`.trim(),
+                    [
+                        item.type,
+                        item.universe
+                    ]
+                        .filter(Boolean)
+                        .join(" • "),
+
+                score,
 
                 url:
                     `locations.html?id=${encodeURIComponent(
@@ -486,36 +781,54 @@ function searchAllDatabases(query) {
                 item.name ||
                 item.title ||
                 ""
-            ).toLowerCase();
-
+            );
 
         const type =
-            String(item.type || "")
-                .toLowerCase();
-
+            String(item.type || "");
 
         const universe =
-            String(item.universe || "")
-                .toLowerCase();
-
+            String(item.universe || "");
 
         const location =
-            String(item.location || "")
-                .toLowerCase();
-
+            String(item.location || "");
 
         const description =
-            String(item.description || "")
-                .toLowerCase();
+            String(item.description || "");
+
+        const year =
+            String(item.year || "");
+
+        const date =
+            String(item.date || "");
+
+        const participants =
+            getValues(
+                item,
+                [
+                    "participants",
+                    "characters",
+                    "teams"
+                ]
+            );
 
 
-        if (
-            name.includes(query) ||
-            type.includes(query) ||
-            universe.includes(query) ||
-            location.includes(query) ||
-            description.includes(query)
-        ) {
+        const score =
+            getSearchScore(
+                query,
+                [
+                    name,
+                    type,
+                    universe,
+                    location,
+                    description,
+                    year,
+                    date,
+                    ...participants
+                ]
+            );
+
+
+        if (score > 0) {
 
             results.push({
 
@@ -528,9 +841,15 @@ function searchAllDatabases(query) {
                     "Unknown Event",
 
                 subtitle:
-                    `${item.year || ""} ${
-                        item.universe || ""
-                    }`.trim(),
+                    [
+                        item.year,
+                        item.universe,
+                        item.location
+                    ]
+                        .filter(Boolean)
+                        .join(" • "),
+
+                score,
 
                 url:
                     `events.html?id=${encodeURIComponent(
@@ -555,43 +874,53 @@ function searchAllDatabases(query) {
                 item.name ||
                 item.title ||
                 ""
-            ).toLowerCase();
-
+            );
 
         const designation =
             String(
                 item.designation ||
-                item.realName ||
-                item.id ||
                 ""
-            ).toLowerCase();
+            );
 
+        const realName =
+            String(
+                item.realName ||
+                ""
+            );
 
         const type =
-            String(item.type || "")
-                .toLowerCase();
-
+            String(item.type || "");
 
         const description =
-            String(item.description || "")
-                .toLowerCase();
-
+            String(item.description || "");
 
         const realm =
             String(
                 item.realm ||
                 item.location ||
                 ""
-            ).toLowerCase();
+            );
+
+        const id =
+            String(item.id || "");
 
 
-        if (
-            name.includes(query) ||
-            designation.includes(query) ||
-            type.includes(query) ||
-            description.includes(query) ||
-            realm.includes(query)
-        ) {
+        const score =
+            getSearchScore(
+                query,
+                [
+                    name,
+                    designation,
+                    realName,
+                    type,
+                    description,
+                    realm,
+                    id
+                ]
+            );
+
+
+        if (score > 0) {
 
             results.push({
 
@@ -604,10 +933,16 @@ function searchAllDatabases(query) {
                     "Unknown Universe",
 
                 subtitle:
-                    item.designation ||
-                    item.realName ||
-                    item.type ||
+                    [
+                        item.designation ||
+                        item.realName,
+                        item.type
+                    ]
+                        .filter(Boolean)
+                        .join(" • ") ||
                     "Universe",
+
+                score,
 
                 url:
                     `universes.html?id=${encodeURIComponent(
@@ -619,6 +954,19 @@ function searchAllDatabases(query) {
         }
 
     });
+
+
+    // ========================================
+    // SORT RESULTS
+    // ========================================
+
+    results.sort(
+        (a, b) =>
+            b.score - a.score ||
+            a.name.localeCompare(
+                b.name
+            )
+    );
 
 
     return results;
@@ -658,11 +1006,9 @@ function displayGlobalResults(matches) {
 
         `;
 
-
         results.classList.add(
             "active"
         );
-
 
         return;
 
@@ -689,6 +1035,9 @@ function displayGlobalResults(matches) {
 
             button.className =
                 "global-search-result";
+
+
+            button.tabIndex = 0;
 
 
             const category =
