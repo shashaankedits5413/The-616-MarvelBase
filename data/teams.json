@@ -2,6 +2,7 @@
     {
         "id": "avengers",
         "name": "Avengers",
+        "image": "images/avengersteam.jpg",
         "type": "Superhero Team",
         "status": "Active",
         "universe": "Earth-616",
@@ -27,10 +28,10 @@
             "young-avengers"
         ]
     },
-
     {
         "id": "x-men",
         "name": "X-Men",
+        "image": "images/xmenteam.jpg",
         "type": "Mutant Superhero Team",
         "status": "Active",
         "universe": "Earth-616",
@@ -59,10 +60,10 @@
             "illuminati"
         ]
     },
-
     {
         "id": "fantastic-four",
         "name": "Fantastic Four",
+        "image": "images/fantasticfourteam.jpg",
         "type": "Superhero Family",
         "status": "Active",
         "universe": "Earth-616",
@@ -84,10 +85,10 @@
             "avengers"
         ]
     },
-
     {
         "id": "guardians-of-the-galaxy",
         "name": "Guardians of the Galaxy",
+        "image": "images/guardiansofthegalaxyteam.jpg",
         "type": "Cosmic Superhero Team",
         "status": "Active",
         "universe": "Earth-616",
@@ -113,10 +114,10 @@
             "eternals"
         ]
     },
-
     {
         "id": "thunderbolts",
         "name": "Thunderbolts",
+        "image": "images/thunderboltsteam.jpg",
         "type": "Superhero / Anti-Hero Team",
         "status": "Active",
         "universe": "Earth-616",
@@ -137,10 +138,10 @@
             "dark-avengers"
         ]
     },
-
     {
         "id": "new-avengers",
         "name": "New Avengers",
+        "image": "images/newavengersteam.jpg",
         "type": "Superhero Team",
         "status": "Active",
         "universe": "Earth-616",
@@ -161,10 +162,10 @@
             "secret-avengers"
         ]
     },
-
     {
         "id": "midnight-sons",
         "name": "Midnight Sons",
+        "image": "images/midnightsonsteam.jpg",
         "type": "Supernatural Superhero Team",
         "status": "Active",
         "universe": "Earth-616",
@@ -183,10 +184,10 @@
             "defenders"
         ]
     },
-
     {
         "id": "x-force",
         "name": "X-Force",
+        "image": "images/xforceteam.jpg",
         "type": "Mutant Strike Team",
         "status": "Active",
         "universe": "Earth-616",
@@ -207,10 +208,10 @@
             "brotherhood-of-mutants"
         ]
     },
-
     {
         "id": "brotherhood-of-mutants",
         "name": "Brotherhood of Mutants",
+        "image": "images/brotherhoodofmutantsteam.jpg",
         "type": "Mutant Organization",
         "status": "Active",
         "universe": "Earth-616",
@@ -233,10 +234,10 @@
             "x-force"
         ]
     },
-
     {
         "id": "illuminati",
         "name": "Illuminati",
+        "image": "images/illuminatiteam.jpg",
         "type": "Secret Superhero Council",
         "status": "Active",
         "universe": "Earth-616",
@@ -259,10 +260,10 @@
             "x-men"
         ]
     },
-
     {
         "id": "eternals",
         "name": "Eternals",
+        "image": "images/eternalsteam.jpg",
         "type": "Cosmic Superpowered Group",
         "status": "Active",
         "universe": "Earth-616",
@@ -284,10 +285,10 @@
             "avengers"
         ]
     },
-
     {
         "id": "heroes-for-hire",
         "name": "Heroes for Hire",
+        "image": "images/heroesforhireteam.jpg",
         "type": "Superhero Team",
         "status": "Active",
         "universe": "Earth-616",
@@ -305,10 +306,10 @@
             "avengers"
         ]
     },
-
     {
         "id": "shield",
         "name": "S.H.I.E.L.D.",
+        "image": "images/shieldteam.jpg",
         "type": "Intelligence Organization",
         "status": "Active",
         "universe": "Earth-616",
@@ -331,10 +332,10 @@
             "hydra"
         ]
     },
-
     {
         "id": "hydra",
         "name": "Hydra",
+        "image": "images/hydrateam.jpg",
         "type": "Villainous Organization",
         "status": "Active",
         "universe": "Earth-616",
@@ -357,10 +358,10 @@
             "dark-avengers"
         ]
     },
-
     {
         "id": "sinister-six",
         "name": "Sinister Six",
+        "image": "images/sinister6team.jpg",
         "type": "Supervillain Team",
         "status": "Active",
         "universe": "Earth-616",
@@ -382,10 +383,10 @@
             "spider-society"
         ]
     },
-
     {
         "id": "masters-of-evil",
         "name": "Masters of Evil",
+        "image": "images/mastersofevilteam.jpg",
         "type": "Supervillain Team",
         "status": "Active",
         "universe": "Earth-616",
@@ -405,10 +406,10 @@
             "dark-avengers"
         ]
     },
-
     {
         "id": "spider-society",
         "name": "Spider-Society",
+        "image": "images/spidersocietyteam.jpg",
         "type": "Multiversal Superhero Network",
         "status": "Active",
         "universe": "Multiverse",
@@ -429,10 +430,10 @@
             "spider-verse"
         ]
     },
-
     {
         "id": "champions",
         "name": "Champions",
+        "image": "images/championsteam.jpg",
         "type": "Young Superhero Team",
         "status": "Active",
         "universe": "Earth-616",
@@ -451,10 +452,10 @@
             "avengers"
         ]
     },
-
     {
         "id": "young-avengers",
         "name": "Young Avengers",
+        "image": "images/youngavengersteam.jpg",
         "type": "Young Superhero Team",
         "status": "Active",
         "universe": "Earth-616",
@@ -475,10 +476,10 @@
             "champions"
         ]
     },
-
     {
         "id": "dark-avengers",
         "name": "Dark Avengers",
+        "image": "images/darkavengersteam.jpg",
         "type": "Villain / Anti-Hero Team",
         "status": "Active",
         "universe": "Earth-616",

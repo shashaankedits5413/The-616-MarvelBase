@@ -28,7 +28,7 @@
             "hells-kitchen",
             "kamar-taj"
         ],
-        "image": "images/locations/sanctumsanctorum.jpg"
+        "image": "images/sanctumsanctorum.jpg"
     },
     {
         "id": "baxter-building",
@@ -58,7 +58,7 @@
         "relatedLocations": [
             "new-york-city"
         ],
-        "image": "images/locations/baxterbuilding.jpg"
+        "image": "images/baxterbuilding.jpg"
     },
     {
         "id": "xaviers-school",
@@ -96,7 +96,7 @@
             "genosha",
             "weapon-x-facility"
         ],
-        "image": "images/locations/xaviersschool.jpg"
+        "image": "images/xaviersschool.jpg"
     },
     {
         "id": "wakanda",
@@ -126,7 +126,7 @@
         "relatedLocations": [
             "wakandan-royal-palace"
         ],
-        "image": "images/locations/wakanda.jpg"
+        "image": "images/wakanda.jpg"
     },
     {
         "id": "latveria",
@@ -146,7 +146,7 @@
         "relatedLocations": [
             "wundagore-mountain"
         ],
-        "image": "images/locations/latveria.jpg"
+        "image": "images/latveria.jpg"
     },
     {
         "id": "asgard",
@@ -177,7 +177,7 @@
             "new-asgard",
             "sakaar"
         ],
-        "image": "images/locations/asgard.jpg"
+        "image": "images/asgard.jpg"
     },
     {
         "id": "new-asgard",
@@ -203,7 +203,7 @@
         "relatedLocations": [
             "asgard"
         ],
-        "image": "images/locations/newasgard.jpg"
+        "image": "images/newasgard.jpg"
     },
     {
         "id": "knowhere",
@@ -233,7 +233,7 @@
         "relatedLocations": [
             "xandar"
         ],
-        "image": "images/locations/knowhere.jpg"
+        "image": "images/knowhere.jpg"
     },
     {
         "id": "kamar-taj",
@@ -261,7 +261,7 @@
             "mirror-dimension",
             "dark-dimension"
         ],
-        "image": "images/locations/kamar-taj.jpg"
+        "image": "images/kamartaj.jpg"
     },
     {
         "id": "the-raft",
@@ -286,7 +286,7 @@
         "relatedLocations": [
             "hells-kitchen"
         ],
-        "image": "images/locations/the-raft.jpg"
+        "image": "images/the-raft.jpg"
     },
     {
         "id": "hells-kitchen",
@@ -314,7 +314,7 @@
             "new-york-city",
             "sanctum-sanctorum"
         ],
-        "image": "images/locations/hellskitchen.jpg"
+        "image": "images/hellskitchen.jpg"
     },
     {
         "id": "daily-bugle",
@@ -337,7 +337,7 @@
         "relatedLocations": [
             "new-york-city"
         ],
-        "image": "images/locations/dailybugle.jpg"
+        "image": "images/dailybugle.jpg"
     },
     {
         "id": "oscorp",
@@ -363,7 +363,7 @@
             "daily-bugle",
             "new-york-city"
         ],
-        "image": "images/locations/oscorp.jpg"
+        "image": "images/oscorp.jpg"
     },
     {
         "id": "weapon-x-facility",
@@ -392,7 +392,7 @@
             "xaviers-school",
             "savage-land"
         ],
-        "image": "images/locations/weaponx.jpg"
+        "image": "images/weaponx.jpg"
     },
     {
         "id": "savage-land",
@@ -415,7 +415,7 @@
         "relatedLocations": [
             "genosha"
         ],
-        "image": "images/locations/savagedland.jpg"
+        "image": "images/savageland.jpg"
     },
     {
         "id": "genosha",
@@ -445,7 +445,7 @@
             "xaviers-school",
             "savage-land"
         ],
-        "image": "images/locations/genosha.jpg"
+        "image": "images/genosha.jpg"
     },
     {
         "id": "attilan",
@@ -465,7 +465,7 @@
         "relatedLocations": [
             "wakanda"
         ],
-        "image": "images/locations/attilan.jpg"
+        "image": "images/attilan.jpg"
     },
     {
         "id": "battleworld",
@@ -492,7 +492,7 @@
             "negative-zone",
             "mirror-dimension"
         ],
-        "image": "images/locations/battleworld.jpg"
+        "image": "images/battleworld.jpg"
     },
     {
         "id": "negative-zone",
@@ -518,7 +518,7 @@
             "baxter-building",
             "battleworld"
         ],
-        "image": "images/locations/negativezone.jpg"
+        "image": "images/negativezone.jpg"
     },
     {
         "id": "xandar",
@@ -544,7 +544,7 @@
         "relatedLocations": [
             "knowhere"
         ],
-        "image": "images/locations/xandar.jpg"
+        "image": "images/xandar.jpg"
     },
     {
         "id": "vormir",
@@ -568,7 +568,7 @@
         "relatedLocations": [
             "titan"
         ],
-        "image": "images/locations/vormir.jpg"
+        "image": "images/vormir.jpg"
     },
     {
         "id": "titan",
@@ -591,7 +591,7 @@
         "relatedLocations": [
             "vormir"
         ],
-        "image": "images/locations/titan.jpg"
+        "image": "images/titan.jpg"
     },
     {
         "id": "morag",
@@ -617,7 +617,7 @@
             "knowhere",
             "xandar"
         ],
-        "image": "images/locations/morag.jpg"
+        "image": "images/morag.jpg"
     },
     {
         "id": "sakaar",
@@ -644,7 +644,7 @@
         "relatedLocations": [
             "asgard"
         ],
-        "image": "images/locations/sakaar.jpg"
+        "image": "images/sakaar.jpg"
     },
     {
         "id": "quantum-realm",
@@ -673,7 +673,7 @@
         "relatedLocations": [
             "mirror-dimension"
         ],
-        "image": "images/locations/quantumrealm.jpg"
+        "image": "images/quantumrealm.jpg"
     },
     {
         "id": "mirror-dimension",
@@ -699,7 +699,7 @@
             "kamar-taj",
             "dark-dimension"
         ],
-        "image": "images/locations/mirrordimension.jpg"
+        "image": "images/mirrordimension.jpg"
     },
     {
         "id": "dark-dimension",
@@ -725,7 +725,7 @@
             "kamar-taj",
             "mirror-dimension"
         ],
-        "image": "images/locations/darkdimension.jpg"
+        "image": "images/darkdimension.jpg"
     },
     {
         "id": "kun-lun",
@@ -747,7 +747,7 @@
         "relatedLocations": [
             "kamar-taj"
         ],
-        "image": "images/locations/kunlun.jpg"
+        "image": "images/kunlun.jpg"
     },
     {
         "id": "madripoor",
@@ -771,7 +771,7 @@
         "relatedLocations": [
             "weapon-x-facility"
         ],
-        "image": "images/locations/madripoor.jpg"
+        "image": "images/madripoor.jpg"
     },
     {
         "id": "wundagore-mountain",
@@ -795,7 +795,7 @@
             "dark-dimension",
             "latveria"
         ],
-        "image": "images/locations/wundagore.jpg"
+        "image": "images/wundagore.jpg"
     },
     {
         "id": "wakandan-royal-palace",
@@ -820,6 +820,6 @@
         "relatedLocations": [
             "wakanda"
         ],
-        "image": "images/locations/wakandanpalace.jpg"
+        "image": "images/wakandanpalace.jpg"
     }
 ]
